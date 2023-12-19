@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color--back: #000000;
+            --color--front: #ffffff;
+        }
+
+        body{
+            background-color: var(--color--back);
+            color: var(--color--front);
+        }
+
+        .white{
+            --color--back: #fff;
+            --color--front: #000;
+        }
+    </style>
+</head>
+<body class="">
+
+    <div>
+
+        <button id="theme">theme</button>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque consequatur earum rerum rem repellat ullam numquam odio totam, esse doloribus explicabo laborum? Optio repellendus architecto, veniam dolore vel nostrum nihil.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum odit et quod molestias libero voluptatem vero totam! Unde, cum illum deleniti similique ducimus at blanditiis assumenda reiciendis molestias inventore?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque consequatur earum rerum rem repellat ullam numquam odio totam, esse doloribus explicabo laborum? Optio repellendus architecto, veniam dolore vel nostrum nihil.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum odit et quod molestias libero voluptatem vero totam! Unde, cum illum deleniti similique ducimus at blanditiis assumenda reiciendis molestias inventore?</p>
+
+</body>
+<script>
+    const theme = document.getElementById("theme")
+
+    const tema = localStorage.getItem('theme')
+
+    if(tema === 'white') {
+        document.body.classList.add('white')
+    } else{
+        document.body.classList.remove('white')
+    }
+    
+
+    theme.addEventListener('click', ()=> {
+        
+        let body = document.body
+
+        body.classList.toggle('white')
+
+
+        if(body.classList.contains('white')){
+            localStorage.setItem('theme', 'white')
+        }else{
+            localStorage.setItem('theme', 'dark')
+        }
+    
+    })
+</script>
+</html>

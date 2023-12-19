@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: var(--color--fundo);
+            color: var(--color--text);
+        }
+        :root{
+            --color--fundo: #000;
+            --color--text: #fff;
+        }
+        .theme-Sun{
+            --color--fundo: #fff;
+            --color--text: #000;
+        }
+        div{
+            /* border: 1px solid red; */
+            width: 120px;
+            display: flex;
+            justify-content: center;
+        }
+        #theme{
+            width: 60%;
+            /* padding: 10px; */
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: flex-start;
+            background-color: transparent;
+            border: 1px solid var(--color--text);
+        }
+        span{
+            /* border: 1px solid blue; */
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            
+        }
+        ion-icon{
+            color: var(--color--text);
+            font-size: 2em;
+            border-color: var(--color--fundo);
+        }
+        .theme-transition {
+            transition: background-color 0.5s ease, color 0.5s ease; 
+        }
+    </style>
+</head>
+<body class="">
+    <div>
+        <button id="theme">
+            <span id="span">
+                <ion-icon name="cloudy-night-outline"></ion-icon>
+                <!-- <ion-icon name="sunny-outline"></ion-icon> -->
+            </span>
+        </button>   
+    </div>
+
+    <ul>
+        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores, nam sed saepe mollitia architecto consectetur dolores maiores dolore quibusdam ipsa dolor voluptate? Commodi vitae itaque ipsum a, dolore explicabo!</p></li>
+
+        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores, nam sed saepe mollitia architecto consectetur dolores maiores dolore quibusdam ipsa dolor voluptate? Commodi vitae itaque ipsum a, dolore explicabo!</p></li>
+
+        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores, nam sed saepe mollitia architecto consectetur dolores maiores dolore quibusdam ipsa dolor voluptate? Commodi vitae itaque ipsum a, dolore explicabo!</p></li>
+
+        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores, nam sed saepe mollitia architecto consectetur dolores maiores dolore quibusdam ipsa dolor voluptate? Commodi vitae itaque ipsum a, dolore explicabo!</p></li>
+
+        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores, nam sed saepe mollitia architecto consectetur dolores maiores dolore quibusdam ipsa dolor voluptate? Commodi vitae itaque ipsum a, dolore explicabo!</p></li>
+    </ul>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    const theme = document.getElementById('theme')
+
+    const span = document.getElementById('span')
+
+    theme.addEventListener('click', ()=> {
+        
+        const body = document.body
+
+        body.classList.toggle('theme-Sun')
+        body.classList.toggle('theme-transition')
+
+        if(body.classList.contains('theme-Sun')) {
+            span.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+            theme.style.justifyContent = 'flex-end'
+            
+        } else{
+            span.innerHTML = '<ion-icon name="cloudy-night-outline"></ion-icon>'
+            theme.style.justifyContent = 'flex-start'
+        }
+
+        setTimeout(() => {
+            body.classList.remove('theme-transition');
+        }, 500);
+    })
+
+    
+
+    
+</script>
+</html>

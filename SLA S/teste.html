@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle de Tamanho de Fonte</title>
+    <style>
+        p {
+            font-size: 1.1em;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+       
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <p id="texto">Este é um exemplo de texto com tamanho de fonte 1.1em.</p>
+
+<br>
+
+    <div>
+        <button id="aumentar">Aumentar Fonte</button>
+        <button id="diminuir">Diminuir Fonte</button>
+    </div>
+
+    </div>
+    
+</body>
+
+<script>
+  
+    const paragrafo = document.getElementById('texto');
+    const botaoAumentar = document.getElementById('aumentar');
+    const botaoDiminuir = document.getElementById('diminuir');
+
+
+    let tamanhoFonte = 1.1;
+
+    botaoAumentar.addEventListener('click', function() {
+        tamanhoFonte += 0.1;
+        paragrafo.style.fontSize = tamanhoFonte + 'em';
+    });
+
+    botaoDiminuir.addEventListener('click', function() {
+        tamanhoFonte -= 0.1;
+        paragrafo.style.fontSize = tamanhoFonte + 'em';
+    });
+
+
+</script>
+
+</html>

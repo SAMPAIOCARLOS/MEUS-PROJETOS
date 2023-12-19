@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        main{
+            /* border: 1px solid red; */
+            min-width: 300px;
+            max-width: 400px;
+            background-color: #444444;
+            border-radius: 12px;
+            padding: 30px;
+        }
+        #result{
+            
+            padding: 10px;
+            text-align: end;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            background-color: #696969;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-size: 2em;
+            
+        }
+        table{
+            /* border: 1px solid rgb(0, 4, 255); */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+           
+        }
+        tbody{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: auto;
+        }
+        tr{
+            display: flex;
+            gap: 5px;
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            color: #fff;
+        }
+        .color1{
+            background-color: rgb(21, 88, 88);
+        }
+        .color2{
+            background-color: rgba(28, 212, 151, 0.815)
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Calculadora</h1>
+        </div>
+        <table>
+            <p id="result"></p>
+            <thead>
+                <tr>
+                    <th><button class="color1" onclick="limpar()">C</button></th>
+                    <th><button class="color1" onclick="addNum('(')">()</button></th>
+                    <th><button class="color1" onclick="addNum('%')">%</button></th>
+                    <th><button class="color1" onclick="addNum('/')">/</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="color2" onclick="addNum('7')">7</button></td>
+                    <td><button class="color2" onclick="addNum('8')">8</button></td>
+                    <td><button class="color2" onclick="addNum('9')">9</button></td>
+                    <td><button class="color1" onclick="addNum('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2" onclick="addNum('4')">4</button></td>
+                    <td><button class="color2" onclick="addNum('5')">5</button></td>
+                    <td><button class="color2" onclick="addNum('6')">6</button></td>
+                    <td><button class="color1" onclick="addNum('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2" onclick="addNum('1')">1</button></td>
+                    <td><button class="color2" onclick="addNum('2')">2</button></td>
+                    <td><button class="color2" onclick="addNum('3')">3</button></td>
+                    <td><button class="color1" onclick="addNum('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2" onclick="addNum('0')">0</button></td>
+                    <td><button class="color2" onclick="addNum('.')">.</button></td>
+                    <td><button class="color2" onclick="back()"><</button></td>
+                    <td><button class="color1" onclick="calcular()">=</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script>
+    function addNum(num) {
+        
+        let resultado = document.getElementById('result');
+        let numero = resultado.innerText;
+        
+        if(numero.length < 18) {
+            resultado.innerText = numero + num;
+        }
+        
+
+    }
+
+    function limpar() {
+        const result = document.getElementById('result').innerHTML = "";
+    }
+
+    function back() {
+        let resultado = document.getElementById('result').innerText;
+        let valor = document.getElementById('result').innerText = resultado.slice(0,-1);
+    }
+
+    function calcular() {
+        try {
+            let resultado = document.getElementById("result").innerText;
+            let valor = document.getElementById('result').innerText = eval(resultado).toLocaleString('pt-BR');
+
+            if(resultado === "") {
+                alert('insira algo para realizar algum calculo');
+                document.getElementById('result').innerText = '';      
+            }
+
+        } catch (error) {
+            alert('Valor Invalido.');
+            document.getElementById('result').innerText = '';
+        }
+
+        
+    }
+</script>
+</html>

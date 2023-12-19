@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width: 200px;
+            height: 180px;
+            margin-top: 20px;
+        }
+        .foto{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="button">aqui</button>
+
+    <div id="div">
+        <!-- <img src="" alt="" class="foto"> -->
+    </div>
+</body>
+<script>
+    const button = document.getElementById('button')
+
+    
+    let contador = 0
+    button.addEventListener('click', ()=> {
+        contador++
+        if(contador > 1) {
+            return
+        }
+        fetch('teste.json').then((response)=> {
+            response.json()
+            .then((data)=> {
+                const div = document.getElementById('div')
+
+                for (let i = 0; i < data.length; i++) {
+                    const item = data[i]
+
+                    const newimg = document.createElement('img')
+                    newimg.setAttribute('src', item.url)
+                    newimg.setAttribute('class', 'foto')
+
+                    div.appendChild(newimg)
+                    
+                }
+            })
+        })
+    })
+</script>
+</html>

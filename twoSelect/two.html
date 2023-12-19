@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+        #myselect2{
+            display: none;
+        }
+        div{
+            display: flex;
+            gap: 30px;
+        }
+        #imagem{
+            width: 150px;
+            height: 150px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>selecione um tipo de bicho</h1>
+
+    <div>
+        <select name="myselect" id="myselect">
+            <option value="" selected disabled>selecione um</option>
+            <option value="Mamíferos">Mamíferos</option>
+            <option value="Herbívoros">Herbívoros</option>
+            <option value="Crustáceos">Crustáceos</option>
+            <option value="Carnívoros">Carnívoros</option>
+        </select>
+        
+        
+        <select name="" id="myselect2">
+        </select>
+    </div>
+    <br><br><br> <br><br><br>
+    <div id="imagem">
+<img src="" alt="" id="imageM">
+    </div>
+
+    <ul id="myul">       
+    </ul>
+
+
+    <p>listar todos os Animais</p>
+    <button>listar</button>
+
+    <table border="1">
+        <tr>
+            <th>Mamíferos</th>
+            <th>Herbívoros</th>
+            <th>Crustáceos</th>
+            <th>Carnívoros</th>
+        </tr>
+        
+    </table>
+    
+</body>
+<script>
+    const myselect = document.getElementById('myselect')
+    const myselect2 = document.getElementById('myselect2')
+    const myul = document.getElementById('myul')
+    const imagem = document.getElementById('imageM')
+
+    function alterSelect1() {
+        myselect2.style.display = 'block'
+        myselect2.innerHTML = ''
+        myul.innerHTML = ''
+        imagem.style.display = 'none'
+
+        const tipos = [
+            {
+                type: "Mamíferos",
+                animals: ["Elefante", "Leão", "Gorila", "Baleia", "Cachorro", "Macaco"]
+            },
+            {
+                type: "Herbívoros",
+                animals: ["Girafa", "Cavalo", "Vaca", "Coelho", "Panda"]
+            },
+            {
+                type: "Crustáceos",
+                animals: ["Caranguejo", "Lagosta", "Siri", "Camarão", "Krill"]
+            },
+            {
+                type: "Carnívoros",
+                animals: ["Tigre", "Águia", "Leopardo", "Orca", "Hiena"]
+            }
+        ];
+
+        const valorSelect = myselect.value
+
+        const optionTitle = document.createElement('option')
+        optionTitle.disabled = true;
+        optionTitle.selected = true;
+        optionTitle.innerHTML = 'Selecione'
+        myselect2.append(optionTitle)
+
+        for (let i = 0; i < tipos.length; i++) {
+            const tipo = tipos[i];
+
+            if(valorSelect === tipo.type) {
+                const NameAnimais = tipo.animals
+
+                for (let index = 0; index < NameAnimais.length; index++) {
+                    const animal = NameAnimais[index];
+
+                    const newOption = document.createElement('option')
+                    newOption.innerText = animal
+
+                    myselect2.append(newOption)
+                    
+                }
+            }
+            
+        }
+    }
+
+    async function alterSelect2() {
+        myul.innerHTML = ''
+        const valorSelect2 = myselect2.value
+        try {
+            const response = await fetch('bicho.json')
+            const data = await response.json()
+
+            for (let i = 0; i < data.length; i++) {
+                const element = data[i];
+
+                if(element.nome === valorSelect2) {
+                    const dataAnimal = element.infor
+                    
+
+                    for (let index = 0; index < dataAnimal.length; index++) {
+                        const dado = dataAnimal[index];
+
+                        const newli = document.createElement('li')
+                        newli.innerText = dado
+                        imagem.style.display = 'block'
+                        imagem.setAttribute('src', element.url)
+
+                        myul.append(newli)
+                        
+                    }
+                }
+            }
+        } catch (error) {
+            alert('Infelizmente ocorreu um erro :(')
+
+            console.log(`Infelizmente ocorreu um erro :( ${error}`)
+        }
+    }
+
+
+    myselect.addEventListener('change', alterSelect1)
+    myselect2.addEventListener('change', alterSelect2)
+</script>
+</html>

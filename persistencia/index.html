@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="add">add</button>
+
+    <br>
+    <ul id="myul">
+
+    </ul>
+</body>
+<script>
+    // Para iNserir dados no localstorange diretamnete é assim
+    //É colocado "localStorage" pra acessar a propriedade e depois para colocar algum dado .setItem() onde o primeiro parametro é o nome da chave e segundo é o valor. 
+
+    localStorage.setItem('name', 'carlos') //pode add o valor da chave diretamnete ou fazendo dinamicamnete
+
+    //add dinamicamnete
+
+    // const nome = prompt('insira seu nome:')
+
+    // localStorage.setItem('name', nome)
+
+    //Para recuperar os dados é pelo metodo getItem() onde o parametro é o nome da chave e o valor fica salvo dentro da variavel que ele está.
+
+    const Nome = localStorage.getItem('name')
+
+    //PARA apagar um item do localstorage é pelo localStorage.removeItem() onde o parametro é o nome da chave 
+    
+    localStorage.removeItem('name')
+
+    // Agora se para apagar todos os dados do localStorage de uma vez é pelo metodo "localStorage.clear()" assim tudo que tiver lá vai sumir 
+
+    localStorage.clear()
+
+    //Agora como salvar obj no localStorage 
+
+    const person = {
+        nome: "carlos",
+        age: 18,
+        job: "programmer"
+    }
+
+    localStorage.setItem("pessoa", person) //se for feito dessa forma vai da ruim 
+
+    //tem primeiro que transformar esse obj para uma string JSON 
+
+    const person2 = {
+        nome: "carlos",
+        age: 18,
+        job: "programmer"
+    }
+
+    const objMod = JSON.stringify(person2)
+
+    localStorage.setItem("pessoa2", objMod)
+
+    let data = localStorage.getItem("pessoa2")
+
+    console.log(data)
+
+    //
+
+    const person3 = {
+        nome: "fabio",
+        age: 18,
+        job: "programmer"
+    }
+
+    localStorage.setItem('pessoa3', JSON.stringify(person3)) // dá pra fazer diretamnete sem colocar em uma variavel 
+    localStorage.clear()
+
+    // let myul = document.getElementById('myul')
+    // let input = document.getElementById('input')
+    // let button = document.getElementById('add')
+
+    // button.addEventListener('click', ()=> {
+
+    //     if(input.value === '') {
+    //         alert('testando')
+    //         return
+    //     }
+
+        
+
+    //     const valorInput = input.value
+
+    //     localStorage.setItem('nome', valorInput)
+
+    //     localStorage.getItem(valorInput)
+
+    //     const newItem = document.createElement('li')
+    //     newItem.innerText = valorInput
+
+    //     myul.append(newItem)
+
+    //    input.value = '' 
+
+
+    // })
+</script>
+</html>

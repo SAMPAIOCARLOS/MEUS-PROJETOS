@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <title>Projeto Prático Guiado 1</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #212529;
+  --border-color: #666;
+  --font-color: #f1f5f9;
+  --primary-color: #4dff91;
+  --error-color: #ff0043;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 0 1.5rem 2.5rem;
+  position: relative;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+#themeSwitcher {
+  background-color: var(--bg-color);
+  border: .125rem solid var(--font-color);
+  color: var(--font-color);
+}
+
+#themeSwitcher:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: .25rem;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  transition: .15s;
+}
+
+input {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: .5rem;
+  color: var(--font-color);
+  display: block;
+  font-size: 1.75rem;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: end;
+  width: 100%;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+#keys button {
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#keys button:hover {
+  filter: brightness(0.8);
+}
+
+#result {
+  border-width: 2px 2px 2px 0;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+#copyToClipboard {
+  background-color: transparent;
+  border: solid var(--border-color);
+  border-width: 2px;
+  border-radius: .5rem 0 0 .5rem;
+  color: var(--font-color);
+  cursor: pointer;
+  display: block;
+  height: 4.25rem;
+  width: 6rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.error {
+  background-color: var(--error-color);
+}
+
+.success {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+  </style>
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <main data-theme="dark">
+    <header class="flex align-center justify-between">
+      <h1>Calc.js</h1>
+      <button id="themeSwitcher">Switch Theme Dark/Light</button>
+    </header>
+    <input type="text" id="input">
+    <div id="keys">
+      <button id="clear">C</button>
+      <button class="charKey" data-value=" ( ">(</button>
+      <button class="charKey" data-value=" ) ">)</button>
+      <button class="charKey" data-value=" / ">/</button>
+      <button class="charKey" data-value="7">7</button>
+      <button class="charKey" data-value="8">8</button>
+      <button class="charKey" data-value="9">9</button>
+      <button class="charKey" data-value=" * ">*</button>
+      <button class="charKey" data-value="4">4</button>
+      <button class="charKey" data-value="5">5</button>
+      <button class="charKey" data-value="6">6</button>
+      <button class="charKey" data-value=" - ">-</button>
+      <button class="charKey" data-value="1">1</button>
+      <button class="charKey" data-value="2">2</button>
+      <button class="charKey" data-value="3">3</button>
+      <button class="charKey" data-value=" + ">+</button>
+      <button class="charKey" data-value="0">0</button>
+      <button class="charKey" data-value=".">.</button>
+      <button class="charKey" data-value=" % ">mod</button>
+      <button id="equal">=</button>
+    </div>
+    <section class="flex align-center justify-between">
+      <button id="copyToClipboard">Copy</button>
+      <input type="text" id="result" disabled>
+    </section>
+  </main>
+</body>
+<script>
+    const main = document.querySelector("main")
+const root = document.querySelector(":root")
+const input = document.getElementById("input")
+const resultInput = document.getElementById("result")
+const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
+
+document.querySelectorAll(".charKey").forEach(function (charKeyBtn) {
+  charKeyBtn.addEventListener("click", function () {
+    const value = charKeyBtn.dataset.value
+    input.value += value
+  })
+})
+
+document.getElementById("clear").addEventListener("click", function () {
+  input.value = ""
+  input.focus()
+})
+
+input.addEventListener("keydown", function (ev) {
+  ev.preventDefault()
+  if (allowedKeys.includes(ev.key)) {
+    input.value += ev.key
+    return
+  }
+  if (ev.key === "Backspace") {
+    input.value = input.value.slice(0, -1)
+  }
+  if (ev.key === "Enter") {
+    calculate()
+  }
+})
+
+document.getElementById("equal").addEventListener("click", calculate)
+
+function calculate() {
+  resultInput.value = "ERROR"
+  resultInput.classList.add("error")
+  const result = eval(input.value)
+  resultInput.value = result
+  resultInput.classList.remove("error")
+}
+
+document.getElementById("copyToClipboard").addEventListener("click", function (ev) {
+  const button = ev.currentTarget
+  if (button.innerText === "Copy") {
+    button.innerText = "Copied!"
+    button.classList.add("success")
+    navigator.clipboard.writeText(resultInput.value)
+  } else {
+    button.innerText = "Copy"
+    button.classList.remove("success")
+  }
+})
+
+document.getElementById("themeSwitcher").addEventListener("click", function () {
+  if (main.dataset.theme === "dark") {
+    root.style.setProperty("--bg-color", "#f1f5f9")
+    root.style.setProperty("--border-color", "#aaa")
+    root.style.setProperty("--font-color", "#212529")
+    root.style.setProperty("--primary-color", "#26834a")
+    main.dataset.theme = "light"
+  } else {
+    root.style.setProperty("--bg-color", "#212529")
+    root.style.setProperty("--border-color", "#666")
+    root.style.setProperty("--font-color", "#f1f5f9")
+    root.style.setProperty("--primary-color", "#4dff91")
+    main.dataset.theme = "dark"
+  }
+})
+</script>
+</html>

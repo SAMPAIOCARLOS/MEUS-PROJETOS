@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        main {
+            /* border: 1px solid red; */
+            min-width: 300px;
+            max-width: 400px;
+            background-color: #444444;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        #result {
+
+            padding: 10px;
+            text-align: end;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            background-color: #696969;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-size: 2em;
+
+        }
+
+        table {
+            /* border: 1px solid rgb(0, 4, 255); */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: auto;
+        }
+
+        tr {
+            display: flex;
+            gap: 5px;
+        }
+
+        button {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            color: #fff;
+        }
+
+        .color1 {
+            background-color: rgb(21, 88, 88);
+        }
+
+        .color2 {
+            background-color: rgba(28, 212, 151, 0.815)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>Calculadora</h1>
+        </div>
+        <table>
+            <p id="result"></p>
+            <thead>
+                <tr>
+                    <th><button class="color1 valores">()</button></th>
+                    <th><button class="color1 valores">%</button></th>
+                    <th><button class="color1" id="remover">C</button></th>
+                    <th><button class="color1 valores">/</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="color2 valores">7</button></td>
+                    <td><button class="color2 valores">8</button></td>
+                    <td><button class="color2 valores">9</button></td>
+                    <td><button class="color1 valores">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2 valores">4</button></td>
+                    <td><button class="color2 valores">5</button></td>
+                    <td><button class="color2 valores">6</button></td>
+                    <td><button class="color1 valores">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2 valores">1</button></td>
+                    <td><button class="color2 valores">2</button></td>
+                    <td><button class="color2 valores">3</button></td>
+                    <td><button class="color1 valores">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="color2 valores">0</button></td>
+                    <td><button class="color2 valores">.</button></td>
+                    <td><button class="color2" id="removeUn"><</button></td>
+                            
+                    
+                    <td><button class="color1" id="calcular">=</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script>
+    const valores = document.querySelectorAll('.valores')
+
+
+    for (let i = 0; i < valores.length; i++) {
+        const num = valores[i];
+
+        num.addEventListener('click', () => {
+            let numero = num.innerHTML;
+
+            let resultado = document.getElementById('result').innerHTML
+            document.getElementById('result').innerHTML = resultado + numero
+        })
+    }
+
+    const remover = document.getElementById('remover').addEventListener('click', () => {
+        document.getElementById('result').innerHTML = ''
+    })
+
+    const removeUn = document.getElementById('removeUn').addEventListener('click', () => {
+        let ultimoNum = document.getElementById('result').innerHTML
+        document.getElementById("result").innerHTML = ultimoNum.slice(0, -1)
+    })
+
+    const calcular = document.getElementById('calcular').addEventListener('click', () => {
+        try {
+            let calculo = document.getElementById('result').innerHTML;
+            document.getElementById('result').innerHTML = eval(calculo)
+
+            if (calculo.length < 1) {
+                alert(`Insira algo para que possa ser calculado.`)
+                document.getElementById('result').innerHTML = ''
+            }
+        } catch (error) {
+            alert(`Valor invalido!!`)
+            document.getElementById('result').innerHTML = ''
+        }
+    })
+</script>
+
+</html>

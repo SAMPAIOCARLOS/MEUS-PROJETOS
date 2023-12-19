@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Dinâmica</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+<input type="radio" id="button">
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Os dados serão inseridos aqui dinamicamente -->
+    </tbody>
+  </table>
+
+  <script>
+    // Seu JSON de exemplo
+    var dadosJson = [
+      { "Nome": "João", "Idade": 25, "Email": "joao@email.com" },
+      { "Nome": "Maria", "Idade": 30, "Email": "maria@email.com" },
+      { "Nome": "José", "Idade": 22, "Email": "jose@email.com"}
+    ];
+
+    // Função para criar as linhas e células dinamicamente
+    document.getElementById("button").addEventListener("change", ()=> {
+      var tabela = document.getElementById('tabela');
+      var tbody = tabela.getElementsByTagName('tbody')[0];
+
+      for (var i = 0; i < dadosJson.length; i++) {
+        var linha = tbody.insertRow(i);
+
+        for (var chave in dadosJson[i]) {
+          var celula = linha.insertCell();
+          celula.innerHTML = dadosJson[i][chave];
+        }
+      }
+    })
+      
+    
+
+    // Chame a função para popular a tabela
+    
+  </script>
+
+</body>
+</html>

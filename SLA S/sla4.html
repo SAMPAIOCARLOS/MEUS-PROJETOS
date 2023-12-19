@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgba(231, 231, 231, 0.608);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.071);
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .barrinha-menu {
+            height: 1px;
+            width: 15px;
+            background-color: #000;
+            display: block;
+            margin: 10px;
+            transition: width 2s ease, margin-left 2s ease;
+            
+        }
+
+
+        div:hover .barrinha-menu {
+           width: 35px;
+           transition: width 0.5s ease, margin-left 0.5s ease;
+          
+        }
+
+        #barrinha{
+            
+            font-size: 2em;
+        }
+
+        main{
+            background-color: #ffffff;
+            min-height: 355px;
+            max-height: 800px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid gainsboro;
+            width: 100vw;
+            
+        }
+        #amazon{
+            padding: 10px;
+            
+        }
+
+        #amazon > a{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        table{
+            border: 1px solid black;
+            width: 95%;
+            margin: auto;
+            border-collapse: collapse;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.129);
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        th, tr, td{
+            border: 1px solid gray;
+            padding: 5px;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.129);
+            
+        }
+
+        .space-between{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .padding-bottom{
+            padding-bottom: 15px;
+            padding-top: 10px;
+        }
+
+            
+        .space-around{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .gray{
+            background-color: rgba(128, 128, 128, 0.136);
+        }
+
+        #rodape{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #rodape > p{
+            margin-left: 20px;
+        }
+
+        #div-span{
+            /* border: 1px solid black; */
+            margin-right: 20px;
+        }
+
+        #input-1{
+            width: 50px;
+        }
+        
+        ion-icon{
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        ion-icon:hover{
+            background-color: rgba(128, 128, 128, 0.644);
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        
+
+
+        button{
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.196);
+            margin-left: -5px;
+            color: rgba(0, 72, 255, 0.614);
+        }
+
+        #button-blue{
+            background-color: rgb(64, 124, 233);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="barrinha">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <div>
+              <ion-icon name="person-outline"></ion-icon>
+          </div>
+    </header>
+
+    <h1 style="margin-left: 10px;">Tenants</h1>
+
+    <main>
+        <div id="amazon">
+            <a href="https://ionic.io/ionicons/usage">
+
+                <ion-icon name="logo-amazon"></ion-icon>
+                <!-- <span>Amazon</span> -->
+                <h1>amazon</h1>
+            </a>
+        </div>
+        <hr>
+        <div style="display: flex;" id="nav">
+        
+                <div style="display: flex;">
+                    <p>Exibir</p>
+                    <input type="number" placeholder="30" id="input-1">
+                    <p>resultados por página</p>
+                </div>
+            <button id="button">aqui</button>
+                    
+                <div style="margin-right: 15px;">
+                    <label for="pesquisar">Pesquisar</label>
+                    <input type="text" name="pesquisar" id="pesquisar">
+                </div>
+                    
+        </div>
+<hr>
+        <section>
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="space-between">
+                                Nome
+                                    <ion-icon name="arrow-undo-outline"></ion-icon>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="space-between">
+                                Número de Série
+                                <ion-icon name="arrow-undo-outline"></ion-icon>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="space-between">
+                                Ativo
+                                <ion-icon name="arrow-undo-outline"></ion-icon>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="space-between">
+                                Ações
+                                <ion-icon name="arrow-undo-outline"></ion-icon>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                
+
+                <tbody id="tbody">
+                    <tr class="gray">
+                        <td class="padding-bottom">
+                            Rodrigo
+                        </td>
+                        <td>
+                            5301
+                        </td>
+                        <td>
+                            Não
+                        </td>
+                        <td>
+                            <div class="space-around">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+
+                
+            </table>
+            
+            <div id="rodape">
+                <p>Mostrando de 1 até 4 de 4 registos</p>
+                <div id="div-span">
+                    <button>Anterior</button>
+                    <button id="button-blue">1</button>
+                    <button>Próximo</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <script src="sla4.js"></script>
+</html>

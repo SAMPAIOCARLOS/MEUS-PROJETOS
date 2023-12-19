@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: linear-gradient(to bottom, #141414, #10063a, #4c17b6, #511781, #581490);
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        form{
+            /* border: 1px solid red; */
+            padding: 20px;
+            background-image: linear-gradient(to bottom, #3623e1d3, #6025d5, #8a18e8);
+            border-radius: 20px;
+            box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.619);
+        }
+
+        h1{
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p{
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        input{
+            margin-bottom: 20px;
+            padding: 8px;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            background-image: linear-gradient(to right, #10063a, #10063ae4);
+            color: #ffffff;
+        }
+
+        input::placeholder{
+            color: #ffffff;
+        }
+
+        button{
+            width: 60%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 8px;
+            border: none;
+            background-color: rgb(45, 205, 34);
+            color: #ffffff;
+            font-weight: bold;
+
+        }
+
+        #botao{
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>LOGIN</h1>
+
+        <div>
+            <label for="usuario"><p>Usuário</p></label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+        </div>
+
+        <div>
+            <label for="senha"><p>Senha</p></label>
+            <input type="password" name="senha" id="senha" placeholder="Senha">
+        </div>
+
+        
+            <div id="botao">
+                <button>LOGIN</button>
+            </div>
+        
+
+        
+    </form>
+</body>
+</html>

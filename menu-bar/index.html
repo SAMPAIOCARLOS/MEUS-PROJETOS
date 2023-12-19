@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu bar respons</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            border: 1px solid red;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(0, 0, 32);
+            color: #fff;
+        }
+        #navegation{
+            border: 1px solid blue;
+            width: 30%;
+        }
+        ul{
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bar{
+            width: 30px;
+            height: 3px;
+            border-radius: 2px;
+            
+            background-color: #fff;
+        }
+        #hand{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            border: 1px solid red;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>carlos</h1>
+
+            <div id="navegation">
+                <ul>
+                    <li>git</li>
+                    <li>github</li>
+                    <li>html</li>
+                </ul>
+            </div>
+
+            <div id="hand">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

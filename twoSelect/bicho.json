@@ -1,0 +1,108 @@
+
+  [
+    {
+        "nome": "Elefante",
+        "infor": ["gordo", "pesado"],
+        "url": "img animais/Mamíferos/Elefante.jpg"
+    },
+    {
+        "nome": "Leão",
+        "infor": ["bravo", "ruim"],
+        "url": "img animais/Mamíferos/leão.webp"
+    },
+    {
+        "nome": "Gorila",
+        "infor": ["agua", "bicho"],
+        "url": "img animais/Mamíferos/Gorilla.jpg"
+    },
+    {
+      "nome": "Baleia",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Mamíferos/Baleia.webp"
+    },
+    {
+      "nome": "Macaco",
+      "infor": ["preto", "sem vergonha"],
+      "url": "img animais/Mamíferos/Macaco.jpg"
+    },
+    {
+      "nome": "Cachorro",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Mamíferos/Cachorro.jpeg"
+    },
+    {
+      "nome": "Girafa",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Herbívoros/Girafa.jpg"
+    },
+    {
+      "nome": "Cavalo",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Herbívoros/Cavalo.webp"
+    },
+    {
+      "nome": "Vaca",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Herbívoros/Vaca.jpg"
+    },
+    {
+      "nome": "Coelho",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Herbívoros/Coelho.jpeg"
+    },
+    {
+      "nome": "Panda",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Herbívoros/Panda.webp"
+    },
+    {
+      "nome": "Caranguejo",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Crustáceos/Caranguejo.jpg"
+    },
+    {
+      "nome": "Lagosta",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Crustáceos/Lagosta.webp"
+    },
+    {
+      "nome": "Siri",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Crustáceos/siri.jpg"
+    },
+    {
+      "nome": "Camarão",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Crustáceos/Camarão.jpg"
+    },
+    {
+      "nome": "Krill",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Crustáceos/Krill.webp"
+    },
+    {
+      "nome": "Tigre",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Carnívoros/Tigre.webp"
+    },
+    {
+      "nome": "Águia",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Carnívoros/Águia.jpg"
+    },
+    {
+      "nome": "Leopardo",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Carnívoros/Leopardo.webp"
+    },
+    {
+      "nome": "Orca",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Carnívoros/Orca.webp"
+    },
+    {
+      "nome": "Hiena",
+      "infor": ["agua", "bicho"],
+      "url": "img animais/Carnívoros/Hiena.jpeg"
+    } 
+  ]

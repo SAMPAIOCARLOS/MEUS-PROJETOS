@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            width: 50%;
+            gap: 10px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        li{
+            border: 1px solid black;
+            list-style: none;
+            border-color: var(--color--border);
+        }
+        body{
+            color: var(--color--font);
+            background-color: var(--color--fundo);
+            border-color: var(--color--border);
+        }
+        :root{
+            --color--fundo: #fff;
+            --color--font: #000;
+            --color--border: #000;
+        }
+        .theme-white{
+            --color--fundo: #000;
+            --color--font: #fff;
+            --color--border: #fff;
+        }
+
+        span{
+            width: 100px;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body class="">
+
+    <input type="text" id="filter" placeholder="escreva algo">
+
+    <ul class="cards">
+
+        <li>
+            <h1>mouse</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem molestiae vitae ea debitis molestias illum fugit inventore, a illo tempore accusamus, mollitia dolores itaque veniam necessitatibus dicta rerum optio?</p>
+            
+        </li>
+
+        <li>
+            <h1>Notebok</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem molestiae vitae ea debitis molestias illum fugit inventore, a illo tempore accusamus, mollitia dolores itaque veniam necessitatibus dicta rerum optio?</p>
+        </li>
+
+        <li>
+            <h1>Teclado</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem molestiae vitae ea debitis molestias illum fugit inventore, a illo tempore accusamus, mollitia dolores itaque veniam necessitatibus dicta rerum optio?</p>
+        </li>
+
+        <li>
+            <h1>fone</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem molestiae vitae ea debitis molestias illum fugit inventore, a illo tempore accusamus, mollitia dolores itaque veniam necessitatibus dicta rerum optio?</p>
+        </li>
+
+    </ul>
+
+    <div>
+        <button id="mais">mais</button>
+        
+        <button id="menos">menos</button>
+    </div>
+
+    
+
+
+    <div>
+        <button id="noitedia">
+
+            <span id="span"><ion-icon name="sunny-outline"></ion-icon></span>
+
+        </button>
+
+    </div>
+</body>
+<script>
+
+const span = document.getElementById('span')
+    let tamanho = 16
+    const texto = document.getElementById('texto')
+    const body = document.body
+
+    document.getElementById('mais').addEventListener('click', ()=> {
+        tamanho += 1
+        body.style.fontSize = tamanho + 'px'
+    })
+
+    document.getElementById('menos').addEventListener('click', ()=> {
+        tamanho -= 1
+        body.style.fontSize = tamanho + 'px'
+   
+    })
+
+    document.getElementById('noitedia').addEventListener('click', ()=> {
+        document.body.classList.toggle("theme-white")
+
+        if(body.classList.contains('theme-white')) {
+        span.innerHTML = '<ion-icon name="moon-outline"></ion-icon>'
+        } else{
+            span.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+        }
+    })
+
+    let cards = document.querySelectorAll('.cards li')
+    let filter = document.getElementById("filter")
+    
+    
+    filter.addEventListener('keyup', ()=> {
+        
+        if(filter.value !== "") {
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+
+                let title = card.querySelector('h1')
+
+                title = title.innerText.toLowerCase()
+
+                let textfilter = filter.value.toLowerCase()
+
+                if(!title.includes(textfilter)) {
+                    card.style.display = 'none'
+                    
+                } else{
+                    card.style.display = 'block'
+                
+                }
+                
+            }
+        } else{
+            for (let index = 0; index < cards.length; index++) {
+                const card = cards[index];
+
+                card.style.display = 'block'
+                
+            }
+        }
+    })
+
+
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

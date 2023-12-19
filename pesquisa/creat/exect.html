@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Dinâmica</title>
+</head>
+<body>
+    <button onclick="carregarDados()">aqui</button>
+
+  <table border="1" id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-corpo">
+      
+    </tbody>
+  </table>
+
+  <script>
+    
+    function carregarDados() {
+      fetch('aquivo.json')
+        .then(response => response.json())
+        .then(data => {
+          adicionarLinhasTabela(data);
+        })
+        .catch(error => console.error('Erro ao carregar dados:', error));
+    }
+
+   
+    function adicionarLinhasTabela(data) {
+      const tabelaCorpo = document.getElementById('tabela-corpo');
+
+      for (let i = 0; i < data.length; i++) {
+        const dado = data[i];
+
+        const newLine = tabelaCorpo.insertRow()
+
+        
+        const newtd = newLine.insertCell()
+        newtd.innerHTML = dado.nome
+        
+        const descrition = newLine.insertCell()
+        descrition.innerHTML = dado.descricao
+      }
+      
+    }
+    
+  </script>
+</body>
+</html>

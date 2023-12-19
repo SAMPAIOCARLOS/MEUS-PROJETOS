@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myselect2{
+            display: none;
+        }
+        div{
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>selecione um tipo de bicho</h1>
+
+    <div>
+        <select name="myselect" id="myselect">
+            <option value="" selected disabled>selecione um</option>
+            <option value="Mamíferos">Mamíferos</option>
+            <option value="Herbívoros">Herbívoros</option>
+            <option value="Crustáceos">Crustáceos</option>
+            <option value="Carnívoros">Carnívoros</option>
+        </select>
+        
+        
+        <select name="" id="myselect2">
+            <option value="" disabled selected>opções</option>
+        </select>
+    </div>
+
+    <ul id="myul">
+
+        <!-- <p id="paragrafo"></p> -->
+        
+    </ul>
+
+
+</body>
+<script>
+    const myselect = document.getElementById('myselect')
+    const myul = document.getElementById('myul')
+    const myselect2 = document.getElementById('myselect2')
+
+function mudar() {
+    myul.innerHTML = ''
+    const valorSelect = myselect.value 
+
+    const tipos = [
+      {
+        type: "Mamíferos",
+        animals: ["Elefante", "Leão", "Gorila", "Baleia", "Cachorro"]
+      },
+      {
+        type: "Herbívoros",
+        animals: ["Girafa", "Cavalo", "Vaca", "Coelho", "Panda"]
+      },
+      {
+        type: "Crustáceos",
+        animals: ["Caranguejo", "Lagosta", "Siri", "Camarão", "Krill"]
+      },
+      {
+        type: "Carnívoros",
+        animals: ["Tigre", "Águia", "Leopardo", "Orca", "Hiena"]
+      }
+    ];
+    
+    
+    
+    myselect2.style.display = 'block'
+
+    const optionTitle = document.createElement('option');
+    optionTitle.innerText = 'Escolher';
+    optionTitle.disabled = true;
+    optionTitle.selected = true;
+    myselect2.innerHTML = ''
+    myselect2.appendChild(optionTitle);
+
+    
+    for (let i = 0; i < tipos.length; i++) {
+        const tipo = tipos[i];
+
+        if(tipo.type === valorSelect) {
+
+            const valorSelect2 = myselect2.value
+
+            const nomes = tipo.animals
+            
+
+            for (let index = 0; index < nomes.length; index++) {
+                const element = nomes[index];
+
+                const newoption = document.createElement('option')
+                newoption.innerText = element
+
+                myselect2.appendChild(newoption)
+
+            }   
+        }   
+    }
+}
+
+function mudar2(){
+    myul.innerHTML = ''
+    fetch('bicho.json').then((response)=> {
+        response.json()
+        .then((data)=> {
+            for (let ix = 0; ix < data.length; ix++) {
+                const element = data[ix];
+                
+                let valorSelect2 = document.getElementById('myselect2').value
+                
+            //    const paragrafo = document.getElementById('paragrafo')
+
+                if(element.nome === valorSelect2) {
+
+                    const item = element.infor    
+                    
+                    for (let end = 0; end < item.length; end++) {
+                        const Item = item[end];
+
+                        const newli = document.createElement('li')
+                        newli.innerHTML = Item
+                        myul.appendChild(newli)
+                        
+                    }
+                    
+                }
+                 
+            }
+        })
+    })
+}
+
+               
+myselect.addEventListener('change', mudar)
+myselect2.addEventListener('change', mudar2)
+
+</script>
+</html>

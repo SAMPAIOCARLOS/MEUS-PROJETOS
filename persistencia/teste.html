@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button id="add">add</button>
+
+    <ul id="myul">
+
+    </ul>
+
+    <button id="limpar">clear</button>
+
+    
+</body>
+<script>
+
+
+    const input = document.getElementById('input')
+    const button = document.getElementById('add')
+    document.getElementById('limpar').addEventListener('click', () => {
+        localStorage.clear()
+        location.reload()
+    })
+
+
+
+    button.addEventListener('click', () => {
+        if (input.value === "") {
+            return
+        }
+        myul.innerHTML = ''
+
+        const valorInput = input.value
+
+        let itens = JSON.parse(localStorage.getItem('itens')) || []
+
+        itens.push(valorInput)
+
+        localStorage.setItem('itens', JSON.stringify(itens))
+
+        let data = localStorage.getItem('itens');
+
+        loadData(data)
+
+        input.value = ''
+    })
+
+
+    window.addEventListener('load', function () {
+        let data = localStorage.getItem('itens');
+        loadData(data)
+    })
+
+    function loadData(data) {
+
+        const myul = document.getElementById('myul')
+
+        let itens = JSON.parse(data)
+
+        for (let item of itens) {
+            const newli = document.createElement("li")
+            newli.innerText = item
+
+            myul.append(newli)
+        }
+
+    }
+
+    
+
+</script>
+
+</html>

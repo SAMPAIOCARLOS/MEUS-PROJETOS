@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="entrada">
+    <button id="button">falar</button>
+</body>
+<script>
+    let button = document.getElementById('button')
+
+    button.addEventListener('click', ()=> {
+        const texto = document.getElementById('entrada').value
+
+        let voz = new SpeechSynthesisUtterance(texto)
+
+        voz.lang = 'pt-PT'
+        voz.pitch = 3
+        voz.volume = 1
+        voz.rate = 1
+
+        speechSynthesis.speak(voz)
+    })
+</script>
+</html>

@@ -1,0 +1,9 @@
+[
+    { "nivel": 42, "nome": "thrall", "raca": "Orc", "classe": "Xamã", "url": ""},
+    { "nivel": 28, "nome": "Garrosh", "raca": "Orc", "classe": "Guerreiro", "url": ""},
+    { "nivel": 35, "nome": "Varok", "raca": "Orc", "classe": "Guerreiro", "url": ""},
+    { "nivel": 35, "nome": "Uther", "raca": "Humano", "classe": "Paladino", "url": ""},
+    { "nivel": 26, "nome": "Jaina", "raca": "Humano", "classe": "Maga", "url": ""},
+    { "nivel": 39, "nome": "Tyrande", "raca": "Elfo Noturno", "classe": "Sacerdotisa", "url": ""},
+    { "nivel": 29, "nome": "Muradin", "raca": "Anão", "classe": "Guerreiro", "url": ""}
+]

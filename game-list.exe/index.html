@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid rgb(38, 0, 255); */
+            height: 250px;
+        }
+        #table{
+            /* width: 50%; */
+            display: none;
+        }
+        .title{
+            /* border: 1px solid red; */
+            width: 20%;
+        }
+        /* #select{
+           
+        } */
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>Personagens</h1>
+            <br>
+            <p>click aqui para visualizar os personagens</p>
+
+            <button id="visualizar">visualizar</button>
+            <button id="voltar">voltar</button>
+        </div>
+        <header>
+            <table border="1" id="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nivel</th>
+                        <th>Raça</th>
+                        <th class="classe">Classe</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>thrall</td>
+                        <td>42</td>
+                        <td>Orc</td>
+                        <td class="classe">Xamã</td>
+                    </tr>
+
+                    <tr id="teste">
+                        <td>Garrosh</td>
+                        <td>42</td>
+                        <td>Orc</td>
+                        <td class="classe">Guerreiro</td>
+                    </tr>
+
+                    <tr>
+                        <td>Varok</td>
+                        <td>35</td>
+                        <td>Orc</td>
+                        <td class="classe">Guerreiro</td>
+                    </tr>
+
+                    <tr>
+                        <td>Uther</td>
+                        <td>35</td>
+                        <td>Humano</td>
+                        <td class="classe">Paladino</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jaina</td>
+                        <td>26</td>
+                        <td>Humano</td>
+                        <td class="classe">Maga</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tyrande</td>
+                        <td>39</td>
+                        <td>Elfo Noturno</td>
+                        <td class="classe">Sacerdotisa</td>
+                    </tr>
+
+                    <tr>
+                        <td>Muradin</td>
+                        <td>29</td>
+                        <td>Anão</td>
+                        <td class="classe">Guerreiro</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </header>
+
+        <div id="select">
+            <div>
+                <select id="myselect">
+                    <option value="" selected disabled>selecionar por classes</option>
+                    <option value="Orc">class Orc</option>
+                    <option value="Humano">class Humano</option>
+                    <option value="ElfoNoturno">class Elfo noturno</option>
+                    <option value="anao">anão</option>
+                </select>
+                <button id="buscar">buscar</button>
+            </div>
+
+            <ul id="listSelect">
+            </ul>
+        </div>
+        
+    </div>
+</body>
+<script>
+    const personagens = [
+    { nivel: 42, nome: "thrall", raca: "Orc", classe: "Xamã" },
+    { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+    { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+    { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+    { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+  ]
+
+    let table = document.getElementById('table')
+
+    const visualizar = document.getElementById('visualizar')
+    const voltar = document.getElementById('voltar')
+
+    visualizar.addEventListener('click', ()=> {
+        table.style.display = 'block'
+    })
+
+    voltar.addEventListener('click', ()=> {
+        location.reload()
+    })
+
+    let myselect = document.getElementById('myselect')
+
+   
+    const buscar = document.getElementById('buscar')
+
+    buscar.addEventListener('click', ()=> {
+
+        const myul = document.getElementById('listSelect')
+
+        // myul.innerHTML = ""
+
+        let valorselect = myselect.value
+
+        if(valorselect === "Orc") {
+           
+            personagens.filter((data)=> {
+                let newli = document.createElement('li')
+                let newSpan = document.createElement('span')
+                if(data.raca === 'Orc') {
+                    newSpan.innerHTML = 'nome:' + data.nome
+                    myul.appendChild(newli)
+                    newli.appendChild(newSpan)
+                    
+                }if(data.raca === 'Humano') {
+                    newSpan.innerHTML = 'nome:' + data.nome
+                }
+            })
+          
+        }
+        
+    })
+
+   
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

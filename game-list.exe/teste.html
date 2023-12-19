@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Selecionar por Classe</title>
+</head>
+<body>
+  <select id="myselect">
+    <option value="" selected disabled>Selecionar por classes</option>
+    <option value="Xamã">Xamã</option>
+    <option value="Guerreiro">Guerreiro</option>
+    <option value="Paladino">Paladino</option>
+    <option value="Maga">Maga</option>
+  </select>
+  <button id="buscar">Buscar</button>
+  <ul id="resultado"></ul>
+
+  <script>
+    const personagens = [
+      { nivel: 42, nome: "thrall", raca: "Orc", classe: "Xamã" },
+      { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+      { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+      { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+      { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+      { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+      { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+    ];
+
+    const select = document.getElementById("myselect");
+    const button = document.getElementById("buscar");
+    const resultado = document.getElementById("resultado");
+
+    button.addEventListener("click",()=> {
+      const classeSelecionada = select.value;
+
+      resultado.innerHTML = "";
+      let encontrados = false;
+
+      for (let i = 0; i < personagens.length; i++) {
+        const personagem = personagens[i];
+        if (personagem.classe === classeSelecionada) {
+          const li = document.createElement("li");
+          li.textContent = `Nome: ${personagem.nome}, Nível: ${personagem.nivel}, Raça: ${personagem.raca}`;
+          resultado.appendChild(li);
+          encontrados = true;
+        }
+      }
+
+      if (!encontrados) {
+        const li = document.createElement("li");
+        li.textContent = "Nenhum personagem encontrado.";
+        resultado.appendChild(li);
+      }
+    });
+    
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selecionar por Classe</title>
+</head>
+<body>
+  <select id="myselect">
+    <option value="" selected disabled>Selecionar por classes</option>
+    <option value="Xamã">Xamã</option>
+    <option value="Guerreiro">Guerreiro</option>
+    <option value="Paladino">Paladino</option>
+    <option value="Maga">Maga</option>
+  </select>
+  <ul id="resultado"></ul>
+
+  <script>
+    const personagens = [
+      { nivel: 42, nome: "thrall", raca: "Orc", classe: "Xamã" },
+      { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+      { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+      { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+      { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+      { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+      { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+    ];
+
+    const select = document.getElementById("myselect");
+    const resultado = document.getElementById("resultado");
+
+    
+    function exibirResultado() {
+      const classeSelecionada = select.value;
+
+      resultado.innerHTML = "";
+      let encontrados = false;
+
+      for (let i = 0; i < personagens.length; i++) {
+        const personagem = personagens[i];
+        if (personagem.classe === classeSelecionada) {
+          const li = document.createElement("li");
+          li.textContent = `Nome: ${personagem.nome}, Nível: ${personagem.nivel}, Raça: ${personagem.raca}`;
+          resultado.appendChild(li);
+          encontrados = true;
+        }
+      }
+
+      if (!encontrados) {
+        const li = document.createElement("li");
+        li.textContent = "Nenhum personagem encontrado.";
+        resultado.appendChild(li);
+      }
+    }
+    
+    exibirResultado(); 
+
+    select.addEventListener("change", exibirResultado);
+  </script>
+</body>
+</html>

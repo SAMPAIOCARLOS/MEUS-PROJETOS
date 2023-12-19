@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="myul">
+
+    </ul>
+
+    <button id="button">aqui</button>
+</body>
+<script>
+    // const button = document.getElementById('button')
+
+    // button.addEventListener('click', async ()=> {
+
+    //     const response = await fetch('./data.json')        
+    //     const data = await response.json()
+
+    //     const myul = document.getElementById('myul')
+
+    //     for (let i = 0; i < data.length; i++) {
+    //         const item = data[i]
+
+    //         const newli = document.createElement('li')
+    //         newli.innerHTML = item.nome
+    //         myul.append(newli)
+            
+    //     }
+    // })
+    
+
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', async ()=> {
+        
+        try {
+            const response = await fetch('./data.json');
+            const data = await response.json();
+
+            const myul = document.getElementById('myul')
+
+            for (let i = 0; i < data.length; i++) {
+                const item = data[i];
+                const newli = document.createElement('li')
+                newli.innerText = item.nome
+
+                myul.append(newli)
+                
+            }
+
+        } catch (error) {
+            alert('deu ruim')
+        }
+    })
+
+        
+    
+
+    // button.addEventListener('click', () => {
+    //     fetch('data.jso').then((response) => {
+    //         response.json()
+    //             .then((data) => {
+    //                 const myul = document.getElementById('myul')
+
+    //                 for (let i = 0; i < data.length; i++) {
+    //                     const item = data[i]
+
+    //                     const newli = document.createElement('li')
+    //                     newli.innerHTML = item.nome
+
+    //                     myul.append(newli)
+
+    //                 }
+    //             }).catch(() => {
+    //                 alert('deu ruim')
+    //             })
+    //     })
+    // })
+</script>
+
+</html>

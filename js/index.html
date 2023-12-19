@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(243, 251, 251);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 99vh;
+        }
+        .main{
+            /* border: 1px solid red; */
+            width: 20%;
+            min-height: 100px;
+           
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 7px;
+            gap: 10px;
+            box-shadow: 1px 1px 1px rgb(217, 217, 217);
+            border: 1px solid rgb(217, 217, 217);
+        }
+        input{
+            padding: 8px;
+            outline-color: rgb(217, 217, 217);
+            
+            
+        }
+        #button{
+            padding: 8px;
+            background-color: rgb(0, 174, 255);
+            border: none;
+            outline: none;
+            border-radius: 8px;
+        }
+        #button:hover{
+            color: #fff;
+            box-shadow: 2px 2px 5px rgb(122, 213, 255);
+            transition-duration: 0.3s;
+        }
+        /* .div-ul{
+            background-color: #ffffff;
+        } */
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        li{
+           list-style: none;
+           padding: 8px;
+           border: 1px solid rgb(217, 217, 217);
+           box-shadow: 1px 1px 1px rgb(217, 217, 217);
+           border-radius: 4px;
+           background-color: #ffffff;
+           display: flex;
+           justify-content: space-between;
+        }
+        .icon{
+            border: none;
+            background-color: #fff;
+            color: #ff0000;
+            font-size: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="" id="form">
+            <input type="text" placeholder="Adicionar Item" id="input">
+            <button id="button">Adicionar</button>
+        </form>
+        
+        <div class="div-ul">
+            <ul id="ul">
+                <!-- <li>item
+                    <button class="icon" id="remover"><ion-icon name="close-outline"></ion-icon></button>
+                </li> -->
+                
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let form = document.getElementById('form')
+    const ul = document.getElementById('ul')
+
+    const remover = document.getElementById('remover')
+
+    form.addEventListener('submit', (event)=> {
+        event.preventDefault()
+
+        
+        const input = document.getElementById('input')
+        const valor = input.value
+
+        if(valor === "") {
+            alert(`Escreva algo para que seja adicionado.`)
+            return
+        }
+
+        const newli = document.createElement('li')
+        newli.textContent = valor
+        
+        const newbutton = document.createElement('button')
+        newbutton.innerHTML = '<ion-icon name="close-outline"></ion-icon>'
+        newbutton.setAttribute("class", "icon")
+
+        newbutton.addEventListener('click', ()=> {
+            let confirmacao = confirm(`deseja remover esse item?`)
+            if(confirmacao === true) {
+                ul.removeChild(newli)
+            }
+        })
+        
+        newli.appendChild(newbutton)
+
+        ul.appendChild(newli)
+
+        input.value = ""
+            
+
+    })
+
+    
+
+
+
+   
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
+
+

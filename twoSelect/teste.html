@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mula{
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="aumentar">aumentar</span>
+        <span id="diminuir">diminuir</span>
+    </div>
+    <h1>testando</h1>
+
+    <ul>
+        <li>teste1</li>
+        <li>teste2</li>
+        <li>teste3</li>
+    </ul>
+
+    <button id="button">aqui</button>
+    <div>
+        <ul id="myul">
+
+        </ul>
+    </div>
+
+    <select name="" id="myselect">
+        <option value="" disabled selected>bem aqui</option>
+        <option value="">teste1</option>
+        <option value="">teste2</option>
+    </select>
+</body>
+<script>
+    const aumentar = document.getElementById('aumentar')
+    const diminuir = document.getElementById('diminuir')
+    let contador = 0
+
+    const button = document.getElementById('myselect').addEventListener('change', async ()=> {
+       
+        try {
+            const res = await fetch('teste.json')
+            const data = await res.json()
+
+            const myul = document.getElementById('myul')
+
+            data.map((dado)=> {
+                const newli = document.createElement('li')
+                newli.innerText = 'caracteristica'
+                newli.setAttribute('class', 'mula')
+
+                const tagp = document.createElement('p')
+                tagp.innerText = `${dado.nome} ${dado.idade}`
+                tagp.style.display = 'none'
+
+
+                newli.addEventListener('click', ()=> {
+                    newli.classList.toggle('.mula')
+
+                    if(newli.classList.contains('.mula')){
+                        tagp.style.display = 'block'
+                    }else{
+                        tagp.style.display = 'none'
+                    }
+                })
+                newli.append(tagp)
+                myul.append(newli)
+
+
+            })
+        } catch (error) {
+            alert('deu ruim!')
+        }
+    })
+
+    let tamanho = 18
+
+    const corpo = document.body
+
+    aumentar.addEventListener('click', ()=> {
+        tamanho += 1
+
+        corpo.style.fontSize = tamanho + 'px'
+    })
+
+    diminuir.addEventListener('click', ()=> {
+        tamanho -= 1
+
+        corpo.style.fontSize = tamanho + 'px'
+    })
+</script>
+</html>
