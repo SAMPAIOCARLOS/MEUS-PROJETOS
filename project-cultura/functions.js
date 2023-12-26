@@ -9,6 +9,12 @@ const theme = localStorage.getItem('theme')
 
 function toggle_theme() {
     body.classList.toggle('dark')
+
+    body.classList.toggle('theme-transition')
+
+    setTimeout(()=> {
+        body.classList.remove('theme-transition')
+    },500)
 }
 function zoomin() {
     body.style.zoom = '140%'
@@ -50,6 +56,11 @@ buttonsSmaller.forEach(btnzommout => {
 document.getElementById('close').addEventListener('click', ()=> {
     input_pesquisar.value = ''
 })
+
+
+
+
+
 
 
 

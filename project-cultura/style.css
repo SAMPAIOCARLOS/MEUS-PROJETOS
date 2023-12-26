@@ -15,6 +15,9 @@
     --color--font: #ffffff;
     --color--nav-blue: #1f1c1d;
 }
+.theme-transition {
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
 body {
     width: 100%;
     min-height: 100vh;
@@ -485,4 +488,5 @@ footer {
 #img-licens{
     width: 100px;
 }
+
 

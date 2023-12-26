@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de Idioma</title>
+</head>
+<body>
+    <h1 id="titulo">Bem-vindo</h1>
+    <p id="conteudo">Este é um exemplo de página com conteúdo.</p>
+    <button onclick="mudarIdioma()">Mudar Idioma</button>
+
+    <script>
+
+        // Defina seus textos em diferentes idiomas
+    const idiomas = {
+        pt: {
+            titulo: 'Bem-vindo',
+            conteudo: 'Este é um exemplo de página com conteúdo.'
+        },
+        en: {
+            titulo: 'Welcome',
+            conteudo: 'This is an example page with content.'
+        },
+        es: {
+            titulo: 'Bienvenido',
+            conteudo: 'Esta es una página de ejemplo con contenido.'
+        }
+    };
+
+// Função para mudar o idioma
+    function mudarIdioma() {
+        const idiomaAtual = document.documentElement.lang; // Obtém o idioma atual da página
+        const novosIdiomas = Object.keys(idiomas).filter(idioma => idioma !== idiomaAtual);
+        const novoIdioma = novosIdiomas[Math.floor(Math.random() * novosIdiomas.length)]; // Escolhe um idioma aleatório
+
+        // Atualiza o idioma da página
+        document.documentElement.lang = novoIdioma;
+
+        // Atualiza o conteúdo da página com base no novo idioma
+        document.getElementById('titulo').innerText = idiomas[novoIdioma].titulo;
+        document.getElementById('conteudo').innerText = idiomas[novoIdioma].conteudo;
+    }
+
+    </script>
+</body>
+</html>

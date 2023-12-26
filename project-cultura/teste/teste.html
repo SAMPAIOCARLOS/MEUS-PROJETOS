@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de Idioma</title>
+</head>
+<body>
+    <h1 id="titulo">Bem-vindo</h1>
+    <p id="conteudo">Este é um exemplo de página com conteúdo.</p>
+    <button id="buttonEN">en</button>
+    <button id="buttonES">es</button>
+
+    <script>
+        const idiomas = {
+            pt: {
+                titulo: 'Bem-vindo',
+                conteudo: 'Este é um exemplo de página com conteúdo.'
+            },
+            en: {
+                titulo: 'Welcome',
+                conteudo: 'This is an example page with content.'
+            },
+            es: {
+                titulo: 'teste',
+                conteudo: 'cururururururu'
+            }
+        };
+
+        const buttonEN = document.getElementById('buttonEN');
+        const buttonES = document.getElementById('buttonES')
+        const tituloElement = document.getElementById('titulo');
+        const conteudoElement = document.getElementById('conteudo');
+
+        
+
+        buttonEN.addEventListener("click", function() {
+            const idiomaAtual = document.documentElement.lang;
+            let novoIdioma;
+
+            // Condição usando if para determinar o novo idioma
+            if (idiomaAtual === 'pt') {
+                novoIdioma = 'en';
+            } else {
+                novoIdioma = 'pt';
+            }
+
+            // Atualiza os elementos de texto com base no novo idioma
+            tituloElement.innerText = idiomas[novoIdioma].titulo;
+            conteudoElement.innerText = idiomas[novoIdioma].conteudo;
+
+            // Atualiza o idioma da página
+            document.documentElement.lang = novoIdioma;
+            
+        });
+
+
+        buttonES.addEventListener("click", function() {
+            const idiomaAtual = document.documentElement.lang;
+            let novoIdioma;
+
+            // Condição usando if para determinar o novo idioma
+            if (idiomaAtual === 'pt') {
+                novoIdioma = 'es';
+            } else {
+                novoIdioma = 'pt';
+            }
+
+            // Atualiza os elementos de texto com base no novo idioma
+            tituloElement.innerText = idiomas[novoIdioma].titulo;
+            conteudoElement.innerText = idiomas[novoIdioma].conteudo;
+
+            // Atualiza o idioma da página
+            document.documentElement.lang = novoIdioma;
+            
+        });
+
+        
+    </script>
+</body>
+</html>

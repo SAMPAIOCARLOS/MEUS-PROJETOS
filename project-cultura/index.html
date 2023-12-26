@@ -16,10 +16,10 @@
                     <nav>
                         <ion-icon name="globe-outline" id="globo"></ion-icon>
                         <h1 class="idiomas">
-                            <a href="" class="idioma">EN</a>
-                            <a href="" class="idioma">FR</a>
-                            <a href="" class="idioma">PT</a>
-                            <a href="" class="idioma">ES</a>
+                            <a href="" class="idioma" id="toggle_EN">EN</a>
+                            <a href="" class="idioma" id="toggle_FR">FR</a>
+                            <a href="" class="idioma" id="toggle_PT">PT</a>
+                            <a href="" class="idioma" id="toggle_ES">ES</a>
                         </h1>
                         <div class="icons-header">
                             <img src="assets/icons/dark-light.svg" alt="button-theme" class="icon-header toggle-theme">
@@ -137,12 +137,12 @@
 
             <div class="servis">
 
-                <p class="Pservis">
+                <p class="Pservis" id="Pservis-Credenciamento">
                     <img src="assets/icons/Cultura_Lazer2.svg" alt="icons/Cultura">
                     Credenciamento Cultural
                 </p>
 
-                <p class="Pservis">
+                <p class="Pservis" id="Pservis-Serviço">
                     <img src="assets/icons/Cultura_Lazer2.svg" alt="icons/Cultura">
                     Serviço de Protocolo da Secma
                 </p>
@@ -163,33 +163,33 @@
 
             <div class="destaque">
                 <div id="text-img">
-                    <h1>SECMA dá início à primeira etapa da IV <br> Conferência Estadual de Cultura</h1>
-                    <p>06 de Dezembro de 2023</p>
+                    <h1 id="text_interno_img">SECMA dá início à primeira etapa da IV <br> Conferência Estadual de Cultura</h1>
+                    <p id="paragrafo_interno_img">06 de Dezembro de 2023</p>
                 </div>
             </div>
 
             <div class="whats">
                 <div class="whats-card">
                     <img src="assets/whats/WhatsApp_Image_2023-11-16_at_16.19.37.jpeg" alt="" class="whats-card-img">
-                    <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
+                    <p><strong id="text-card-whats1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
                             suscipit voluptatibus </strong> <br> 16/11/2023</p>
                 </div>
 
                 <div class="whats-card">
                     <img src="assets/whats/WhatsApp_Image_2023-11-13_at_16.37.41.jpeg" alt="" class="whats-card-img">
-                    <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
+                    <p><strong id="text-card-whats2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
                             suscipit voluptatibus </strong> <br> 16/11/2023</p>
                 </div>
 
                 <div class="whats-card">
                     <img src="assets/whats/WhatsApp_Image_2023-10-20_at_16.08.54.jpeg" alt="" class="whats-card-img">
-                    <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
+                    <p><strong id="text-card-whats3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
                             suscipit voluptatibus </strong> <br> 16/11/2023</p>
                 </div>
 
                 <div class="whats-card">
                     <img src="assets/whats/WhatsApp_Image_2023-10-11_at_15.12.51.jpeg" alt="" class="whats-card-img">
-                    <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
+                    <p><strong id="text-card-whats4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, officiis, omnis
                             suscipit voluptatibus dicta</strong> <br> 16/11/2023</p>
                 </div>
             </div>
@@ -201,9 +201,9 @@
             </div>
 
             <ul id="list">
-                <li class="list-item-portal"><a href="#" class="list-item-link">Portal da <br> Transparência</a></li>
-                <li class="list-item-e-sic"><a href="#" class="list-item-link">E-SIC</a></li>
-                <li class="list-item-e-ouv"><a href="#" class="list-item-link">e-OUV</a></li>
+                <li class="list-item-portal"><a href="#" class="list-item-link" id="list-item-portal">Portal da <br> Transparência</a></li>
+                <li class="list-item-e-sic"><a href="#" class="list-item-link" id="list-item-E-SIC">E-SIC</a></li>
+                <li class="list-item-e-ouv"><a href="#" class="list-item-link" id="list-item-e-OUV">e-OUV</a></li>
             </ul>
 
 
@@ -213,8 +213,8 @@
 
             <div id="buttons">
                 <button id="buttonsmaller"> <ion-icon name="git-merge-outline"></ion-icon></button>
-                <button class="buttonsbigger">WEBMAIL</button>
-                <button class="buttonsbigger">VERSÃO ANTERIOR</button>
+                <button class="buttonsbigger" id="button-webmail">WEBMAIL</button>
+                <button class="buttonsbigger" id="button-versao-anterior">VERSÃO ANTERIOR</button>
             </div>
 
         </div>
@@ -226,7 +226,7 @@
 
             <div id="div-infor">
                 <div id="information">
-                    <p>Avenida Jerônimo de Albuquerque, S/N, <br>
+                    <p id="paragrafo-footer-infor">Avenida Jerônimo de Albuquerque, S/N, <br>
                         Centro Administrativo do Governo do Estado do Maranhão, Palácio Henrique de La Rocque, Segundo
                         Andar. <br>
                         Segunda a Sexta-Feira <br>
@@ -242,7 +242,7 @@
                 <div class="licens">
                     <img src="assets/licens/by.png" alt="" id="img-licens">
 
-                    <p>Este obra está sob a Licença <strong>Creative Commons Atribuição 4.0 Internacional</strong></p>
+                    <p id="text-end">Este obra está sob a Licença <strong id="text-end-strong">Creative Commons Atribuição 4.0 Internacional</strong></p>
                 </div>
             </div>
         </footer>
@@ -251,6 +251,7 @@
 </body>
 <script src="script.js"></script>
 <script src="functions.js"></script>
+<script src="toggleIdioma.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
