@@ -4,30 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      transition: font-size 0.5s; /* Adiciona uma transição suave ao alterar o tamanho do texto */
+    }
+  </style>
 </head>
 <body>
+  <div>
+    <button id="bigger">
+      Bigger
+    </button>
+
+    <button id="smaller">
+      Smaller
+    </button>
+  </div>
+  <ul>
+    <ul>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
   
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+  
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+  
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+  
+      <br>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+       <br> <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis possimus ut quidem libero commodi placeat voluptatum corporis, expedita nesciunt molestias optio earum illo voluptate voluptatibus dolorum tempora sint harum natus.</li>
+    </ul>
+  </ul>
+
+  <script>
+    let tamanho = 0.5
+
+    document.getElementById('bigger').addEventListener('click', ()=> {
+
+      if(tamanho >= 2) {
+        return
+      }
+      tamanho += 0.9
+      document.body.style.fontSize = tamanho + 'em'; 
+ 
+    });
+
+    document.getElementById('smaller').addEventListener('click', ()=> {
+      tamanho -= 0.9
+
+      document.body.style.fontSize = tamanho + 'em'
+    });
+
+
+
+  </script>
 </body>
-<script>
-  // Verificar se a largura da janela é menor que 600 pixels
-  const query = window.matchMedia('(max-width: 600px)');
-
-  // Função de retorno de chamada que será chamada sempre que a condição da consulta de mídia mudar
-  const handleQueryChange = (event) => {
-    if (event.matches) {
-      // A condição da consulta de mídia é verdadeira
-      console.log('A largura é menor que 600 pixels');
-    } else {
-      // A condição da consulta de mídia é falsa
-      console.log('A largura é maior ou igual a 600 pixels');
-    }
-  };
-
-  // Adicionar o ouvinte de mudança à consulta de mídia
-  query.addListener(handleQueryChange);
-
-  // Chamar a função de retorno de chamada pela primeira vez para verificar o estado inicial
-  handleQueryChange(query);
-
-</script>
 </html>
+

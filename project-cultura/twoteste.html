@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="input" id="input">
+
+    <button id="limpar">close</button>
+</body>
+
+<script>
+    let valor = document.getElementById('input')
+
+    let limpar = document.getElementById('limpar')
+
+    limpar.addEventListener('click', ()=> {
+        valor.value = ''
+    })
+
+</script>
+</html>
