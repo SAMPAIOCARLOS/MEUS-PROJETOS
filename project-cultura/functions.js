@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('.toggle-theme')
 const body = document.body
 const input_pesquisar = document.getElementById('pesquisar')
+const header = document.getElementById("header")
 
 const buttonsBigger = document.querySelectorAll('.button-Bigger')
 const buttonsSmaller = document.querySelectorAll('.button-Smaller')
@@ -16,6 +17,19 @@ function toggle_theme() {
         body.classList.remove('theme-transition')
     },500)
 }
+
+function toggleHeader() {
+    if(header.classList.contains('fundo-header')) {
+        header.classList.remove('fundo-header')
+        header.style.backgroundImage = 'var(--fundo--header)'
+        localStorage.setItem('bottom', 'one_bottom')
+    }else {
+        header.classList.add('fundo-header')
+        header.style.backgroundImage = 'var(--fundo--header)'
+        localStorage.setItem('bottom', 'two_bottom')
+    }
+}
+
 function zoomin() {
     body.style.zoom = '140%'
 }
@@ -56,6 +70,15 @@ buttonsSmaller.forEach(btnzommout => {
 document.getElementById('close').addEventListener('click', ()=> {
     input_pesquisar.value = ''
 })
+
+window.onload = () => {
+    const fundoSalvo = localStorage.getItem('bottom');
+    if (fundoSalvo === 'two_bottom') {
+      header.classList.add('fundo-header');
+    }
+
+    toggleHeader()
+  }
 
 
 

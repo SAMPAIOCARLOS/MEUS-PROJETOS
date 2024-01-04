@@ -8,6 +8,10 @@
     --color--white: #f0f8ff;
     --color--font: #000000;
     --color--nav-blue: #007BC2;
+    --fundo--header: url('assets/imgs/fundTexy/02_Gestao_de_Negocios.jpg');
+}
+.fundo-header {
+    --fundo--header: url('assets/imgs/fundTexy/modelo-negocio-industria4.0-manufatura-avancada.jpg');
 }
 .dark {
     --color--black: #ffffff;
@@ -35,7 +39,7 @@ header {
     width: 100%;
     /* border: 1px solid rgb(0, 0, 0); */
     height: 70vh;
-    background-image: url('assets/imgs/fundo_2.png');
+    background-image: var(--fundo--header);
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
