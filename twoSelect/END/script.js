@@ -1,6 +1,7 @@
 const myselect = document.getElementById('myselect')
 const TwoSelect = document.getElementById('TwoSelect')
 const myul = document.getElementById('myul')
+let body = document.body
 
 const Imagem = document.getElementById('Imagem')
 const Nameh1 = document.getElementById('Nameh1')
@@ -9,14 +10,14 @@ const TypeAnimal = document.getElementById('TypeAnimal')
 const ButtonTheme = document.getElementById('ButtonTheme')
 const span = document.getElementById('spanTheme')
 
-const theme = sessionStorage.getItem('theme')
+const theme = localStorage.getItem('theme')
 
 if(!theme) {
-    document.body.classList.remove('theme-white')
+    body.classList.remove('theme-white')
 }
 
 if(theme === 'white') {
-    document.body.classList.add('theme-white')
+    body.classList.add('theme-white')
     ButtonTheme.style.justifyContent = 'flex-end'
     span.innerHTML = '<ion-icon name="sunny-outline" class="Theme-ion-icon"></ion-icon>'
 }
@@ -150,7 +151,6 @@ TwoSelect.addEventListener('change', async ()=> {
 })
 
 ButtonTheme.addEventListener('click', ()=> {
-    const body = document.body
 
     body.classList.toggle('theme-white')
     body.classList.toggle('theme-transition')
