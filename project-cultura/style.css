@@ -89,6 +89,12 @@ nav {
 #globo {
     font-size: 2em;
 }
+#globo:hover {
+    cursor: pointer;
+}
+#nome:hover{
+    cursor: pointer;
+}
 .nav-header {
     /* border: 3px solid blue; */
     width: 75%;
@@ -132,6 +138,12 @@ nav {
 .icon-social:hover {
     scale: 1.3;
     transition: 0.3s;
+}
+.link-icon-social {
+    color: #ffffff;
+}
+.link-icon-social-two {
+    color: #000000;
 }
 
 .botton-header {
@@ -477,6 +489,9 @@ footer {
     font-size: 2em;
     display: flex;
     gap: 20px;
+}
+.icon-footer {
+    color: var(--color--black);
 }
 .icon-footer:hover{
     scale: 1.3;
