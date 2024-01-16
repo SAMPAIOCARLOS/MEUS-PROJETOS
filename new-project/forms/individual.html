@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendameto Individual</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/individual.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="h1">Agendamento individual</h1>
+
+        <form id="form">
+            <div id="container">
+                <section class="sections">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" class="inputs">
+                    <span class="span-invalido span-name">O nome tem que ter no mínimo 3 caracteres!</span>
+                </section>
+                <section class="sections">
+                    <label for="telefone">Telefone</label>
+                    <input type="phone" id="telefone" name="telefone" maxlength="15" minlength="10"
+                        placeholder="(xx) xxxxx-xxxx" class="inputs">
+                    <span class="span-invalido span-telefone">Telefone invalido!</span>
+                </section>
+                <section class="sections">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="inputs">
+                    <span class="span-invalido span-email">Este email é invalido!</span>
+                </section>
+                <section class="sections" id="section_data">
+                    <label for="data_hora">Selecione a data e hora</label>
+                    <input type="datetime-local" id="data_hora" name="data_hora" class="inputs">
+                    <span id="span">
+                        <ion-icon name="alert-circle-outline" id="icon-data-hora"></ion-icon>
+                        <p id="campo-data"></p>
+                    </span>
+                </section>
+            </div>
+
+            <section id="section-button-enviar">
+                <button class="Button-enviar">Enviar</button>
+            </section>
+        </form>
+
+        <footer>
+            <img src="../img/ma-logo 1.png" alt="imagem-logo-MA">
+        </footer>
+
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="../scripts/individual.js"></script>
+<script src="../scripts/utils.js"></script>
+
+</html>
