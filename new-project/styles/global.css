@@ -45,6 +45,16 @@ footer img {
     cursor: pointer;
     transition: 0.2s;
 }
+.inputs {
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.5em;
+    width: 100%;
+    min-width: 300px;
+}
 
 .Button-enviar:hover {
     opacity: 0.8;

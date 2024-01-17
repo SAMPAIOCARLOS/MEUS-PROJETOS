@@ -9,85 +9,104 @@
 </head>
 <body>
     <div id="main">
-        <h1 id="h1">Fundação da Memória Republicana - FMRB</h1>
 
         <h1>Agendamento em grupo</h1>
 
         <form id="form-group">
-            <section>
-                <label for="Solicitante">Solicitante </label>
-                <input type="text" id="Solicitante" name="Solicitante">
-            </section>
+            <div id="group-campo-start">
+                <section class="section-group">
+                    <label for="Solicitante">Solicitante </label>
+                    <input type="text" id="Solicitante" name="Solicitante" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="Data-visita">Data da visita</label>
+                    <input type="datetime-local" id="Data-visita" name="Data-visita" class="inputs">
+                </section>
+            </div>
 
-            <section>
-                <label for="Data-visita">Data da visita</label>
-                <input type="datetime-local">
-            </section>
-
-            <h2>Endereço</h2>
+            <h2 class="h2">Endereço</h2>
             
-            <section>
-                <label for="rua">Rua</label>
-                <input type="text" id="rua" name="rua">
-            </section>
+            <div id="group-campo-endereco">
+                <section class="section-group">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" name="rua" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="N">N°</label>
+                    <input type="number" id="N" name="N" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city" class="inputs">
+                </section>
+                <section class="section-group">
+                    <label for="select-estado">Estado</label>
+                    <select name="select-estado" id="select-estado" class="inputs">
+                        <option value="" disabled selected>Selecione um estado</option>
+                    </select>
+                </section>
+            </div>
 
-            <section>
-                <label for="N">N°</label>
-                <input type="number" id="N" name="N">
-            </section>
+            <h2 class="h2">Segmento</h2>
 
-            <section>
-                <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" name="bairro">
-            </section>
+            <h3>Instituições de Ensino?</h3>
+            
+            <div id="group-container-ensino">
 
-            <section>
-                <label for="cep">CEP</label>
-                <input type="number" id="cep" name="cep">
-            </section>
+                <div class="container-ensino">
+                    <p>sim</p>
+                    <input type="checkbox">
+                </div>
 
-            <section>
-                <label for="city">Cidade</label>
-                <input type="text" id="city" name="city">
-            </section>
+                <div class="container-ensino">
+                    <p>não</p>
+                    <input type="checkbox">
+                </div>
 
-            <section>
-                <label for="select-estado">Estado</label>
-                <select name="select-estado" id="select-estado">
-                    <option value="" disabled selected>Selecione um estado</option>
-                    <option value="Acre">Acre </option>
-                    <option value="Alagoas">Alagoas</option>
-                    <option value="Amazonas">Amazonas</option>
-                    <option value="Bahia">Bahia</option>
-                    <option value="Ceará">Ceará</option>
-                    <option value="Distrito">Distrito Federal</option>
-                    <option value="Espírito">Espírito Santo</option>
-                    <option value="Goiás">Goiás</option>
-                    <option value="Maranhão">Maranhão</option>
-                    <option value="Mato_Grosso">Mato Grosso</option>
-                    <option value="Mato_Grosso_do_Sul">Mato Grosso do Sul</option>
-                    <option value="Minas_Gerais">Minas Gerais</option>
-                    <option value="Para">Pará</option>
-                    <option value="Paraiba">Paraíba</option>
-                    <option value="Parana">Paraná</option>
-                    <option value="Pernambuco">Pernambuco</option>
-                    <option value="Piaui">Piauí</option>
-                    <option value="Rio_de_Janeiro">Rio de Janeiro</option>
-                    <option value="Rio_Grande_do_Norte">Rio Grande do Norte</option>
-                    <option value="Rio_Grande_do_Sul">Rio Grande do Sul</option>
-                    <option value="Rondonia">Rondônia</option>
-                    <option value="Roraima">Roraima</option>
-                    <option value="Santa_Catarina">Santa Catarina</option>
-                    <option value="Sao_Paulo">São Paulo</option>
-                    <option value="Sergipe">Sergipe</option>
-                    <option value="Tocantins">Tocantins</option>
-                </select>
-            </section>
+            </div>
+
+            <div id="box-case-yes">
+                <section class="section-group">
+                    <select name="select-case-yes" id="select-case-yes" class="inputs">
+                        <option value="" disabled selected>Selecione:</option>
+                        <option value="Publica">Pública</option>
+                        <option value="Infantil">Infantil</option>
+                        <option value="Fundamental">Fundamental</option>
+                        <option value="Medio">Médio</option>
+                        <option value="Superior">Superior</option>
+                    </select>
+                </section>
+
+                <section class="section-group">
+                    <label for="select-case-yes-escolaridade">Escolaridade</label>
+                    <select name="select-case-yes-escolaridade" id="select-case-yes-escolaridade" class="inputs">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </section>
+            </div>
+
+
+            <div id="box-case-no">
+                <input type="text" id="" name="" class="inputs" placeholder="Qual">
+            </div>
         </form>
+
+        <footer>
+            <img src="../img/ma-logo 1.png" alt="imagem-logo-MA">
+        </footer>
     </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script src="../scripts/utils.js"></script>
+<script src="../scripts/group.js"></script>
 </html>

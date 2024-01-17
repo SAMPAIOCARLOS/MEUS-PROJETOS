@@ -63,6 +63,12 @@ form.addEventListener('submit', (event)=> {
     let valorCampo = data_hora.value;
     let dataHora = new Date(valorCampo);
 
+    if (dataHora < new Date()) {
+        data_hora.style.border = '1px solid rgb(186, 0, 0)'
+        document.getElementById('campo-data').innerText = 'Você tem que selecionar uma data maior que a atual!'
+        return 
+    }
+
     if (!isNaN(dataHora.getTime())) {
       if (dataHora.getDay() === 1) {
         data_hora.style.border = '1px solid rgb(186, 0, 0)'
@@ -76,7 +82,6 @@ form.addEventListener('submit', (event)=> {
         document.getElementById('campo-data').innerText = 'Preencha este campo!'
         return
     }
-
 
 
     const schedulingDate = new Date(data_hora.value).toLocaleString('pt-BR', { timeZone: 'America/Sao_paulo' });
