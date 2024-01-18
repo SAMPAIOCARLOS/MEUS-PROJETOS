@@ -62,13 +62,13 @@
             <div id="group-container-ensino">
 
                 <div class="container-ensino">
-                    <p>sim</p>
-                    <input type="checkbox">
+                    <p>Sim</p>
+                    <input type="checkbox" id="case_yes">
                 </div>
 
                 <div class="container-ensino">
-                    <p>não</p>
-                    <input type="checkbox">
+                    <p>Não / Outro</p>
+                    <input type="checkbox" id="case_no">
                 </div>
 
             </div>
@@ -89,13 +89,56 @@
                     <label for="select-case-yes-escolaridade">Escolaridade</label>
                     <select name="select-case-yes-escolaridade" id="select-case-yes-escolaridade" class="inputs">
                         <option value="" disabled selected>Selecione</option>
+                        <option value="Infantil">Infantil</option>
+                        <option value="Fundamental">Fundamental</option>
+                        <option value="Medio">Médio</option>
+                        <option value="Superior">Superior</option>
                     </select>
+                </section>
+
+                <div id="container-campos-number">
+                    <section class="section-group-number">
+                        <label for="Faixa-etaria">Faixa etária</label>
+                        <input type="text" id="Faixa-etaria" name="Faixa-etaria" class="inputs-number">
+                    </section>
+                    <section class="section-group-number">
+                        <label for="Quantidade">Quantidade</label>
+                        <input type="text" id="Quantidade" name="Quantidade" class="inputs-number">
+                    </section>
+                </div>
+
+                <h2 class="h2">Há portador de necessidades especiais?</h2>
+
+                <section class="section-group">
+                    <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
+                    <textarea name="campo-def" id="campo-def" cols="30" rows="10"></textarea>
                 </section>
             </div>
 
 
             <div id="box-case-no">
-                <input type="text" id="" name="" class="inputs" placeholder="Qual">
+                <section class="section-group">
+                    <label for="">qual Instituição?</label>
+                    <input type="text" id="" name="" class="inputs">
+                </section>
+
+                <div id="container-campos-number">
+                    <section class="section-group-number">
+                        <label for="Faixa-etaria">Faixa etária</label>
+                        <input type="text" id="Faixa-etaria" name="Faixa-etaria" class="inputs-number">
+                    </section>
+                    <section class="section-group-number">
+                        <label for="Quantidade">Quantidade</label>
+                        <input type="text" id="Quantidade" name="Quantidade" class="inputs-number">
+                    </section>
+                </div>
+
+                <h2 class="h2">Há portador de necessidades especiais?</h2>
+
+                <section class="section-group">
+                    <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
+                    <textarea name="campo-def" id="campo-def" cols="30" rows="10"></textarea>
+                </section>
             </div>
         </form>
 

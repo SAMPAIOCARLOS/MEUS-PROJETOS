@@ -11,3 +11,16 @@ for (let i = 0; i < estados_brasil.length; i++) {
 }
 
 
+const box_case_yes = document.getElementById('box-case-yes')
+const box_case_no = document.getElementById('box-case-no')
+
+document.getElementById('case_yes').addEventListener('change', ()=> {
+    box_case_no.style.display = 'none'
+    box_case_yes.style.display = 'flex'
+})
+
+document.getElementById('case_no').addEventListener('change', ()=> {
+    box_case_yes.style.display = 'none'
+    box_case_no.style.display = 'flex'
+})
+

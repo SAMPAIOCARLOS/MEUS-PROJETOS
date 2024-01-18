@@ -2,6 +2,7 @@ const form = document.getElementById('form')
 const nome = document.getElementById('name')
 const telefone = document.getElementById('telefone')
 const email = document.getElementById('email')
+const conf_email = document.getElementById('conf-email')
 const data_hora = document.getElementById('data_hora')
 
 
@@ -57,6 +58,15 @@ form.addEventListener('submit', (event)=> {
     } else {
         email.style.border = 'none'
         document.querySelector('.span-email').style.display = 'none'
+    }
+
+    if(email.value === conf_email.value) {
+        conf_email.style.border = 'none'
+        document.querySelector('.span-conf-email').style.display = 'none'
+    } else {
+        conf_email.style.border = '1px solid rgb(186, 0, 0)'
+        document.querySelector('.span-conf-email').style.display = 'block'
+        return
     }
 
 

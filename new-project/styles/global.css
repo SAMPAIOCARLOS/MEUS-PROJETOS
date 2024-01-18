@@ -10,6 +10,7 @@ body{
     font-family: 'Baloo 2', sans-serif;
     background: #b4b4b4c0;
     /* backdrop-filter: blur(2px); */
+    font-weight: bold;
 }
 
 footer{
