@@ -18,7 +18,7 @@
     gap: 40px;
 }
 .section-group {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -32,8 +32,23 @@
     flex-wrap: wrap;
     gap: 40px;
 }
+#h1{
+    margin-bottom: 50px;
+}
 .h2 {
     width: 100%;
+}
+#icon-data-hora-group {
+    color: rgb(186, 0, 0);
+    font-size: 1.7em;
+    display: none;
+}
+#span-group-dataVisita{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgb(186, 0, 0);
+    font-size: 16px;
 }
 #group-campo-endereco {
     /* border: 2px solid black; */
@@ -54,6 +69,7 @@
     display: flex;
     justify-content: left;
     gap: 20px;
+    margin-bottom: 30px;
     /* border: 1px solid red; */
 }
 #box-case-yes {
@@ -63,14 +79,14 @@
     align-items: flex-end;
     gap: 40px;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #select-case-yes {
     display: block;
    
 }
 #box-case-no {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     display: none;
     gap: 40px;
@@ -94,13 +110,13 @@
     gap: 10px;
 }
 #container-campos-number {
-    
     width: 300px;
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 }
 
-#campo-def {
+.campo-def {
     max-width: 100%;
     max-height: 100px;
     min-width: 100%;
@@ -112,8 +128,27 @@
     background-color: #D9D9D9;
     font-size: 20px;
 }
-footer {
-    margin-bottom: 100px;
+.container-textarea-yes-no {
+    width: 100%;
+}
+.container-textaea {
+    max-width: 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#footer-group {
+    padding-bottom: 50px;
+}
+
+@media(max-width: 1050px) {
+    #group-campo-start {
+        justify-content: center;
+    }
+    .section-group {
+        width: 100%;
+    }
 }
 
 

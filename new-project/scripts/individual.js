@@ -34,12 +34,10 @@ form.addEventListener('submit', (event)=> {
     event.preventDefault()
 
     if(nome.value.length < 3) {
-        nome.style.border = '1px solid rgb(186, 0, 0)'
-        document.querySelector('.span-name').style.display = 'block'
+        validarName(nome, '.span-name')
         return
     } else {
-        nome.style.border = 'none'
-        document.querySelector('.span-name').style.display = 'none'
+       validarName(nome, '.span-name')
     }
     
     if(telefone.value.length < 11) {
@@ -103,6 +101,30 @@ form.addEventListener('submit', (event)=> {
     Data: ${schedulingDate}`);
 
     form.submit()
+    
+   const body = `<p>
+        <strong style="color: #555;">Nome:</strong> <span id="nome" style="color: #777; font-weight: bold;"></span>
+    </p>
+
+    <p>
+        <strong style="color: #555;">Telefone:</strong> <span id="telefone" style="color: #777;">${telefone.value}</span>
+    </p>
+
+    <p>
+        <strong style="color: #555;">Email:</strong> <span id="email" style="color: #777;"></span>
+    </p>
+
+    <p>
+        <strong style="color: #555;">Data:</strong> <span id="data" style="color: #777;"></span>
+    </p>`
+
+    fetch('', {
+        body: JSON.stringify({
+            author_email: email.value,
+            subject: 'Agendamento Individual',
+            body,
+        })
+    })
 })
 
 

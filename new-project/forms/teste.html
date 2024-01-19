@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de CEP</title>
+</head>
+<body>
+
+  <label for="cepInput">CEP:</label>
+  <input type="text" id="cepInput" onkeyup="formatarCEP(this)">
+
+  <script>
+    function formatarCEP(input) {
+      // Remove qualquer caractere não numérico
+      var cepFormatado = input.value.replace(/\D/g, '');
+
+      // Adiciona a máscara (XXXXX-XXX)
+      cepFormatado = cepFormatado.replace(/^(\d{5})(\d{0,3})$/, '$1-$2');
+
+      // Atualiza o valor do input
+      input.value = cepFormatado;
+    }
+  </script>
+
+</body>
+</html>

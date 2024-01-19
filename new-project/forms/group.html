@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,58 +8,88 @@
     <link rel="stylesheet" href="../styles/group.css">
     <link rel="stylesheet" href="../styles/global.css">
 </head>
+
 <body>
     <div id="main">
 
-        <h1>Agendamento em grupo</h1>
+        <h1 id="h1">Agendamento em grupo</h1>
 
         <form id="form-group">
             <div id="group-campo-start">
                 <section class="section-group">
                     <label for="Solicitante">Solicitante </label>
-                    <input type="text" id="Solicitante" name="Solicitante" class="inputs">
+                    <input type="text" id="Solicitante" name="Solicitante" class="inputs" onkeydown="return /[a-z]/i.test(event.key)">
+                    <span class="span-invalido span-name-group">O nome tem que ter no mínimo 3 caracteres!</span>
                 </section>
                 <section class="section-group">
                     <label for="Data-visita">Data da visita</label>
-                    <input type="datetime-local" id="Data-visita" name="Data-visita" class="inputs">
+                    <input type="datetime-local" id="Data-visita-group" name="Data-visita" class="inputs">
+                    <span id="span-group-dataVisita">
+                        <ion-icon name="alert-circle-outline" id="icon-data-hora-group"></ion-icon>
+                        <p id="campo-data-visita-group"></p>
+                    </span>
+                </section>
+
+                <section class="section-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="phone" id="telefone-group" name="telefone-group" maxlength="15" minlength="10"
+                        placeholder="(xx) xxxxx-xxxx" class="inputs">
+                    <span class="span-invalido span-telefone-group">Telefone invalido!</span>
+                </section>
+                <section class="section-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email-group" name="email-group" class="inputs">
+                    <span class="span-invalido span-email-group">Este email é invalido!</span>
+                </section>
+
+                <section class="section-group">
+                    <label for="conf-email">Confirme seu email</label>
+                    <input type="text" id="conf-email-group" name="conf-email-group" class="inputs">
+                    <span class="span-invalido span-conf-email-group">Este e-mail difere do anterior.</span>
                 </section>
             </div>
 
             <h2 class="h2">Endereço</h2>
-            
+
             <div id="group-campo-endereco">
                 <section class="section-group">
                     <label for="rua">Rua</label>
                     <input type="text" id="rua" name="rua" class="inputs">
+                    <span class="span-invalido span-invalido-rua teste">Preencha este campo!</span>
                 </section>
                 <section class="section-group">
                     <label for="N">N°</label>
-                    <input type="number" id="N" name="N" class="inputs">
+                    <input type="text" id="N" name="N" class="inputs" onkeydown="return /[0-9]/.test(event.key) || ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)">
+                    <span class="span-invalido span-invalido-N teste">Preencha este campo!</span>
                 </section>
                 <section class="section-group">
                     <label for="bairro">Bairro</label>
                     <input type="text" id="bairro" name="bairro" class="inputs">
+                    <span class="span-invalido span-invalido-bairro teste">Preencha este campo!</span>
                 </section>
                 <section class="section-group">
                     <label for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" class="inputs">
+                    <span class="span-invalido span-invalido-cep">Cep invalido!</span>
                 </section>
                 <section class="section-group">
                     <label for="city">Cidade</label>
                     <input type="text" id="city" name="city" class="inputs">
+                    <span class="span-invalido span-invalido-city">Cidade invalida!</span>
                 </section>
                 <section class="section-group">
                     <label for="select-estado">Estado</label>
                     <select name="select-estado" id="select-estado" class="inputs">
                         <option value="" disabled selected>Selecione um estado</option>
                     </select>
+                    <span class="span-invalido span-invalido-estado">Selecione um estado!</span>
                 </section>
             </div>
 
             <h2 class="h2">Segmento</h2>
 
             <h3>Instituições de Ensino?</h3>
-            
+
             <div id="group-container-ensino">
 
                 <div class="container-ensino">
@@ -83,6 +114,7 @@
                         <option value="Medio">Médio</option>
                         <option value="Superior">Superior</option>
                     </select>
+                    <span class="span-invalido span-invalido-instituicao">Selecione uma Instituição</span>
                 </section>
 
                 <section class="section-group">
@@ -94,55 +126,74 @@
                         <option value="Medio">Médio</option>
                         <option value="Superior">Superior</option>
                     </select>
+                    <span class="span-invalido span-invalido-escolaridade">Selecione a Escolaridade</span>
                 </section>
 
                 <div id="container-campos-number">
                     <section class="section-group-number">
                         <label for="Faixa-etaria">Faixa etária</label>
-                        <input type="text" id="Faixa-etaria" name="Faixa-etaria" class="inputs-number">
+                        <input type="text" id="Faixa-etaria-yes" name="Faixa-etaria-yes" class="inputs-number" onkeydown="return /[0-9]/.test(event.key) || ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)">
+                        <span class="span-invalido span-invalido-faixaEtaria">Preencha este campo!</span>
                     </section>
                     <section class="section-group-number">
                         <label for="Quantidade">Quantidade</label>
-                        <input type="text" id="Quantidade" name="Quantidade" class="inputs-number">
+                        <input type="text" id="Quantidade-yes" name="Quantidade-yes" class="inputs-number" onkeydown="return /[0-9]/.test(event.key) || ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)">
+                        <span class="span-invalido span-invalido-quantidade">Preencha este campo!</span>
                     </section>
                 </div>
 
                 <h2 class="h2">Há portador de necessidades especiais?</h2>
 
-                <section class="section-group">
-                    <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
-                    <textarea name="campo-def" id="campo-def" cols="30" rows="10"></textarea>
+                <section class="section-group container-textarea-yes-no">
+                    <div class="container-textaea">
+                        <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
+                        <textarea class="campo-def" name="campo-def-case-yes" id="campo-def-case-yes" cols="30" rows="10"></textarea>
+                    </div>
                 </section>
+
+                <section id="section-button-enviar">
+                    <button class="Button-enviar">Enviar</button>
+                </section>
+
             </div>
 
 
             <div id="box-case-no">
                 <section class="section-group">
                     <label for="">qual Instituição?</label>
-                    <input type="text" id="" name="" class="inputs">
+                    <input type="text" id="name-instituicao-case-no" name="name-instituicao-case-no" class="inputs">
+                    <span class="span-invalido span-name-instituicao-case-no">Informe a Instituição!</span>
                 </section>
 
                 <div id="container-campos-number">
                     <section class="section-group-number">
                         <label for="Faixa-etaria">Faixa etária</label>
-                        <input type="text" id="Faixa-etaria" name="Faixa-etaria" class="inputs-number">
+                        <input type="text" id="Faixa-etaria-no" name="Faixa-etaria-no" class="inputs-number" onkeydown="return /[0-9]/.test(event.key) || ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)">
+                        <span class="span-invalido span-invalido-faixaEtaria-case-no">Preencha este campo!</span>
                     </section>
                     <section class="section-group-number">
                         <label for="Quantidade">Quantidade</label>
-                        <input type="text" id="Quantidade" name="Quantidade" class="inputs-number">
+                        <input type="text" id="Quantidade-no" name="Quantidade-no" class="inputs-number" onkeydown="return /[0-9]/.test(event.key) || ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)">
+                        <span class="span-invalido span-invalido-quantidade-case-no">Preencha este campo!</span>
                     </section>
                 </div>
 
                 <h2 class="h2">Há portador de necessidades especiais?</h2>
 
-                <section class="section-group">
-                    <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
-                    <textarea name="campo-def" id="campo-def" cols="30" rows="10"></textarea>
+                <section class="section-group container-textarea-yes-no">
+                    <div class="container-textaea">
+                        <label for="campo-def">Especifiquei a quantidade e o tipo de necessidade</label>
+                        <textarea class="campo-def" name="campo-def-case-no" id="campo-def-case-no" cols="30" rows="10"></textarea>
+                    </div>
+                </section>
+
+                <section id="section-button-enviar">
+                    <button class="Button-enviar">Enviar</button>
                 </section>
             </div>
         </form>
 
-        <footer>
+        <footer id="footer-group">
             <img src="../img/ma-logo 1.png" alt="imagem-logo-MA">
         </footer>
     </div>
@@ -152,4 +203,6 @@
 
 <script src="../scripts/utils.js"></script>
 <script src="../scripts/group.js"></script>
+<script src="../scripts/functions.js"></script>
+
 </html>
