@@ -5,6 +5,7 @@ navMenu.style.border = '1px solid blue'
 const navbar = document.getElementById("nav-header");
 const nome = document.getElementById("nome");
 const hamb = document.querySelectorAll('#hamburguer span');
+const link_icon_social = document.querySelectorAll('.link-icon-social')
 
 const iconsSocial = document.querySelectorAll('.icon-social');
 
@@ -20,7 +21,7 @@ menu.addEventListener('click', ()=> {
         navMenu.style.display = 'block'
 
         hamb.forEach(elemnt => {
-            elemnt.style.backgroundColor = '#000'
+            elemnt.style.backgroundColor = '#fff'
         });
 
         fetch('dados.json').then((res)=> {
@@ -59,7 +60,7 @@ menu.addEventListener('click', ()=> {
                             button_exibir.style.color = 'rgb(0, 149, 255)'
                         } else {
                             ul_infor.style.display = 'none'
-                            button_exibir.style.color = '#000'
+                            button_exibir.style.color = '#fff'
                         }
                     });
 
@@ -94,15 +95,24 @@ menu.addEventListener('click', ()=> {
 });
 
 
-window.onscroll = function () {
+window.onscroll = ()=> {
     if (window.pageYOffset >= 0.7 * window.innerHeight) {
         navbar.classList.add("fixed");
         nome.style.display = 'none'
         navbar.style.padding = '0 170px'
-
         hamb.forEach(elemnt => {
             elemnt.style.backgroundColor = '#000'
         });
+
+    if(navMenu.classList.contains('active')) {
+        hamb.forEach(elemnt => {
+            elemnt.style.backgroundColor = '#fff'
+        });
+        menu.classList.add('bola')
+    } 
+
+
+        
     } else {
         navbar.classList.remove("fixed");
         nome.style.display = 'block'
