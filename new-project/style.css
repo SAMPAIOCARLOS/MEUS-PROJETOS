@@ -39,6 +39,14 @@ main {
     justify-content: center;
     text-decoration: none;
 }
+#testee {
+    width: 55%;
+}
+#containerteste {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;
+}
 .buttons {
     border: none;
     background-color: transparent;

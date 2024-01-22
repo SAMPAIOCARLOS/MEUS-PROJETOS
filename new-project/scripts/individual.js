@@ -93,37 +93,28 @@ form.addEventListener('submit', (event)=> {
 
 
     const schedulingDate = new Date(data_hora.value).toLocaleString('pt-BR', { timeZone: 'America/Sao_paulo' });
+    const htmlData = `<p><strong>Nome:</strong> ${nome.value}</p><p><strong>Email:</strong> ${email.value}</p><p><strong>Telefone:</strong> ${telefone.value}</p><p><strong>Data:</strong> ${schedulingDate}</p>`
 
-    sendEmail(email.value, 'Agendamento Individual', `
-    Nome: ${nome.value}
-    Telefone: ${telefone.value}
-    Email: ${email.value}
-    Data: ${schedulingDate}`);
+    const formButton = document.querySelector('.Button-enviar')
+    formButton.disabled = true
+    formButton.innerHTML = `<img src='../img/image.gif' alt="" class="loading"/>`
 
-    form.submit()
-    
-   const body = `<p>
-        <strong style="color: #555;">Nome:</strong> <span id="nome" style="color: #777; font-weight: bold;"></span>
-    </p>
-
-    <p>
-        <strong style="color: #555;">Telefone:</strong> <span id="telefone" style="color: #777;">${telefone.value}</span>
-    </p>
-
-    <p>
-        <strong style="color: #555;">Email:</strong> <span id="email" style="color: #777;"></span>
-    </p>
-
-    <p>
-        <strong style="color: #555;">Data:</strong> <span id="data" style="color: #777;"></span>
-    </p>`
-
-    fetch('', {
+    fetch('http://10.25.0.158:8000/scheduling', {
+        method: 'POST',
         body: JSON.stringify({
             author_email: email.value,
             subject: 'Agendamento Individual',
-            body,
+            body: htmlData,
         })
+    }).then(response => {
+        formButton.innerHTML = ''
+        formButton.textContent = 'Enviar'
+        console.log(response)
+        form.submit()
+    })
+    .catch(error => {
+        formButton.innerHTML = ''
+        formButton.textContent = 'Enviar'
     })
 })
 

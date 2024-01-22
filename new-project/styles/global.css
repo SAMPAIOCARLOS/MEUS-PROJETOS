@@ -13,6 +13,8 @@ body{
     background: #b4b4b4c0;
     /* backdrop-filter: blur(2px); */
     font-weight: bold;
+
+    position: relative;
 }
 
 footer{
@@ -64,4 +66,8 @@ footer img {
 
 .Button-enviar:hover {
     opacity: 0.8;
+}
+.loading {
+    width: 30px;
+    height: 30px;
 }
