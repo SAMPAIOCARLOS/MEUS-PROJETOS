@@ -32,10 +32,12 @@ footer img {
     color: rgb(186, 0, 0);
     display: none;
 }
-#section-button-enviar {
+
+.section-group {
+    /* border: 1px solid green; */
     width: 400px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
 .Button-enviar {
