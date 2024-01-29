@@ -10,6 +10,7 @@
  const email_responsavel_case_No = document.getElementById('email-responsavel-case-No')
  const conf_email_group_responsavel = document.getElementById('conf-email-group-responsavel')
  const mySelect_estados = document.getElementById('mySelect-estados')
+ const mySelect_city = document.getElementById('mySelect-city')
 
 // const case_yes = document.getElementById('case_yes')
 // const case_no = document.getElementById('case_no')
@@ -144,6 +145,48 @@ telefones.forEach(phone => {
 //     document.getElementById('case_yes').checked = false
 // })
 
+
+// function carregar() {
+//     const estadoSelecionado = mySelect_estados.value
+//     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`).then((res)=> {
+//     return res.json()
+//     }).then((data)=> {
+//         mySelect_city.innerHTML = ''
+//         data.forEach(element => {
+            
+//             const newoption = document.createElement('option');
+//             newoption.innerText = element.nome
+
+//             mySelect_city.append(newoption)
+//         });
+//     })
+// }
+
+async function loadCity() {
+    try {
+        const estadoSelecionado = mySelect_estados.value
+        const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`)
+        const data = await response.json()
+
+        mySelect_city.innerHTML = ''
+
+        data.forEach(city => {
+            const Option_city = document.createElement('option')
+            Option_city.innerText = city.nome
+
+            mySelect_city.append(Option_city)
+        });
+
+    } catch (error) {
+        
+    }
+}
+
+mySelect_estados.addEventListener("change", ()=> {
+    loadCity()
+})
+
+
 form_grou.addEventListener('submit', (event)=> {
     event.preventDefault()
 
@@ -249,9 +292,7 @@ form_grou.addEventListener('submit', (event)=> {
         } else {
             validarEmail_conf(email_responsavel_case_No, conf_email_group_responsavel, '.span-conf-email-case-responsavel-no')
             return
-        }
-
-        
+        }   
 
           
     }
@@ -263,6 +304,9 @@ form_grou.addEventListener('submit', (event)=> {
         vazio(mySelect_estados, '.span-select-estado')
     }
 
+
+
+    
 })
 
 
