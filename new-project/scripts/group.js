@@ -164,21 +164,35 @@ telefones.forEach(phone => {
 
 async function loadCity() {
     try {
+        
+        mySelect_city.innerHTML = '<option value="" disabled selected>Carregando...</option>'
+
         const estadoSelecionado = mySelect_estados.value
         const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`)
         const data = await response.json()
 
+        if(!response.ok) {
+            return
+        }
+
         mySelect_city.innerHTML = ''
+
+        const optionTitle = document.createElement('option')
+        optionTitle.disabled = true;
+        optionTitle.selected = true;
+        optionTitle.innerText = 'Escolha'
+        mySelect_city.append(optionTitle)
 
         data.forEach(city => {
             const Option_city = document.createElement('option')
             Option_city.innerText = city.nome
-
+            Option_city.value = city.nome.toLowerCase()
+            Option_city.text = city.nome
             mySelect_city.append(Option_city)
         });
 
     } catch (error) {
-        
+        mySelect_city.innerHTML = '<option value="" disabled selected>Error!!</option>'
     }
 }
 
@@ -295,14 +309,28 @@ form_grou.addEventListener('submit', (event)=> {
         }   
 
           
+    } else {
+
+        if(mySelect_estados.value === '') {
+            vazio(mySelect_estados, '.span-select-estado')
+            return
+        } else {
+            vazio(mySelect_estados, '.span-select-estado')
+        }
+    
+        if(mySelect_city.value == 'Escolha') {
+            mySelect_city.style.border = '1px solid rgb(186, 0, 0)'
+            document.querySelector('.span-select-cidade').style.display = 'flex'
+            mySelect_city.focus()
+            return
+        } else {
+            mySelect_city.style.border = 'none'
+            document.querySelector('.span-select-cidade').style.display = 'none'
+        }
+    
     }
 
-    if(mySelect_estados.value === '') {
-        vazio(mySelect_estados, '.span-select-estado')
-        return
-    } else {
-        vazio(mySelect_estados, '.span-select-estado')
-    }
+    
 
 
 
