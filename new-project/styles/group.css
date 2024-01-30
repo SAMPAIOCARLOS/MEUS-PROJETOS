@@ -90,7 +90,17 @@
 #footer-group {
     padding-bottom: 50px;
 }
+#myul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-direction: column;
+    font-size: 20px;
+}
 
+#li-0-5 {
+    margin-top: 15px;
+}
 @media(max-width: 1050px) {
     #group-campo-start {
         justify-content: center;
