@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Checkbox</title>
+</head>
+<body>
+
+<section class="section-group">
+    <label for="">Faixa Etária</label>
+    <details class="inputs">
+        <summary id="summary">Selecione</summary>
+
+        <ul id="myul">
+            <li id="li-0-5">
+                <input type="checkbox" class="input-check">
+                <p>0-5 anos</p>
+            </li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+
+        <button onclick="verificarCheckbox()">Verificar</button>
+    </details>
+</section>
+
+<script>
+    function verificarCheckbox() {
+        // Obter todos os elementos de input com a classe "input-check"
+        var checkboxes = document.querySelectorAll('.input-check');
+
+        // Verificar se algum checkbox está marcado
+        var algumCheckboxMarcado = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        // Exibir uma mensagem de alerta se nenhum checkbox estiver marcado
+        if (!algumCheckboxMarcado) {
+            alert('Selecione pelo menos uma opção.');
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -103,7 +103,7 @@
             <section class="section-group">
                 <label for="Nome-Instituição">Nome da Instituição</label>
                 <input type="text" id="Nome-Instituição" name="Nome-Instituição" class="inputs">
-                <span class="span-invalido">Preencha este campo!</span>
+                <span class="span-invalido span-name-instituicao">Preencha este campo!</span>
             </section>
 
             <section class="section-group">
@@ -120,71 +120,72 @@
                     <option value="ongsEntidades">ONGs / Entidades Assistenciais</option>
                     <option value="outros">Outros (Turismo, clubes, famílias, igrejas, entre outros)</option>
                 </select>
-                <span class="span-invalido">Preencha este campo</span>
+                <span class="span-invalido span-natureza-instituicao">Preencha este campo</span>
             </section>
 
             <section class="section-group">
                 <label for="quantidade-participantes">Quantidades de participantes</label>
                 <input type="number" id="quantidade-participantes" name="quantidade-participantes" class="inputs">
-                <span class="span-invalido">Preencha este campo</span>
+                <span class="span-invalido span-quant-participantes">Preencha este campo</span>
             </section>
 
             <section class="section-group">
                 <label for="">faixa Etária</label>
-                <details class="inputs">
+                <details class="inputs" id="details-faixaEtaria">
                     <summary id="summary">Selecione</summary>
 
                     <ul id="myul">
                         <li id="li-0-5">
-                            <input type="checkbox">
-                            0-5 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>0-5 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            6-10 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>6-10 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            11-15 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>11-15 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            16-20 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>16-20 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            21-25 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>21-25 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            26-30 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>26-30 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            31-35 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>31-35 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            36-40 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>36-40 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            41-45 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>41-45 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            46-50 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>46-50 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            51-55 anos 
+                            <input type="checkbox" class="input-check">
+                            <p>51-55 anos </p>
                         </li>
                         <li>
-                            <input type="checkbox">
-                            Acima de 60 anos?
+                            <input type="checkbox" class="input-check">
+                            <p>Acima de 60 anos?</p>
                         </li>              
                     </ul>
                 </details>
+                <span class="span-invalido span-details">Preencha este campo!</span>
             </section>
 
             <section class="section-group">
@@ -201,7 +202,7 @@
                     <option value="turismo">Turismo</option>
                     <option value="outrosPerfil">Outros</option>
                 </select>
-                <span class="span-invalido">Preencha este campo</span>
+                <span class="span-invalido span-perfil-group">Preencha este campo</span>
             </section>
 
             <section class="section-group">
@@ -211,6 +212,7 @@
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
                 </select>
+                <span class="span-invalido span-portador-def">Preencha este campo!</span>
             </section>
 
             
@@ -218,12 +220,13 @@
             <section class="section-group">
                 <label for="textarea-Sobre-grupo">Observações sobre o Grupo</label>
                 <textarea name="textarea-Sobre-grupo" id="textarea-Sobre-grupo" class="inputs textarea"></textarea>
-                <span class="span-invalido">Preencha este campo!</span>
+                <span class="span-invalido span-textarea-sobre-group">Preencha este campo!</span>
             </section>
 
             <section class="section-group" id="section-infor-def">
                 <label for="textarea-infor-def">Informe mais detalhes</label>
                 <textarea name="textarea-infor-def" id="textarea-infor-def" class="inputs textarea"></textarea>
+                <span class="span-invalido span-textarea-infor-def">Preencha este campo!</span>
             </section>
 
             <h2 class="h2">Data da visita</h2>
@@ -260,5 +263,25 @@
 
 <script src="../scripts/group.js"></script>
 <script src="../scripts/functions.js"></script>
+
+
+<script>
+// const valores = document.querySelectorAll('#myul .input-check')
+//     document.getElementById('myul').addEventListener('change', ()=> {
+        
+
+//         const valoresSelecionado = []
+
+//         valores.forEach(valor => {
+//             if(valor.checked) {
+//                 valoresSelecionado.push(valor)
+//             }
+//         });
+
+//         console.log(valoresSelecionado)
+//     })
+
+    
+</script>
 
 </html>

@@ -3,7 +3,6 @@
  const telefone_group = document.getElementById('telefone-group')
  const email_group = document.getElementById('email-group')
  const conf_email_group = document.getElementById('conf-email-group')
- const select_deficiencia = document.getElementById('select-deficiencia')
  const select_responsavel_presente = document.getElementById('select-responsavel-presente')
  const Nome_responsavel_case_No = document.getElementById('Nome-responsavel-case-No')
  const telefone_responsavel_case_No = document.getElementById('telefone-responsavel-case-No')
@@ -11,6 +10,15 @@
  const conf_email_group_responsavel = document.getElementById('conf-email-group-responsavel')
  const mySelect_estados = document.getElementById('mySelect-estados')
  const mySelect_city = document.getElementById('mySelect-city')
+ const Nome_Instituição = document.getElementById('Nome-Instituição')
+ const Natureza_Instituição = document.getElementById('Natureza-Instituição')
+ const quantidade_participantes = document.getElementById('quantidade-participantes')
+ const details_faixaEtaria = document.getElementById('details-faixaEtaria')
+ const input_check = document.querySelectorAll('.input-check')
+ const select_perfil_group = document.getElementById('select-perfil-group')
+ const select_deficiencia = document.getElementById('select-deficiencia')
+ const textarea_Sobre_grupo = document.getElementById('textarea-Sobre-grupo')
+ const textarea_infor_def = document.getElementById('textarea-infor-def')
 
 // const case_yes = document.getElementById('case_yes')
 // const case_no = document.getElementById('case_no')
@@ -207,73 +215,73 @@ form_grou.addEventListener('submit', (event)=> {
 
     
 
-    if(solicitante.value.length < 3) {
-        validarName(solicitante, '.span-name-group')
-        return
-    } else {
-        validarName(solicitante, '.span-name-group')
-    }
-
-    // let valorCampo = Data_visita_group.value;
-    // let dataHora = new Date(valorCampo);
-
-    // if (dataHora < new Date()) {
-    //    Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
-    //    document.getElementById('icon-data-hora-group').style.display = 'block'
-    //    document.getElementById('campo-data-visita-group').innerText = 'Você tem que selecionar uma data maior que a atual!'
-    //    Data_visita_group.focus()
-    //    return 
-    // }
-
-    // if (!isNaN(dataHora.getTime())) {
-    //   if (dataHora.getDay() === 1) {
-    //     Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
-    //     document.getElementById('icon-data-hora-group').style.display = 'block'
-    //     document.getElementById('campo-data-visita-group').innerText = 'Não funcionamos as segundas-feiras!'
-    //     Data_visita_group.focus()
+    // if(solicitante.value.length < 3) {
+    //     validarName(solicitante, '.span-name-group')
     //     return
-    //   } else{
-    //     Data_visita_group.style.border = 'none'
-    //     document.getElementById('icon-data-hora-group').style.display = 'none'
-    //     document.getElementById('campo-data-visita-group').innerText = ''
-    //   }
     // } else {
-    //     Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
-    //     document.getElementById('icon-data-hora-group').style.display = 'block'
-    //     document.getElementById('campo-data-visita-group').innerText = 'Preencha este campo!'
-    //     Data_visita_group.focus()
-    //     return
+    //     validarName(solicitante, '.span-name-group')
     // }
 
-    if(telefone_group.value.length < 11) {
-        validarPhone(telefone_group, '.span-telefone-group')
-        return
-    } else {
-        validarPhone(telefone_group, '.span-telefone-group')
-    }
+    // // let valorCampo = Data_visita_group.value;
+    // // let dataHora = new Date(valorCampo);
+
+    // // if (dataHora < new Date()) {
+    // //    Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+    // //    document.getElementById('icon-data-hora-group').style.display = 'block'
+    // //    document.getElementById('campo-data-visita-group').innerText = 'Você tem que selecionar uma data maior que a atual!'
+    // //    Data_visita_group.focus()
+    // //    return 
+    // // }
+
+    // // if (!isNaN(dataHora.getTime())) {
+    // //   if (dataHora.getDay() === 1) {
+    // //     Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+    // //     document.getElementById('icon-data-hora-group').style.display = 'block'
+    // //     document.getElementById('campo-data-visita-group').innerText = 'Não funcionamos as segundas-feiras!'
+    // //     Data_visita_group.focus()
+    // //     return
+    // //   } else{
+    // //     Data_visita_group.style.border = 'none'
+    // //     document.getElementById('icon-data-hora-group').style.display = 'none'
+    // //     document.getElementById('campo-data-visita-group').innerText = ''
+    // //   }
+    // // } else {
+    // //     Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+    // //     document.getElementById('icon-data-hora-group').style.display = 'block'
+    // //     document.getElementById('campo-data-visita-group').innerText = 'Preencha este campo!'
+    // //     Data_visita_group.focus()
+    // //     return
+    // // }
+
+    // if(telefone_group.value.length < 11) {
+    //     validarPhone(telefone_group, '.span-telefone-group')
+    //     return
+    // } else {
+    //     validarPhone(telefone_group, '.span-telefone-group')
+    // }
 
 
-    if(email_group.value === '' || !isEmailValue(email_group.value)) {
-        validarEmail(email_group, '.span-email-group')
-        return
-    } else {
-        validarEmail(email_group, '.span-email-group')
-    }
+    // if(email_group.value === '' || !isEmailValue(email_group.value)) {
+    //     validarEmail(email_group, '.span-email-group')
+    //     return
+    // } else {
+    //     validarEmail(email_group, '.span-email-group')
+    // }
 
-    if(email_group.value === conf_email_group.value) {
-        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-    } else {
-        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-        return
-    }
+    // if(email_group.value === conf_email_group.value) {
+    //     validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
+    // } else {
+    //     validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
+    //     return
+    // }
 
     
-    if(select_responsavel_presente.value === '') {
-        vazio(select_responsavel_presente, '.span-responsavel-presente')
-        return
-    } else {
-        vazio(select_responsavel_presente, '.span-responsavel-presente')
-    }
+    // if(select_responsavel_presente.value === '') {
+    //     vazio(select_responsavel_presente, '.span-responsavel-presente')
+    //     return
+    // } else {
+    //     vazio(select_responsavel_presente, '.span-responsavel-presente')
+    // }
 
 
 
@@ -326,6 +334,71 @@ form_grou.addEventListener('submit', (event)=> {
         } else {
             mySelect_city.style.border = 'none'
             document.querySelector('.span-select-cidade').style.display = 'none'
+        }
+
+        if(Nome_Instituição.value === '') {
+            vazio(Nome_Instituição, '.span-name-instituicao')
+            return
+        } else {
+            vazio(Nome_Instituição, '.span-name-instituicao')
+        }
+
+        if(Natureza_Instituição.value === '') {
+            vazio(Natureza_Instituição, '.span-natureza-instituicao')
+            return
+        } else {
+            vazio(Natureza_Instituição, '.span-natureza-instituicao')
+        }
+
+        if(quantidade_participantes.value === '') {
+            vazio(quantidade_participantes, '.span-quant-participantes')
+            return
+        } else {
+            vazio(quantidade_participantes, '.span-quant-participantes')
+        }
+
+        let checkbox_checket = Array.from(input_check).some(checkbox => checkbox.checked);
+
+        if(!checkbox_checket) {
+            details_faixaEtaria.style.border = '1px solid rgb(186, 0, 0)'
+            document.querySelector('.span-details').style.display = 'flex'
+            details_faixaEtaria.focus()
+            return
+        } else {
+            details_faixaEtaria.style.border = 'none'
+            document.querySelector('.span-details').style.display = 'none'
+        }
+
+        if(select_perfil_group.value === '') {
+            vazio(select_perfil_group, '.span-perfil-group')
+            return
+        } else {
+            vazio(select_perfil_group, '.span-perfil-group')
+        }
+
+        if(select_deficiencia.value === '') {
+            vazio(select_deficiencia, '.span-portador-def')
+            return
+        } else {
+            vazio(select_deficiencia, '.span-portador-def')
+        }
+
+        if(select_deficiencia.value == 'sim') {
+            if(textarea_Sobre_grupo.value === '') {
+                vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
+                return
+            } else {
+                vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
+            }
+
+            if(textarea_infor_def.value === '') {
+                vazio(textarea_infor_def, '.span-textarea-infor-def')
+                return
+            } else {
+                vazio(textarea_infor_def, 'span-textarea-infor-def')
+            }
+        } else {
+            
         }
     
     }
