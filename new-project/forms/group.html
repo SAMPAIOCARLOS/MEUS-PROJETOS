@@ -18,7 +18,7 @@
             <div id="group-campo-start">
                 <section class="section-group">
                     <label for="Solicitante">Nome Completo do Responsavel </label>
-                    <input type="text" id="Solicitante" name="Solicitante" class="inputs"
+                    <input type="text" id="Solicitante" name="Solicitante" class="inputs campo_text"
                         onkeydown="return /[a-z]/i.test(event.key)">
                     <span class="span-invalido span-name-group">O nome tem que ter no mínimo 3 caracteres!</span>
                 </section>
@@ -27,24 +27,24 @@
                 <section class="section-group">
                     <label for="telefone">Telefone do Responsavel</label>
                     <input type="phone" id="telefone-group" name="telefone-group" maxlength="15" minlength="10"
-                        placeholder="(xx) xxxxx-xxxx" class="inputs telefones">
+                        placeholder="(xx) xxxxx-xxxx" class="inputs telefones campo_text">
                     <span class="span-invalido span-telefone-group">Telefone invalido!</span>
                 </section>
                 <section class="section-group">
                     <label for="email-group">Email do Responsavel</label>
-                    <input type="text" id="email-group" name="email-group" class="inputs">
+                    <input type="text" id="email-group" name="email-group" class="inputs campo_text">
                     <span class="span-invalido span-email-group">Este email é invalido!</span>
                 </section>
 
                 <section class="section-group">
                     <label for="conf-email-group">Confirme seu email</label>
-                    <input type="text" id="conf-email-group" name="conf-email-group" class="inputs">
+                    <input type="text" id="conf-email-group" name="conf-email-group" class="inputs campo_text">
                     <span class="span-invalido span-conf-email-group">Este e-mail difere do anterior.</span>
                 </section>
 
                 <section class="section-group" id="section-responsavel-presente">
                     <label for="select-responsavel-presente">O responsável pelo cadastro será o mesmo presente no dia da visita?</label>
-                    <select name="select-responsavel-presente" id="select-responsavel-presente" class="inputs">
+                    <select name="select-responsavel-presente" id="select-responsavel-presente" class="inputs selects">
                         <option value="" disabled selected>Selecione</option>
                         <option value="Sim">Sim</option>
                         <option value="Nao">Não</option>
@@ -58,22 +58,22 @@
                     <div id="agrupamento-box-responsavel">
                         <section class="section-group">
                             <label for="Nome-responsavel-case-No">Nome</label>
-                            <input type="text" id="Nome-responsavel-case-No" name="Nome-responsavel-case-No" class="inputs">
+                            <input type="text" id="Nome-responsavel-case-No" name="Nome-responsavel-case-No" class="inputs campo_text">
                             <span class="span-invalido span-name-case-responsavel-no">O nome tem que ter no mínimo 3 caracteres!</span>
                         </section>
                         <section class="section-group">
                             <label for="telefone-responsavel-case-No">Telefone</label>
-                            <input type="phone" id="telefone-responsavel-case-No" name="telefone-responsavel-case-No" class="inputs telefones" placeholder="(xx) xxxxx-xxxx">
+                            <input type="phone" id="telefone-responsavel-case-No" name="telefone-responsavel-case-No" class="inputs telefones campo_text" placeholder="(xx) xxxxx-xxxx" maxlength="15" minlength="11">
                             <span class="span-invalido span-telefone-case-responsavel-no">Preencha este campo!</span>
                         </section>
                         <section class="section-group">
                             <label for="email-responsavel-case-No">Email</label>
-                            <input type="email" id="email-responsavel-case-No" name="email-responsavel-case-No" class="inputs">
+                            <input type="text" id="email-responsavel-case-No" name="email-responsavel-case-No" class="inputs campo_text">
                             <span class="span-invalido span-email-case-responsavel-no">Este email é invalido!</span>
                         </section>
                         <section class="section-group">
                             <label for="conf-email-group-responsavel">Confirme seu email</label>
-                            <input type="text" id="conf-email-group-responsavel" name="conf-email-group-responsavel" class="inputs">
+                            <input type="text" id="conf-email-group-responsavel" name="conf-email-group-responsavel" class="inputs campo_text">
                             <span class="span-invalido span-conf-email-case-responsavel-no">Este e-mail difere do anterior.</span>
                         </section>
                     </div>
@@ -85,14 +85,14 @@
 
 
             <section class="section-group">
-                <select name="mySelect-estados" id="mySelect-estados" class="inputs">
+                <select name="mySelect-estados" id="mySelect-estados" class="inputs selects">
                     <option value="" disabled selected>Estado</option>
                 </select>
                 <span class="span-invalido span-select-estado">Prencha este campo!</span>
             </section>
 
             <section class="section-group">
-                <select name="mySelect-city" id="mySelect-city" class="inputs">
+                <select name="mySelect-city" id="mySelect-city" class="inputs selects">
                     <option value="" selected disabled>Cidade</option>
                 </select>
                 <span class="span-invalido span-select-cidade">Prencha este campo!</span>
@@ -102,13 +102,13 @@
 
             <section class="section-group">
                 <label for="Nome-Instituição">Nome da Instituição</label>
-                <input type="text" id="Nome-Instituição" name="Nome-Instituição" class="inputs">
+                <input type="text" id="Nome-Instituição" name="Nome-Instituição" class="inputs campo_text">
                 <span class="span-invalido span-name-instituicao">Preencha este campo!</span>
             </section>
 
             <section class="section-group">
                 <label for="Natureza-Instituição">Natureza da Instituição</label>
-                <select name="Natureza-Instituição" id="Natureza-Instituição" class="inputs">
+                <select name="Natureza-Instituição" id="Natureza-Instituição" class="inputs selects">
                     <option value="" disabled selected>Selecione</option>
                     <option value="escolaParticular">Escola Particular</option>
                     <option value="escolaEstadual">Escola Pública Estadual</option>
@@ -125,7 +125,7 @@
 
             <section class="section-group">
                 <label for="quantidade-participantes">Quantidades de participantes</label>
-                <input type="number" id="quantidade-participantes" name="quantidade-participantes" class="inputs">
+                <input type="number" id="quantidade-participantes" name="quantidade-participantes" class="inputs campo_text">
                 <span class="span-invalido span-quant-participantes">Preencha este campo</span>
             </section>
 
@@ -190,7 +190,7 @@
 
             <section class="section-group">
                 <label for="select-perfil-group">Perfil do grupo</label>
-                <select name="select-perfil-group" id="select-perfil-group" class="inputs">
+                <select name="select-perfil-group" id="select-perfil-group" class="inputs selects">
                     <option value="" disabled selected>Selecione</option>
                     <option value="educacaoInfantil">Educação Infantil</option>
                     <option value="fundamentalI">Ensino Fundamental I (1º ao 5º ano)</option>
@@ -207,7 +207,7 @@
 
             <section class="section-group">
                 <label for="select-deficiencia">Há portador de deficiência?</label>
-                <select name="select-deficiencia" id="select-deficiencia" class="inputs">
+                <select name="select-deficiencia" id="select-deficiencia" class="inputs selects">
                     <option value="" disabled selected>Selecione</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
@@ -219,13 +219,13 @@
 
             <section class="section-group">
                 <label for="textarea-Sobre-grupo">Observações sobre o Grupo</label>
-                <textarea name="textarea-Sobre-grupo" id="textarea-Sobre-grupo" class="inputs textarea"></textarea>
+                <textarea name="textarea-Sobre-grupo" id="textarea-Sobre-grupo" class="inputs textarea campo_text"></textarea>
                 <span class="span-invalido span-textarea-sobre-group">Preencha este campo!</span>
             </section>
 
             <section class="section-group" id="section-infor-def">
                 <label for="textarea-infor-def">Informe mais detalhes</label>
-                <textarea name="textarea-infor-def" id="textarea-infor-def" class="inputs textarea"></textarea>
+                <textarea name="textarea-infor-def" id="textarea-infor-def" class="inputs textarea campo_text"></textarea>
                 <span class="span-invalido span-textarea-infor-def">Preencha este campo!</span>
             </section>
 
