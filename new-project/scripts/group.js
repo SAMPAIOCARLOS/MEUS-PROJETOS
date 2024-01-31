@@ -1,83 +1,72 @@
- const form_grou = document.getElementById('form-group')
- const solicitante = document.getElementById('Solicitante')
- const telefone_group = document.getElementById('telefone-group')
- const email_group = document.getElementById('email-group')
- const conf_email_group = document.getElementById('conf-email-group')
- const select_responsavel_presente = document.getElementById('select-responsavel-presente')
- const Nome_responsavel_case_No = document.getElementById('Nome-responsavel-case-No')
- const telefone_responsavel_case_No = document.getElementById('telefone-responsavel-case-No')
- const email_responsavel_case_No = document.getElementById('email-responsavel-case-No')
- const conf_email_group_responsavel = document.getElementById('conf-email-group-responsavel')
- const mySelect_estados = document.getElementById('mySelect-estados')
- const mySelect_city = document.getElementById('mySelect-city')
- const Nome_Instituição = document.getElementById('Nome-Instituição')
- const Natureza_Instituição = document.getElementById('Natureza-Instituição')
- const quantidade_participantes = document.getElementById('quantidade-participantes')
- const details_faixaEtaria = document.getElementById('details-faixaEtaria')
- const input_check = document.querySelectorAll('.input-check')
- const select_perfil_group = document.getElementById('select-perfil-group')
- const select_deficiencia = document.getElementById('select-deficiencia')
- const textarea_Sobre_grupo = document.getElementById('textarea-Sobre-grupo')
- const textarea_infor_def = document.getElementById('textarea-infor-def')
+const form_grou = document.getElementById('form-group')
+const solicitante = document.getElementById('Solicitante')
+const telefone_group = document.getElementById('telefone-group')
+const email_group = document.getElementById('email-group')
+const conf_email_group = document.getElementById('conf-email-group')
+const select_responsavel_presente = document.getElementById('select-responsavel-presente')
+const Nome_responsavel_case_No = document.getElementById('Nome-responsavel-case-No')
+const telefone_responsavel_case_No = document.getElementById('telefone-responsavel-case-No')
+const email_responsavel_case_No = document.getElementById('email-responsavel-case-No')
+const conf_email_group_responsavel = document.getElementById('conf-email-group-responsavel')
+const mySelect_estados = document.getElementById('mySelect-estados')
+const mySelect_city = document.getElementById('mySelect-city')
+const Nome_Instituição = document.getElementById('Nome-Instituição')
+const Natureza_Instituição = document.getElementById('Natureza-Instituição')
+const quantidade_participantes = document.getElementById('quantidade-participantes')
+const details_faixaEtaria = document.getElementById('details-faixaEtaria')
+const input_check = document.querySelectorAll('.input-check')
+const select_perfil_group = document.getElementById('select-perfil-group')
+const select_deficiencia = document.getElementById('select-deficiencia')
+const textarea_Sobre_grupo = document.getElementById('textarea-Sobre-grupo')
+const textarea_infor_def = document.getElementById('textarea-infor-def')
+const Data_visita_group = document.getElementById('Data-visita-group')
 
 // const case_yes = document.getElementById('case_yes')
 // const case_no = document.getElementById('case_no')
 
-
 const estados_brasil = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
-
-
-for (let i = 0; i < estados_brasil.length; i++) {
-    const estado = estados_brasil[i];
-    const newOption = document.createElement('option')
+for (const estado of estados_brasil) {
+    const newOption = document.createElement('option');
     newOption.innerText = estado
 
     mySelect_estados.append(newOption)
 }
 
 
-
 // async function mudarCidade() {
 //     const res = await fetch(``)
 // }
 
-
-
-
 // const select_responsavel_presente = document.getElementById('select-responsavel-presente')
 
-select_responsavel_presente.addEventListener('change', ()=> {
-    if(select_responsavel_presente.value === 'Nao') {
-        document.getElementById('box-responsavel-case-No').style.display = 'flex'     
-    } else{
+select_responsavel_presente.addEventListener('change', () => {
+    if (select_responsavel_presente.value === 'Nao') {
+        document.getElementById('box-responsavel-case-No').style.display = 'flex'
+    } else {
         document.getElementById('box-responsavel-case-No').style.display = 'none'
     }
 })
 
 
-select_deficiencia.addEventListener('change', ()=> {
-    if(select_deficiencia.value === 'sim') {
+select_deficiencia.addEventListener('change', () => {
+    if (select_deficiencia.value === 'sim') {
         document.getElementById('section-infor-def').style.display = 'flex'
     } else {
         document.getElementById('section-infor-def').style.display = 'none'
     }
 })
 
-
-
-
-
-function isEmailValue(campo) { 
+function isEmailValue(value) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
 
-    return emailRegex.test(campo);
+    return emailRegex.test(value);
 }
 
 // function validarCEP(cep) {
-    
+
 //     var regexCEP = /^[0-9]{5}-?[0-9]{0,3}$/;
 
-  
+
 //     if (regexCEP.test(cep)) {
 //       return true; // CEP válido
 //     } else {
@@ -89,13 +78,10 @@ function isEmailValue(campo) {
 const telefones = document.querySelectorAll('.telefones')
 
 telefones.forEach(phone => {
-
-    document.addEventListener('DOMContentLoaded', ()=> {
-
-        phone.addEventListener('keyup', ()=> {
-                 
+    document.addEventListener('DOMContentLoaded', () => {
+        phone.addEventListener('keyup', () => {
             let apenasNumeros = phone.value.replace(/\D/g, '');
-    
+
             if (apenasNumeros.length <= 2) {
                 phone.value = apenasNumeros;
             } else if (apenasNumeros.length <= 6) {
@@ -103,18 +89,14 @@ telefones.forEach(phone => {
             } else {
                 phone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
             }
-      
         });
-    })    
-    
+    })
+
 });
-
-
-
 
 // function isTelefoneValue() {
 //     telefone_group.addEventListener('keyup', ()=> {
-             
+
 //         var apenasNumeros = telefone_group.value.replace(/\D/g, '');
 
 //         if (apenasNumeros.length <= 2) {
@@ -124,7 +106,7 @@ telefones.forEach(phone => {
 //         } else {
 //             telefone_group.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
 //         }
-  
+
 //     });
 // }
 
@@ -161,7 +143,7 @@ telefones.forEach(phone => {
 //     }).then((data)=> {
 //         mySelect_city.innerHTML = ''
 //         data.forEach(element => {
-            
+
 //             const newoption = document.createElement('option');
 //             newoption.innerText = element.nome
 
@@ -172,31 +154,31 @@ telefones.forEach(phone => {
 
 async function loadCity() {
     try {
-        
+
         mySelect_city.innerHTML = '<option value="" disabled selected>Carregando...</option>'
 
         const estadoSelecionado = mySelect_estados.value
-        const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`)
-        const data = await response.json()
+        const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`);
+        const data = await response.json();
 
-        if(!response.ok) {
+        if (!response.ok) {
             return
         }
 
         mySelect_city.innerHTML = ''
 
-        const optionTitle = document.createElement('option')
+        const optionTitle = document.createElement('option');
         optionTitle.disabled = true;
         optionTitle.selected = true;
-        optionTitle.innerText = 'Escolha'
-        mySelect_city.append(optionTitle)
+        optionTitle.innerText = 'Escolha';
+        mySelect_city.append(optionTitle);
 
         data.forEach(city => {
-            const Option_city = document.createElement('option')
-            Option_city.innerText = city.nome
-            Option_city.value = city.nome.toLowerCase()
-            Option_city.text = city.nome
-            mySelect_city.append(Option_city)
+            const Option_city = document.createElement('option');
+            Option_city.innerText = city.nome;
+            Option_city.value = city.nome.toLowerCase();
+            Option_city.text = city.nome;
+            mySelect_city.append(Option_city);
         });
 
     } catch (error) {
@@ -204,16 +186,31 @@ async function loadCity() {
     }
 }
 
-mySelect_estados.addEventListener("change", ()=> {
-    loadCity()
+mySelect_estados.addEventListener("change", () => {
+    loadCity();
 })
 
+form_grou.addEventListener('keydown', (event) => {
+    const section = event.target.parentNode;
+    const span = section.querySelector('span');
+    const input = section.querySelector('input');
 
-form_grou.addEventListener('submit', (event)=> {
-    event.preventDefault()
+    if (span) {
+        if (span.style.display === 'flex') {
+            input.style.border = 'none';
+            span.style.display = 'none';
+        }
+    }
+})
+
+form_grou.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (solicitante.value.length < 3) return gerarErrorNoInput(solicitante, 'span-name-group');
 
 
-    
+
+
 
     // if(solicitante.value.length < 3) {
     //     validarName(solicitante, '.span-name-group')
@@ -253,6 +250,9 @@ form_grou.addEventListener('submit', (event)=> {
     // //     return
     // // }
 
+
+    // if (solicitante.value.length < 3) return gerarErrorNoInput(solicitante, 'span-name-group');
+
     // if(telefone_group.value.length < 11) {
     //     validarPhone(telefone_group, '.span-telefone-group')
     //     return
@@ -260,6 +260,9 @@ form_grou.addEventListener('submit', (event)=> {
     //     validarPhone(telefone_group, '.span-telefone-group')
     // }
 
+    if (telefone_group.value.length < 15) return gerarErrorNoInput(telefone_group, 'span-telefone-group')
+
+    if (!isEmailValue(email_group.value)) return gerarErrorNoInput(email_group, 'span-email-group')
 
     // if(email_group.value === '' || !isEmailValue(email_group.value)) {
     //     validarEmail(email_group, '.span-email-group')
@@ -268,65 +271,67 @@ form_grou.addEventListener('submit', (event)=> {
     //     validarEmail(email_group, '.span-email-group')
     // }
 
-    // if(email_group.value === conf_email_group.value) {
-    //     validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-    // } else {
-    //     validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-    //     return
-    // }
-
-    
-    // if(select_responsavel_presente.value === '') {
-    //     vazio(select_responsavel_presente, '.span-responsavel-presente')
-    //     return
-    // } else {
-    //     vazio(select_responsavel_presente, '.span-responsavel-presente')
-    // }
+    if (email_group.value === conf_email_group.value) {
+        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
+    } else {
+        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
+        return
+    }
 
 
+    if (select_responsavel_presente.value === '') {
+        vazio(select_responsavel_presente, '.span-responsavel-presente')
+        return
+    } else {
+        vazio(select_responsavel_presente, '.span-responsavel-presente')
+    }
 
-    if(select_responsavel_presente.value === 'Nao') {
-        
-        if(Nome_responsavel_case_No.value.length < 3) {
+
+    // select_responsavel_presente.value.length === 0  ? 'Ele é gay' : 'Não tem como n ser'
+
+
+    if (select_responsavel_presente.value === 'Nao') {
+
+        if (Nome_responsavel_case_No.value.length < 3) {
             validarName(Nome_responsavel_case_No, '.span-name-case-responsavel-no')
             return
         } else {
             validarName(Nome_responsavel_case_No, '.span-name-case-responsavel-no')
         }
 
-        if(telefone_responsavel_case_No.value.length < 11) {
+        if (telefone_responsavel_case_No.value.length < 11) {
             validarPhone(telefone_responsavel_case_No, '.span-telefone-case-responsavel-no')
             return
-        } else{
+        } else {
             validarPhone(telefone_responsavel_case_No, '.span-telefone-case-responsavel-no')
         }
 
 
-        if(email_responsavel_case_No.value === '' || !isEmailValue(email_responsavel_case_No.value)) {
+        if (email_responsavel_case_No.value === '' || !isEmailValue(email_responsavel_case_No.value)) {
             validarEmail(email_responsavel_case_No, '.span-email-case-responsavel-no')
             return
         } else {
             validarEmail(email_responsavel_case_No, '.span-email-case-responsavel-no')
         }
-    
-        if(email_responsavel_case_No.value === conf_email_group_responsavel.value) {
+
+        if (email_responsavel_case_No.value === conf_email_group_responsavel.value) {
             validarEmail_conf(email_responsavel_case_No, conf_email_group_responsavel, '.span-conf-email-case-responsavel-no')
         } else {
             validarEmail_conf(email_responsavel_case_No, conf_email_group_responsavel, '.span-conf-email-case-responsavel-no')
             return
-        }   
+        }
 
-          
+
     } else {
 
-        if(mySelect_estados.value === '') {
+        if (mySelect_estados.value === '') {
             vazio(mySelect_estados, '.span-select-estado')
             return
         } else {
             vazio(mySelect_estados, '.span-select-estado')
         }
-    
-        if(mySelect_city.value == 'Escolha') {
+
+        if (mySelect_city.value == 'Escolha') {
             mySelect_city.style.border = '1px solid rgb(186, 0, 0)'
             document.querySelector('.span-select-cidade').style.display = 'flex'
             mySelect_city.focus()
@@ -336,21 +341,21 @@ form_grou.addEventListener('submit', (event)=> {
             document.querySelector('.span-select-cidade').style.display = 'none'
         }
 
-        if(Nome_Instituição.value === '') {
+        if (Nome_Instituição.value === '') {
             vazio(Nome_Instituição, '.span-name-instituicao')
             return
         } else {
             vazio(Nome_Instituição, '.span-name-instituicao')
         }
 
-        if(Natureza_Instituição.value === '') {
+        if (Natureza_Instituição.value === '') {
             vazio(Natureza_Instituição, '.span-natureza-instituicao')
             return
         } else {
             vazio(Natureza_Instituição, '.span-natureza-instituicao')
         }
 
-        if(quantidade_participantes.value === '') {
+        if (quantidade_participantes.value === '') {
             vazio(quantidade_participantes, '.span-quant-participantes')
             return
         } else {
@@ -359,7 +364,7 @@ form_grou.addEventListener('submit', (event)=> {
 
         let checkbox_checket = Array.from(input_check).some(checkbox => checkbox.checked);
 
-        if(!checkbox_checket) {
+        if (!checkbox_checket) {
             details_faixaEtaria.style.border = '1px solid rgb(186, 0, 0)'
             document.querySelector('.span-details').style.display = 'flex'
             details_faixaEtaria.focus()
@@ -369,46 +374,83 @@ form_grou.addEventListener('submit', (event)=> {
             document.querySelector('.span-details').style.display = 'none'
         }
 
-        if(select_perfil_group.value === '') {
+        if (select_perfil_group.value === '') {
             vazio(select_perfil_group, '.span-perfil-group')
             return
         } else {
             vazio(select_perfil_group, '.span-perfil-group')
         }
 
-        if(select_deficiencia.value === '') {
+        if (select_deficiencia.value === '') {
             vazio(select_deficiencia, '.span-portador-def')
             return
         } else {
             vazio(select_deficiencia, '.span-portador-def')
         }
 
-        if(select_deficiencia.value == 'sim') {
-            if(textarea_Sobre_grupo.value === '') {
+        if (select_deficiencia.value == 'sim') {
+            if (textarea_Sobre_grupo.value === '') {
                 vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
                 return
             } else {
                 vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
             }
 
-            if(textarea_infor_def.value === '') {
+            if (textarea_infor_def.value === '') {
                 vazio(textarea_infor_def, '.span-textarea-infor-def')
                 return
             } else {
                 vazio(textarea_infor_def, 'span-textarea-infor-def')
             }
-        } else {
-            
         }
-    
+
+        if (textarea_Sobre_grupo.value === '') {
+            vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
+            return
+        } else {
+            vazio(textarea_Sobre_grupo, '.span-textarea-sobre-group')
+        }
+
+
+        let valorCampo = Data_visita_group.value;
+        let dataHora = new Date(valorCampo);
+
+        if (dataHora < new Date()) {
+            Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+            document.getElementById('icon-data-hora-group').style.display = 'block'
+            document.getElementById('campo-data-visita-group').innerText = 'Você tem que selecionar uma data maior que a atual!'
+            Data_visita_group.focus()
+            return
+        }
+
+        if (!isNaN(dataHora.getTime())) {
+            if (dataHora.getDay() === 1) {
+                Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+                document.getElementById('icon-data-hora-group').style.display = 'block'
+                document.getElementById('campo-data-visita-group').innerText = 'Não funcionamos as segundas-feiras!'
+                Data_visita_group.focus()
+                return
+            } else {
+                Data_visita_group.style.border = 'none'
+                document.getElementById('icon-data-hora-group').style.display = 'none'
+                document.getElementById('campo-data-visita-group').innerText = ''
+            }
+        } else {
+            Data_visita_group.style.border = '1px solid rgb(186, 0, 0)'
+            document.getElementById('icon-data-hora-group').style.display = 'block'
+            document.getElementById('campo-data-visita-group').innerText = 'Preencha este campo!'
+            Data_visita_group.focus()
+            return
+        }
+
+
+
+
     }
-
-    
-
-
-
-    
 })
 
-
-
+function gerarErrorNoInput(input, span) {
+    input.style.border = '1px solid rgb(186, 0, 0)'
+    document.querySelector(`.${span}`).style.display = 'flex'
+    input.focus();
+}
