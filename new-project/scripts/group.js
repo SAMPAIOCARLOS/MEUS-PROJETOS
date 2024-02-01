@@ -250,8 +250,7 @@ form_grou.addEventListener('submit', (event) => {
     }
 
 
-    alert('sla')
-
+    console.log('apenas um teste')
     
   
 })
