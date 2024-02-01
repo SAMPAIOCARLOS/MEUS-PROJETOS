@@ -249,9 +249,10 @@ form_grou.addEventListener('submit', (event) => {
         return
     }
 
-    alert("fabio é preto (estagiario)")
 
+    alert('sla')
 
     
+  
 })
 
