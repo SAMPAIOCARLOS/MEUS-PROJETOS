@@ -249,7 +249,7 @@ form_grou.addEventListener('submit', (event) => {
         return
     }
 
-    
+console.log('')
 
 
 })
