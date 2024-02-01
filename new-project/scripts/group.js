@@ -22,24 +22,8 @@ const textarea_infor_def = document.getElementById('textarea-infor-def')
 const Data_visita_group = document.getElementById('Data-visita-group')
 const selects = document.querySelectorAll('.selects')
 const campo_text = document.querySelectorAll('.campo_text')
+const telefones = document.querySelectorAll('.telefones')
 
-// const case_yes = document.getElementById('case_yes')
-// const case_no = document.getElementById('case_no')
-
-const estados_brasil = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
-for (const estado of estados_brasil) {
-    const newOption = document.createElement('option');
-    newOption.innerText = estado
-
-    mySelect_estados.append(newOption)
-}
-
-
-// async function mudarCidade() {
-//     const res = await fetch(``)
-// }
-
-// const select_responsavel_presente = document.getElementById('select-responsavel-presente')
 
 select_responsavel_presente.addEventListener('change', () => {
     if (select_responsavel_presente.value === 'Nao') {
@@ -58,11 +42,6 @@ select_deficiencia.addEventListener('change', () => {
     }
 })
 
-function isEmailValue(value) {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
-
-    return emailRegex.test(value);
-}
 
 // function validarCEP(cep) {
 
@@ -76,8 +55,6 @@ function isEmailValue(value) {
 //     }
 //   }
 
-
-const telefones = document.querySelectorAll('.telefones')
 
 telefones.forEach(phone => {
     document.addEventListener('DOMContentLoaded', () => {
@@ -96,63 +73,6 @@ telefones.forEach(phone => {
 
 });
 
-// function isTelefoneValue() {
-//     telefone_group.addEventListener('keyup', ()=> {
-
-//         var apenasNumeros = telefone_group.value.replace(/\D/g, '');
-
-//         if (apenasNumeros.length <= 2) {
-//             telefone_group.value = apenasNumeros;
-//         } else if (apenasNumeros.length <= 6) {
-//             telefone_group.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2);
-//         } else {
-//             telefone_group.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
-//         }
-
-//     });
-// }
-
-
-
-
-// document.addEventListener("DOMContentLoaded", ()=> {
-//     isTelefoneValue()
-// });
-
-
-// const box_case_yes = document.getElementById('box-case-yes')
-// const box_case_no = document.getElementById('box-case-no')
-
-// document.getElementById('case_yes').addEventListener('click', (event)=> {
-//     box_case_no.style.display = 'none'
-//     box_case_yes.style.display = 'flex'
-
-//     document.getElementById('case_no').checked = false
-// })
-
-// document.getElementById('case_no').addEventListener('change', ()=> {
-//     box_case_yes.style.display = 'none'
-//     box_case_no.style.display = 'flex'
-
-//     document.getElementById('case_yes').checked = false
-// })
-
-
-// function carregar() {
-//     const estadoSelecionado = mySelect_estados.value
-//     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSelecionado}/municipios`).then((res)=> {
-//     return res.json()
-//     }).then((data)=> {
-//         mySelect_city.innerHTML = ''
-//         data.forEach(element => {
-
-//             const newoption = document.createElement('option');
-//             newoption.innerText = element.nome
-
-//             mySelect_city.append(newoption)
-//         });
-//     })
-// }
 
 async function loadCity() {
     try {
@@ -332,8 +252,3 @@ form_grou.addEventListener('submit', (event) => {
 
 })
 
-function gerarErrorNoInput(input, span) {
-    input.style.border = '1px solid rgb(186, 0, 0)'
-    document.querySelector(`.${span}`).style.display = 'flex'
-    input.focus();
-}
