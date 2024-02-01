@@ -249,8 +249,9 @@ form_grou.addEventListener('submit', (event) => {
         return
     }
 
-console.log('')
+    alert("fabio é preto (estagiario)")
 
 
+    
 })
 
