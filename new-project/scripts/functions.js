@@ -18,4 +18,9 @@ function isEmailValue(value) {
     return emailRegex.test(value);
 }
 
-alert('')
+
+// function validarEmail_conf(campo, span) {
+//     campo.style.border = '1px solid rgb(186, 0, 0)'
+//     span.style.display = 'flex'
+// }
+

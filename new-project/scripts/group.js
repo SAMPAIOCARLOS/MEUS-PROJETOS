@@ -152,14 +152,10 @@ form_grou.addEventListener('submit', (event) => {
 
     if (!isEmailValue(email_group.value)) return gerarErrorNoInput(email_group, 'span-email-group')
 
-    if (email_group.value === conf_email_group.value) {
-        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-    } else {
-        validarEmail_conf(email_group, conf_email_group, '.span-conf-email-group')
-        return
-    }
+    if (email_group.value !== conf_email_group.value) return gerarErrorNoInput(conf_email_group, 'span-conf-email-group')
 
     if(select_responsavel_presente.value === '') return gerarErrorNoInput(select_responsavel_presente, 'span-responsavel-presente')
+
 
 
     if (select_responsavel_presente.value === 'Nao') {
@@ -173,6 +169,7 @@ form_grou.addEventListener('submit', (event) => {
         if (email_responsavel_case_No.value !== conf_email_group_responsavel.value) return gerarErrorNoInput(conf_email_group_responsavel, 'span-conf-email-case-responsavel-no')
 
     } 
+    
 
     if(mySelect_estados.value === '') return gerarErrorNoInput(mySelect_estados, 'span-select-estado')
 
@@ -249,7 +246,6 @@ form_grou.addEventListener('submit', (event) => {
     }
 
 
-    console.log('apenas um teste')
     
   
 })
