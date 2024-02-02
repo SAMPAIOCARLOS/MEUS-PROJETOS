@@ -1,5 +1,5 @@
 #main{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 80vw;
     height: 100%;
     margin: auto;
@@ -11,7 +11,7 @@
 }
 
 #form-group {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +78,7 @@
 }
 
 .textarea {
-    min-width: 400px !important;
+    min-width: 300px;
     max-width: 400px;
     min-height: 120px;
     max-height: 120px;
@@ -147,12 +147,27 @@
     left: 30px;
 }
 
-@media(max-width: 1050px) {
+@media(max-width: 1604px) {
+    #none{
+        display: none;
+    }
+}
+
+@media(max-width: 1054px) {
     #group-campo-start {
         justify-content: center;
     }
     .section-group {
-        width: 100%;
+        width: 100% !important;
+    }
+    .textarea {
+        min-width: 100% !important;
+    }
+    
+}
+@media(max-width: 504px) {
+    .textarea {
+        width: 300px !important;
     }
 }
 

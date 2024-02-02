@@ -57,7 +57,7 @@ select_deficiencia.addEventListener('change', () => {
 
 
 telefones.forEach(phone => {
-    document.addEventListener('DOMContentLoaded', () => {
+    
         phone.addEventListener('keyup', () => {
             let apenasNumeros = phone.value.replace(/\D/g, '');
 
@@ -69,7 +69,6 @@ telefones.forEach(phone => {
                 phone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
             }
         });
-    })
 
 });
 

@@ -13,50 +13,49 @@ function isEmailValue(email) {
     return emailRegex.test(email);
 }
 
-function isTelefoneValue() {
-    telefone.addEventListener('keyup', ()=> {
-             
-        var apenasNumeros = telefone.value.replace(/\D/g, '');
 
-        if (apenasNumeros.length <= 2) {
-            telefone.value = apenasNumeros;
-        } else if (apenasNumeros.length <= 6) {
-            telefone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2);
-        } else {
-            telefone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
+telefone.addEventListener('keyup', ()=> {
+            
+    var apenasNumeros = telefone.value.replace(/\D/g, '');
+
+    if (apenasNumeros.length <= 2) {
+        telefone.value = apenasNumeros;
+    } else if (apenasNumeros.length <= 6) {
+        telefone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2);
+    } else {
+        telefone.value = '(' + apenasNumeros.slice(0, 2) + ') ' + apenasNumeros.slice(2, 6) + '-' + apenasNumeros.slice(6);
+    }
+
+});
+
+
+const campos_text = document.querySelectorAll('.campos_text')
+
+campos_text.forEach(campo => {
+    campo.addEventListener('keyup', (event)=> {
+        const section = event.target.parentNode
+        const span = section.querySelector('.span-invalido')
+        const campo = section.querySelector('.campos_text')
+
+        if(span.style.display === 'flex') {
+            span.style.display = 'none'
+            campo.style.border = 'none'
         }
-  
-    });
-}
+    })
+
+    
+});
+
 
 
 form.addEventListener('submit', (event)=> {
     event.preventDefault()
 
-    if(nome.value.length < 3) {
-        validarName(nome, '.span-name')
-        return
-    } else {
-       validarName(nome, '.span-name')
-    }
-    
-    if(telefone.value.length < 11) {
-        telefone.style.border = '1px solid rgb(186, 0, 0)'
-        document.querySelector('.span-telefone').style.display = 'block'
-        return
-    } else{
-        telefone.style.border = 'none'
-        document.querySelector('.span-telefone').style.display = 'none'
-    }
+    if(nome.value.length < 3) return gerarErrorNoInput(nome, 'span-name')
 
-    if(email.value === '' || !isEmailValue(email.value)) {
-        email.style.border = '1px solid rgb(186, 0, 0)'
-        document.querySelector('.span-email').style.display = 'block'
-        return
-    } else {
-        email.style.border = 'none'
-        document.querySelector('.span-email').style.display = 'none'
-    }
+    if(telefone.value.length < 15) return gerarErrorNoInput(telefone, 'span-telefone')
+    
+    if(!isEmailValue(email.value)) return gerarErrorNoInput(email, 'span-email')
 
     if(email.value === conf_email.value) {
         conf_email.style.border = 'none'
@@ -119,9 +118,9 @@ form.addEventListener('submit', (event)=> {
 })
 
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    isTelefoneValue()
-});
+// document.addEventListener("DOMContentLoaded", ()=> {
+//     isTelefoneValue()
+// });
 
 
 
