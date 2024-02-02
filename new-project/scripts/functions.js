@@ -18,3 +18,4 @@ function isEmailValue(value) {
     return emailRegex.test(value);
 }
 
+alert('')

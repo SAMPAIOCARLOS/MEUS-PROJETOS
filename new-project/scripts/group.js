@@ -249,5 +249,8 @@ form_grou.addEventListener('submit', (event) => {
     }
 
 
+    console.log('apenas um teste')
+    
+  
 })
 
