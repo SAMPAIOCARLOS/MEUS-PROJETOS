@@ -108,7 +108,7 @@ window.onscroll = ()=> {
         hamb.forEach(elemnt => {
             elemnt.style.backgroundColor = '#fff'
         });
-        menu.classList.add('bola')
+        menu.classList.add('borda')
     } 
 
 

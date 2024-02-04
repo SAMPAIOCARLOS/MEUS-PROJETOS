@@ -24,7 +24,7 @@
     top: 2%;
     z-index: 100;
 }
-#hamburguer.bola {
+#hamburguer.borda {
     margin-top: 10px;
 }
 #hamburguer.active .line-span:nth-child(2) {

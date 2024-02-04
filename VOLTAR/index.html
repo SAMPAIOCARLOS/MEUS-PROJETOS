@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myselectTow{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>selections</h1>
+
+    <br>
+
+    <select name="myselect" id="myselect">
+        <option disabled selected>selecione um bicho</option>
+        <option value="mamiferos">mamiferos</option>
+        <option value="herbivoros">herbivoros</option>
+        <option value="carnivoros">carnivoros</option>
+        <option value="crustacios">crustacios</option>
+    </select>
+<br><br><br><br>
+    <select name="myselectTow" id="myselectTow">
+
+    </select>
+
+</body>
+
+<script>
+    const myselect = document.getElementById('myselect')
+    const myselectTow = document.getElementById('myselectTow')
+
+    function mudar1() {
+
+        const animais = [
+            {
+                type: "mamiferos",
+                animais: ['mula', 'cavalo']
+            },
+            {
+                type: "herbivoros",
+                animais: ['girafales']
+            },
+            {
+                type: "carnivoros",
+                animais: ['leão', 'tigre']
+            },
+            {
+                type: "crustacios",
+                animais: ['peixe', 'camarão']
+            }
+        ]
+
+        let valorSelect1 = myselect.value
+
+        for (let i = 0; i < animais.length; i++) {
+            const animal = animais[i];
+
+            if(animal.type === valorSelect1) {
+                myselectTow.style.display = 'block'
+                const optionDisabled = document.createElement('option')
+                optionDisabled.disabled = 'true'
+                optionDisabled.selected = 'true'
+                optionDisabled.innerText = 'escolha um animal'
+
+                myselectTow.append(optionDisabled)
+
+                
+            }
+            
+        }
+
+    }
+
+
+    myselect.addEventListener('change', ()=> {
+        mudar1()
+    })
+</script>
+</html>
