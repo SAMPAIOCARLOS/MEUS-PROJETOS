@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="select-option" id="select-option">
+        <option value="" disabled selected>Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+
+
+    <input type="text" id="nome" placeholder="nome">
+    <input type="text" id="job" placeholder="profissão">
+</body>
+
+<script>
+    const select_option = document.getElementByid('select-option')
+    const nome = document.getElementById('nome')
+    const job = document.getElementById('job')
+
+
+    if(select_option.value === 'sim') {
+        nome.style.border = '1px solid red'
+    }
+</script>
+</html>
