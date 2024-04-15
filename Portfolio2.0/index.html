@@ -17,8 +17,8 @@
 
             <ul class="list-nav">
                 <li class="item-list-nav cursor-pointer"><a href="#">INÍCIO</a></li>
-                <li class="item-list-nav cursor-pointer"><a href="#">SOBRE</a></li>
-                <li class="item-list-nav cursor-pointer"><a href="#">HABILIDADES</a></li>
+                <li class="item-list-nav cursor-pointer"><a href="#section-about">SOBRE</a></li>
+                <li class="item-list-nav cursor-pointer"><a href="#section-ability">HABILIDADES</a></li>
                 <li class="item-list-nav cursor-pointer"><a href="#">PROJETOS</a></li>
             </ul>
 
@@ -35,7 +35,7 @@
                 <h3 class="h3-information">Eu sou <span style="color: #8663FD;" id="span_auto_imcrement">Desenvolvedor Front-end</span></h3>
 
                 <div id="container-links-informations">
-                    <button class="cursor-pointer">
+                    <button class="cursor-pointer buttons">
                         <ion-icon name="mail-outline"></ion-icon>
                         Contact
                     </button>
@@ -76,69 +76,88 @@
 
         <main>
             <section id="section-about">
-                <div id="container-title-about">
-                    <h1 id="h1-title">Sobre Mim</h1>
-                    
+                <div class="container-title">
+                    <h1 class="h1-title">Sobre Mim</h1>
                 </div>
 
-                <div id="container-about">
-                    <div id="Minha-img">
-                        <img src="imgs/eu.jpg" alt="" id="eu">
-                    </div>
-
-                    <div id="description">
-                        <h2 style="color: #8663FD;">Quem sou eu?</h2>
-                        <h3>Carlos Sampaio, Um entusiasta apaixonado pelo mundo da tecnologia, com uma afinidade excepcional pelo desenvolvimento front-end.</h3>
-
-                        <p>Me chamo Carlos Eduardo Sampaio, tenho 19 anos e atualmente estou no início da minha carreira no mundo de T.I (Tecnologia da Informação).
-                            Estou sempre focado e determinado a aprender novos conceitos nas tecnologias que estou estudando, buscando cada vez mais aperfeiçoar tanto minhas habilidades técnicas quanto meu desenvolvimento pessoal.
-                            Atualmente, estou cursando o 3º período de Engenharia de Software na UNDB (Centro Universitário Dom Bosco) em São Luís, MA.
-                            Tenho um grande interesse em demonstrar minhas habilidades no ramo de desenvolvimento web.</p>
-
-
-                        <hr>
-
-                        <div id="container-details">
-                            <div id="group-aside">
-                                <aside class="aside">
-                                    <p class="paragrafo-about"><strong>Nome:</strong>Carlos Eduardo</p>
-                                    <p class="paragrafo-about"><strong>Idade:</strong>19</p>
-                                    
+                <div class="container-section">
+                    <div class="container-section-group">
+                        <div id="Minha-img">
+                            <img src="imgs/eu.jpg" alt="" id="eu">
+                        </div>
+                        <div id="description">
+                            <h2 style="color: #8663FD;">Quem sou eu?</h2>
+                            <h3>Carlos Sampaio, Um entusiasta apaixonado pelo mundo da tecnologia, com uma afinidade excepcional pelo desenvolvimento front-end.</h3>
+                            <p>Me chamo Carlos Eduardo Sampaio, tenho 19 anos e atualmente estou no início da minha carreira no mundo de T.I (Tecnologia da Informação).
+                                Estou sempre focado e determinado a aprender novos conceitos nas tecnologias que estou estudando, buscando cada vez mais aperfeiçoar tanto minhas habilidades técnicas quanto meu desenvolvimento pessoal.
+                                Atualmente, estou cursando o 3º período de Engenharia de Software na UNDB (Centro Universitário Dom Bosco) em São Luís, MA.
+                                Tenho um grande interesse em demonstrar minhas habilidades no ramo de desenvolvimento web.</p>
+                            <hr>
+                            <div id="container-details">
+                                <div id="group-aside">
+                                    <aside class="aside">
+                                        <p class="paragrafo-about"><strong>Nome:</strong>Carlos Eduardo</p>
+                                        <p class="paragrafo-about"><strong>Idade:</strong>19</p>
+                        
+                                    </aside>
+                                    <aside class="aside">
+                                        <p class="paragrafo-about"><strong>Nacionalidade:</strong>Tumtum</p>
+                                        <p class="paragrafo-about"><strong>Email:</strong>sampaiocarlos957@gmail.com</p>
+                                    </aside>
+                                </div>
+                                <aside id="container-languages">
+                                    <h1>Idiomas</h1>
+                                    <ul id="list-languages">
+                                        <li>
+                                            <img src="imgs/icons8-brasil-96.png" alt="">
+                                            <p>
+                                                <strong>Português</strong>
+                        
+                                                <i>Nativo</i>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="imgs/icons8-eua-96.png" alt="">
+                                            <p>
+                                                <strong>Inglês</strong>
+                        
+                                                <i>Basico do Basico do Basico</i>
+                                            </p>
+                                        </li>
+                                    </ul>
                                 </aside>
-                                <aside class="aside">
-                                    <p class="paragrafo-about"><strong>Nacionalidade:</strong>Tumtum</p>
-                                    <p class="paragrafo-about"><strong>Email:</strong>sampaiocarlos957@gmail.com</p>
+                                <aside id="container-download">
+                                    <button class="cursor-pointer buttons">
+                                        <ion-icon name="newspaper-outline"></ion-icon>
+                                        Download CV
+                                    </button>
                                 </aside>
                             </div>
-
-                            <aside id="container-languages">
-                                <h1>Idiomas</h1>
-
-                                <ul id="list-languages">
-                                    <li>
-                                        <img src="imgs/icons8-brasil-96.png" alt="">
-                                        <p>
-                                            <strong>Português</strong>
-                                            
-                                            <i>Nativo</i>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <img src="imgs/icons8-eua-96.png" alt="">
-                                        <p>
-                                            <strong>Inglês</strong>
-                                            
-                                            <i>Basico do Basico do Basico</i>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </aside>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section id="section-ability">
+                <div class="container-title">
+                    <h1 class="h1-title">Habilidades</h1>  
+                </div>
+
+                <div class="container-section">
+                    <div class="container-section-group" id="container-ability">
+                        <div id="container-list-bar">
+                            <ul id="list-bar">
+                                <li id="teste">TECNOLOGIAS</li> <!--falta fazer o efeito quando trocar de parte-->
+                                <li>CURSOS</li>
+                                <li>CERTIFICADOS</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="container-tecnologias">
+                        </div>
+                    </div>
+                </div>
+
 
             </section>
 
