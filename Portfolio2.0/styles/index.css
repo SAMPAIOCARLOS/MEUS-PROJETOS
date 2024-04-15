@@ -15,7 +15,7 @@
 #h2 {
     display: flex;
     /* border: 1px solid red; */
-    width: 200px;
+    width: 12vw;
     height: 70%;
 }
 #img {
@@ -26,32 +26,37 @@
 
 #information-header {
     /* border: 1px solid red; */
-    width: 30%;
+    width: 100vw;
+    height: 40vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 30px;
     margin-left: 100px;
 }
 
 .h3-information {
-    font-size: 2em;
+    font-size: 2vw;
 }
 #h1-name {
-    font-size: 3.5em;
+    font-size: 3vw;
 }
 #container-links-informations {
     /* border: 1px solid rgb(60, 0, 255); */
     display: flex;
     align-items: center;
     gap: 30px;
+    width: 100vw;
+    height: 8vh;
 }
 .buttons {
     background-color: #8663FD;
-    width: 200px;
+    width: 13vw;
+    height: 5vh;
     padding: 10px;
     border-radius: 8px;
     color: #ffffff;
-    font-size: 1.3em;
+    font-size: 1.2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +64,14 @@
     outline: none;
     border: none;
     transition: all 0.5s;
+}
+#link-verPortifolio {
+    width: 10vw;
+    height: 3vh;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
 }
 .buttons:hover {
     scale: 1.1;
@@ -72,7 +85,7 @@
     /* border: 2px solid green; */
     display: flex;
     margin-left: 100px;
-    font-size: 2em;
+    font-size: 1.7vw;
     gap: 10px;
     /* align-items: center; */
 }

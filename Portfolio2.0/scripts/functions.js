@@ -15,3 +15,11 @@ function typed(id, array) {
 
 
 typed(text, array_text_about_header)
+
+
+const hamburguer = document.getElementById(`hamburguer`)
+
+
+hamburguer.addEventListener("click", ()=> {
+    hamburguer.classList.toggle("active")
+})
