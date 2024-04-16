@@ -14,8 +14,8 @@
 }
 #h2 {
     display: flex;
-    /* border: 1px solid red; */
-    width: 12vw;
+    border: 1px solid red;
+    min-width: 11vw;
     height: 70%;
 }
 #img {
@@ -26,7 +26,7 @@
 
 #information-header {
     /* border: 1px solid red; */
-    width: 100vw;
+    /* width: 100vw; */
     height: 40vh;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,8 @@
 
 .h3-information {
     font-size: 2vw;
+    /* border: 1px solid red; */
+    width: 50%;
 }
 #h1-name {
     font-size: 3vw;
@@ -46,7 +48,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    width: 100vw;
+    /* width: 100vw; */
     height: 8vh;
 }
 .buttons {

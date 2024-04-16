@@ -4,14 +4,16 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body {
-    /* overflow-x: hidden; */
+html {
     scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
 }
 .main {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100vw;
     min-height: 100%;
 
@@ -19,7 +21,7 @@ body {
 
 .nav {
     width: 100%;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     height: 10vh;
     /* background-color: #0c0c0c; */
     background-image: linear-gradient(to right, #0a0a0a, #0d1418);
@@ -32,16 +34,18 @@ body {
     list-style: none;
     display: flex;
     gap: 40px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     font-size: 1.5vw;
     width: 47vw;
     height: 4vh;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .item-list-nav {
-    width: 12vw;
+    font-size: 1.2vw;
     border-bottom: 1px solid transparent;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     padding: 0px 20px;
 }
 .item-list-nav > a {
@@ -115,9 +119,10 @@ body {
     gap: 30px;
 }
 
-/* ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #0d1418;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -126,7 +131,7 @@ body {
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0);
-} */
+}
 
 #hamburguer {
     display: none;
@@ -142,12 +147,12 @@ body {
     transition: 0.5s;
 }
 
-#hamburguer.active{
+/* #hamburguer.active{
     position: absolute;
     left: 97%;
     top: 2%;
     z-index: 100;
-}
+} */
 #hamburguer.borda {
     margin-top: 10px;
 }
@@ -167,11 +172,29 @@ body {
 @media(max-width: 1330px) {
     .list-nav {
         font-size: 15px;
+        border: 1px solid red;
+        
     }
     .button-nav {
         width: 200px;
         padding: 10px;
         font-size: 15px;
         gap: 15px;
+        border: 1px solid red;
+    }
+}
+
+@media(max-width: 1190px) {
+    .list-nav {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 950px) {
+    #hamburguer {
+        display: flex;
+    }
+    .button-nav {
+        display: none;
     }
 }
