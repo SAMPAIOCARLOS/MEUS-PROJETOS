@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         *{
             margin: 0;
             padding: 0;
@@ -16,6 +9,7 @@
             /* border: 1px solid red; */
             min-height: 100%;
             font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
         }
 
         main {
@@ -27,7 +21,7 @@
             justify-content: space-between;
         }
 
-        #top {
+        .top {
             /* border: 1px solid gold; */
             width: 300px;
             height: 250px;
@@ -35,7 +29,7 @@
             background-color: #036496;
         }
 
-        #container-center {
+        .container-center {
             /* border: 2px solid rgb(30, 0, 255); */
             width: 70%;
             height: 40%;
@@ -44,14 +38,14 @@
             gap: 10px;
         }
 
-        #container-img {
+        .container-img {
             /* border: 1px solid black; */
             width: 51%;
             /* height: 100%; */
             /* animation: float 2s ease-in-out infinite; */
         }
 
-        #container-text {
+        .container-text {
             width: 49%;
             /* height: 100%; */
             display: flex;
@@ -60,45 +54,27 @@
             /* border: 1px solid red; */
         }
 
-        #container-text > h1 {
+        .container-text > h1 {
             font-size: 3em;
         }
 
-        #container-text > p {
+        .container-text > p {
             font-size: 1.5em;
         }
-        #container-button {
+        .container-logo-two {
             /* border: 1px solid red; */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        #button {
-            width: 50%;
-            height: 60px;
-            /* padding: 20px; */
-            border-radius: 10px;
-            outline: none;
-            border: none;
-            background-color: #036496;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.2em;
-            
-        }
-        #robo {
-            width: 15%;
-            margin-right: 100px;
-            animation: float 2s ease-in-out infinite;
-        }
-
-        #favicon {
+        
+        .favicon {
             width: 100%;
             height: 100%;
             /* border: 1px solid red; */
         }
-        #container-bottom {
+        .container-bottom {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -106,7 +82,7 @@
             align-items: end;
         }
 
-        #none {
+        .none {
             width: 300px;
             height: 30vh;
             border-bottom-right-radius: 100%;
@@ -114,7 +90,7 @@
             /* border: 1px solid red; */
         }
 
-        #bottom {
+        .bottom {
             /* border: 1px solid green; */
             width: 300px;
             height: 250px;
@@ -122,52 +98,52 @@
             background-color: #FFCC03;
             
         }
-        #logo-ma {
-            width: 260px;
+        .logo-ma {
+            width: 300px;
             height: 100px;
             margin-bottom: 100px;
             /* border: 1px solid red; */
 
         }
 
-        #logo-ma-two {
+        .logo-ma-two {
             display: none;
             width: 200px;
             margin: auto;
         }
 
-        /* @keyframes float{
+        @keyframes float{
             0%,100%{
                 transform:translatey(0)
             }
             50%{
-                transform:translatey(-20px)
+                transform:translatey(-10px)
             }
-        } */
+        }
         /* .efeito-flutuante-infinito {
             animation: float 2s ease-in-out infinite;
         } */
 
         @media(max-width: 1300px) {
-            #top{
+            .top{
                 width: 250px;
                 height: 200px;
             }
-            #bottom{
+            .bottom{
                 width: 250px;
                 height: 200px;
                 /* border: 1px solid red; */
             }
 
-            #container-text > h1 {
+            .container-text > h1 {
             font-size: 2em;
         }
 
-            #container-text > p {
+            .container-text > p {
                 font-size: 1.1em;
             }
 
-            #container-text {
+            .container-text {
                 /* border: 1px solid red; */
                 justify-content: center;
                 gap: 30px;
@@ -181,82 +157,45 @@
                 height: 100%;
                 gap: 100px;
             }
-            #container-center {
+            .container-center {
                 /* border: 2px solid rgb(255, 0, 238); */
                 flex-wrap: wrap;
                 height: 100%;
             }
 
-            #top{
+            .top{
                 width: 50%;
                 height: 130px;
             }
-            #bottom{
+            .bottom{
                 width: 50%;
                 height: 130px;
                 /* border: 1px solid red; */
             }
 
-            #none {
+            .none {
                 /* border: 1px solid blue; */
                 display: none;
             }
 
-            #logo-ma{
+            .logo-ma{
                 display: none;
             }
 
-            #container-bottom {
+            .container-bottom {
                 justify-content: flex-end;
             }
-            #container-img{
+            .container-img{
                 /* border: 1px solid red; */
                 width: 100%;
             }
 
-            #container-text {
+            .container-text {
                 /* border: 1px solid blue; */
                 width: 100%;
             }
 
-            #logo-ma-two {
+            .logo-ma-two {
                 display: flex;
             }
         }
-    </style>
-</head>
-<body>
-    <main>
-        <div id="top">
-
-        </div>
-
-        <div id="container-center">
-            <div id="container-img">
-                <img src="imgs/404 Error-pana.svg" alt="" id="favicon">
-            </div>
-
-            <div id="container-text">
-                <h1>Pagina não encontrada</h1>
-
-                <p>Ops! Parece que você alcançou uma página que não existe. Por favor, verifique o URL e tente novamente.</p>
-
-                <div id="container-button">
-                    <img src="imgs/LOGO GOV MA-ATI.png" alt="" id="logo-ma-two">
-                </div>
-                <!-- <a href="https://www.flaticon.com/br/icones-gratis/robo" title="robô ícones">Robô ícones criados por Smashicons - Flaticon</a> -->
-            </div>
-        </div>
-        
-        <div id="container-bottom">
-            <div id="none">
-
-            </div>
-            <img src="imgs/LOGO GOV MA-ATI.png" alt="" id="logo-ma">
-            <div id="bottom">
-
-            </div>
-        </div>
-    </main>
-</body>
-</html>
