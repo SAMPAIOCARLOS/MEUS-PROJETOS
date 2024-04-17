@@ -77,6 +77,17 @@ img {
     align-items: center;
 }
 
+/* @keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+}
+.efeito-flutuante-infinito {
+     animation: float 2s ease-in-out infinite;
+} */
 #favicon {
     /* border: 1px solid blue; */
     width: 100%;
