@@ -20,10 +20,13 @@ typed(text, array_text_about_header)
 const hamburguer = document.getElementById(`hamburguer`)
 const list_full = document.getElementById("list-full")
 
+const button_nav = document.querySelector(".button-nav")
+
 
 hamburguer.addEventListener("click", ()=> {
     hamburguer.classList.toggle("active")
     list_full.classList.toggle("active")
+
 })
 
 
