@@ -44,12 +44,12 @@
     font-size: 3vw;
 }
 #container-links-informations {
-    /* border: 1px solid rgb(60, 0, 255); */
+    border: 1px solid rgb(60, 0, 255);
     display: flex;
     align-items: center;
     gap: 30px;
-    /* width: 100vw; */
-    height: 8vh;
+    width: 70vw;
+    min-height: 8%;
 }
 .buttons {
     background-color: #8663FD;
@@ -70,7 +70,7 @@
 #link-verPortifolio {
     width: 10vw;
     height: 3vh;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     align-items: center;
     font-size: 1vw;

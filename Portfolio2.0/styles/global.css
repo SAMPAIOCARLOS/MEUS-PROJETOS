@@ -137,6 +137,12 @@ body {
     display: none;
     flex-direction: column;
     gap: 5px;
+    z-index: 1000;
+}
+
+#hamburguer.active {
+    position: fixed;
+    left: 90%;
 }
 
 .line-span {
@@ -147,12 +153,61 @@ body {
     transition: 0.5s;
 }
 
-/* #hamburguer.active{
-    position: absolute;
-    left: 97%;
-    top: 2%;
+#list-full {
+    /* border: 1px solid rgb(0, 255, 30); */
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    left: 100%;
+    top: 0%;
+    background-image: linear-gradient(to right, #0a0a0a, #0d1418);
     z-index: 100;
-} */
+    transition: 1s;
+}
+
+#list-full.active {
+    left: 20%;
+}
+
+#container-list-full {
+    /* border: 2px solid #fff; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#button-nav-two {
+    width: 26vw;
+    height: 5vh;
+    border: 2px solid #ffffff;
+    border-radius: 13px;
+    padding: 15px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1vw;
+    font-weight: bold;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.5s;
+}
+
+#list-nav-two {
+    display: none;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 26vw;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+}
+
+
 #hamburguer.borda {
     margin-top: 10px;
 }
@@ -172,7 +227,7 @@ body {
 @media(max-width: 1330px) {
     .list-nav {
         font-size: 15px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         
     }
     .button-nav {
@@ -180,7 +235,7 @@ body {
         padding: 10px;
         font-size: 15px;
         gap: 15px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 }
 
@@ -196,5 +251,54 @@ body {
     }
     .button-nav {
         display: none;
+    }
+    
+    #information-header {
+        
+    }
+    .h3-information {
+        /* border: 1px solid red; */
+        font-size: 4vw !important;
+        width: 80% !important;
+    }
+
+    #h1-name {
+        font-size: 6vw !important;
+    }
+
+    .buttons {
+        width: 30vw !important;
+        font-size: 1.5em !important;
+    }
+
+    #link-verPortifolio {
+        width: 20vw !important;
+        font-size: 1.2em !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .list-nav {
+        display: none;
+    }
+    #list-nav-two {
+        display: flex;
+    }
+}
+
+@media(max-width: 550px) {
+    #information-header {
+        margin: 0 !important;
+        width: 90%;
+        padding-left: 10%;
+    }
+    .buttons {
+        min-width: 200px !important;
+    }
+    #container-links-informations {
+        flex-wrap: wrap !important;
+    }
+    #link-verPortifolio {
+        width: 100% !important;
     }
 }

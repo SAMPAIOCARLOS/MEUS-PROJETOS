@@ -18,10 +18,12 @@ typed(text, array_text_about_header)
 
 
 const hamburguer = document.getElementById(`hamburguer`)
+const list_full = document.getElementById("list-full")
 
 
 hamburguer.addEventListener("click", ()=> {
     hamburguer.classList.toggle("active")
+    list_full.classList.toggle("active")
 })
 
 
