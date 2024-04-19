@@ -7,6 +7,11 @@ const button_nav = document.querySelector(".button-nav");
 
 const link_navgation = document.querySelectorAll(".link-navgation")
 
+const data_atual = new Date()
+const ano_atual = data_atual.getFullYear()
+const nascimento = "2005"
+const span_age = document.getElementById("span-age")
+
 //Biblioteca typed. js
 
 function typed(id, array) {
@@ -18,16 +23,24 @@ function typed(id, array) {
         loop: true //Para ficar se repetindo infinitamente
     })
 }
-typed(text, array_text_about_header);
 
 
+function Calc_age(Ano_atual, Data_nascimento) {
+    const idade = Ano_atual - Data_nascimento
 
+    console.log(`minha idade é ${idade}`)
 
-hamburguer.addEventListener("click", ()=> {
-    hamburguer.classList.toggle("active")
-    list_full.classList.toggle("active")
+    span_age.innerText = idade
 
-})
+}
+
+function Active(Menu_ham, list_full) {
+    Menu_ham.addEventListener("click", ()=> {
+        Menu_ham.classList.toggle("active")
+        list_full.classList.toggle("active")
+    })
+}
+
 
 
 
@@ -66,5 +79,11 @@ link_navgation.forEach(element => {
 
     })
 });
+
+document.addEventListener(`DOMContentLoaded`, ()=>{
+    typed(text, array_text_about_header);
+    Active(hamburguer, list_full);
+    Calc_age(ano_atual, nascimento);
+})
 
 
