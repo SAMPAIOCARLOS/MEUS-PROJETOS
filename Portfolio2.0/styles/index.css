@@ -54,6 +54,7 @@
 .buttons {
     background-color: #8663FD;
     width: 13vw;
+    min-width: 240px;
     height: 5vh;
     padding: 10px;
     border-radius: 8px;
@@ -112,16 +113,20 @@
 
 #section-about {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     color: #ffffff;
     background-image: linear-gradient(to bottom, #0a0a0a, #0d1418);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
 
 #Minha-img {
     /* border: 1px solid rgb(0, 255, 89); */
-    width: 30%;
+    width: 40%;
+    min-width: 300px;
     height: 80%;
     
 }
@@ -147,19 +152,20 @@
     flex-direction: column;
     gap: 30px;
 }
+#group-aside {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
 .aside {
-    width: 40%;
+    width: 300px;
     height: 100px;
     /* border: 2px solid rgb(0, 255, 17); */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-#group-aside {
-    /* border: 1px solid red; */
-    width: 100%;
-    display: flex;
-    gap: 30px;
 }
 .paragrafo-about {
     /* border: 1px solid blue; */
@@ -175,6 +181,7 @@
     list-style: none;
     justify-content: left;
     gap: 50px;
+    /* border: 1px solid red; */
 }
 
 #list-languages > li {
@@ -216,7 +223,7 @@
     font-size: 2em;
     cursor: pointer;
 }
-#teste {
+.teste {
     border-bottom: 2px solid #8663FD;
 }
 #container-ability {

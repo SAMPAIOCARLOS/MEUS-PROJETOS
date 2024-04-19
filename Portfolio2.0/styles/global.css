@@ -247,6 +247,23 @@ body {
     .list-nav {
         gap: 10px;
     }
+    .container-section-group {
+        /* flex-wrap: wrap; */
+        align-items: center;
+    }
+
+    #Minha-img {
+        /* border: 1px solid red !important; */
+        display: none;
+    }
+
+    #description {
+        width: 100% !important;
+    }
+
+    
+
+  
 }
 
 @media(min-width: 950px) {
@@ -313,6 +330,15 @@ body {
     #list-midia {
         width: 30% !important;
     }
+    #group-aside {
+        flex-wrap: wrap !important;
+        /* justify-content: center; */
+    }
+
+    #list-languages {
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
 }
 
 @media(max-width: 550px) {
@@ -347,6 +373,33 @@ body {
 
     #hamburguer.active {
         left: 80%;
+    }
+    .h1-title {
+        /* border: 1px solid red; */
+        width: 90%;
+        font-size: 30px;
+    }
+
+    #description > h2 {
+        font-size: 17px;
+    }
+
+    #description > h3 {
+        font-size: 16px;
+    }
+
+    #description > p {
+        font-size: 12px;
+    }
+    .aside {
+        font-size: 12px;
+    }
+    #list-languages > li > P > strong {
+        font-size: 15px;
+    }
+
+    #list-languages > li > P {
+        font-size: 12px;
     }
 
 }
