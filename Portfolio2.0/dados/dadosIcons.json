@@ -1,0 +1,29 @@
+[
+    {
+        "icon": "../dados/iconss/icons8-html-240.png",
+        "name": "HTML"
+    },
+
+    {
+        "icon": "../dados/iconss/icons8-css-240.png",
+        "name": "CSS"
+    },
+    {
+        "icon": "../dados/iconss/icons8-js-240.png",
+        "name": "JS"
+    },
+    {
+        "icon": "../dados/iconss/icons8-git-240.png",
+        "name": "GIT"
+    },
+
+    {
+        "icon": "../dados/iconss/icons8-github-375.png",
+        "name": "GITHUB"
+    },
+    {
+        "icon": "../dados/iconss/icons8-mysql-240.png",
+        "name": "MYSQL"
+    }
+    
+]
