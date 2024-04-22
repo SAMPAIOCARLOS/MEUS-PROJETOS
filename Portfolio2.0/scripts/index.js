@@ -46,12 +46,19 @@ link_navgation.forEach(element => {
 });
 
 const container_tech = document.getElementById("container-tech")
+const link_ver_todos = document.getElementById("link-ver-todos")
 
 fetch("../dados/dadosIcons.json").then((res)=> {
     return res.json()
 
 }).then((data)=> {
     console.log(data)
+
+    if (data.length > 6) {
+        console.log("teste")
+        data.length = 6
+        link_ver_todos.style.display = 'block'
+    }
 
     data.forEach(element => {
         const newAside = document.createElement("aside")
@@ -68,6 +75,12 @@ fetch("../dados/dadosIcons.json").then((res)=> {
         container_tech.append(newAside)
         newAside.append(newP, newDiv)
         newDiv.append(newImg)
+
+        
         
     });
+
+    
 })
+
+// const box_icon = document.querySelectorAll("box-icon")

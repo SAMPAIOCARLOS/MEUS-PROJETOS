@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+    <head>
+        <meta charset="utf-8">
+        <title>animação de borda usando CSS</title>
+        <style>
+            /* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vw;
+    background: #25252b;
+} */
+
+.box{
+    position: relative;
+    width:  400px ;
+    height: 400px ;
+    background: repeating-conic-gradient(from var(--a),#5a2af7 0%, #592de7 5%, transparent 5%, transparent 40%, #6131ff 50% );
+    animation: animar 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false; 
+    initial-value: 0deg;
+}
+
+@keyframes animar{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#8663FD 0%, #8663FD 5%, transparent 5%, transparent 40%, #8663FD 50% );
+    animation: animar 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #2d2d39;
+    border-radius: 15px;
+    border: solid 8px #25252b;
+
+}
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

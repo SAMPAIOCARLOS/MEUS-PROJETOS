@@ -41,6 +41,26 @@ function Active(Menu_ham, list_full) {
     })
 }
 
+const teste = document.querySelectorAll(".teste")
+
+function Intersecting(list, classe) {
+    
+    const myObserver = new IntersectionObserver((fun)=> {
+        fun.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(classe)
+            } else {
+                entry.target.classList.remove(classe)
+            }
+        });
+    })
+
+    list.forEach(element => {
+        myObserver.observe(element)
+    });
+}
+
+Intersecting(teste, 'show')
 
 
 

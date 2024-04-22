@@ -24,6 +24,11 @@
     {
         "icon": "../dados/iconss/icons8-mysql-240.png",
         "name": "MYSQL"
+    },
+    {
+        "icon": "../dados/iconss/icons8-mysql-240.png",
+        "name": "MYSQL"
     }
+    
     
 ]
