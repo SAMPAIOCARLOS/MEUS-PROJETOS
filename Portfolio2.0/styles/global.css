@@ -6,9 +6,10 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     width: 100%;
     min-height: 100vh;
 }
@@ -302,13 +303,15 @@ body {
 .trasition-right {
     opacity: 0;
     filter: blur(20px);
-    transform: translate(50%);
+    /* transform: translate(50%); */
+    transform: rotate(-180deg);
 }
 .trasition-right-show {
     opacity: 1;
     filter: blur(0);
-    transition: all 1.5s;
-    transform: translate(0);
+    transition: all 1s;
+    /* transform: translate(0); */
+    transform: rotate(0);
 }
 
 @media(max-width: 1330px) {
