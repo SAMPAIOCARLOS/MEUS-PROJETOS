@@ -285,20 +285,31 @@ body {
 }
 
 
-.teste {
+.trasition-left {
     opacity: 0;
     filter: blur(15px);
     /* transition: all 3s; */
     transform: translate(-10%);
 }
 
-.show {
+.trasition-left-show {
     opacity: 1;
     filter: blur(0px);
     transition: all 1.5s;
     transform: translate(0);
 }
 
+.trasition-right {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translate(50%);
+}
+.trasition-right-show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1.5s;
+    transform: translate(0);
+}
 
 @media(max-width: 1330px) {
     .list-nav {

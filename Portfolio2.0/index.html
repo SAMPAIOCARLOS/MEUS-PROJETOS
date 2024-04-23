@@ -11,19 +11,19 @@
     <div class="main">
 
         <nav class="nav">
-            <h2 class="logo-img">
+            <h2 class="logo-img trasition-left">
                 <img src="imgs/Logo + Letreiro (1).png" alt="">
             </h2>
 
 
-            <ul class="list-nav">
+            <ul class="list-nav trasition-right">
                 <li class="item-list-nav cursor-pointer"><a href="#">INÍCIO</a></li>
                 <li class="item-list-nav cursor-pointer"><a href="#section-about">SOBRE</a></li>
                 <li class="item-list-nav cursor-pointer"><a href="#section-ability">HABILIDADES</a></li>
                 <li class="item-list-nav cursor-pointer"><a href="#section-project">PROJETOS</a></li>
             </ul>
 
-            <button class="button-nav cursor-pointer" id="button-header">
+            <button class="button-nav cursor-pointer trasition-right" id="button-header">
                 <ion-icon name="paper-plane-outline"></ion-icon>
                 Entrar em Contato
             </button>
@@ -54,12 +54,12 @@
         </div>
 
         <header id="header">
-             <div id="information-header" class="teste"> <!--essa class "teste" tem que ser mudada conforme os efeitos de animação de cada elemento -->
-                <h3 class="h3-information teste">Olá, meu nome é</h3>
-                <h1 id="h1-name" class="teste">Carlos Sampaio</h1>
-                <h3 class="h3-information teste">Eu sou <span style="color: #8663FD;" id="span_auto_imcrement">Desenvolvedor Front-end</span></h3>
+             <div id="information-header" class="trasition-left"> <!--essa class "teste" tem que ser mudada conforme os efeitos de animação de cada elemento -->
+                <h3 class="h3-information trasition-left">Olá, meu nome é</h3>
+                <h1 id="h1-name" class="trasition-left">Carlos Sampaio</h1>
+                <h3 class="h3-information trasition-left">Eu sou <span style="color: #8663FD;" id="span_auto_imcrement">Desenvolvedor Front-end</span></h3>
 
-                <div id="container-links-informations" class="teste">
+                <div id="container-links-informations" class="trasition-left">
                     <button class="cursor-pointer buttons">
                         <ion-icon name="mail-outline"></ion-icon>
                         Contact
@@ -70,8 +70,8 @@
             </div>
 
             <div id="container-midia">
-                <p>Mídia:</p>
-                <ul id="list-midia">
+                <p class="trasition-left">Mídia:</p>
+                <ul id="list-midia" class="trasition-left">
                     <li>
                         <a href="#" class="icon-link-midia">
                             <ion-icon name="logo-instagram" class="cursor-pointer"></ion-icon>
@@ -102,35 +102,35 @@
         <main>
             <section id="section-about">
                 <div class="container-title">
-                    <h1 class="h1-title">Sobre Mim</h1>
+                    <h1 class="h1-title trasition-left">Sobre Mim</h1>
                 </div>
 
                 <div class="container-section">
                     <div class="container-section-group">
-                        <div id="Minha-img">
+                        <div id="Minha-img" class="trasition-left">
                             <img src="imgs/eu.jpg" alt="" id="eu">
                         </div>
                         <div id="description">
-                            <h2 style="color: #8663FD;">Quem sou eu?</h2>
-                            <h3>Carlos Sampaio, Um entusiasta apaixonado pelo mundo da tecnologia, com uma afinidade excepcional pelo desenvolvimento front-end.</h3>
-                            <p>Sou Carlos Eduardo Sampaio, 19 anos, estudante de Engenharia de Software na UNDB, São Luís, MA. Apaixonado por Tecnologia da Informação e dedicado ao aprimoramento constante de habilidades técnicas e pessoais. Busco oportunidades para aplicar meu conhecimento e paixão no desenvolvimento web.</p>
-                            <hr>
+                            <h2 style="color: #8663FD;" class="trasition-right">Quem sou eu?</h2>
+                            <h3 class="trasition-right">Carlos Sampaio, Um entusiasta apaixonado pelo mundo da tecnologia, com uma afinidade excepcional pelo desenvolvimento front-end.</h3>
+                            <p class="trasition-right">Sou Carlos Eduardo Sampaio, 19 anos, estudante de Engenharia de Software na UNDB, São Luís, MA. Apaixonado por Tecnologia da Informação e dedicado ao aprimoramento constante de habilidades técnicas e pessoais. Busco oportunidades para aplicar meu conhecimento e paixão no desenvolvimento web.</p>
+                            <hr class="trasition-left">
                             <div id="container-details">
                                 <div id="group-aside">
-                                    <aside class="aside">
+                                    <aside class="aside trasition-right">
                                         <p class="paragrafo-about"><strong>Nome:</strong>Carlos Eduardo</p>
                                         <p class="paragrafo-about"><strong>Idade:</strong><span id="span-age"></span></p>
                         
                                     </aside>
-                                    <aside class="aside">
+                                    <aside class="aside trasition-right">
                                         <p class="paragrafo-about"><strong>Nacionalidade:</strong>Tumtum</p>
                                         <p class="paragrafo-about"><strong>Email:</strong>sampaiocarlos957@gmail.com</p>
                                     </aside>
                                 </div>
                                 <aside id="container-languages">
-                                    <h1>Idiomas</h1>
+                                    <h1 class="trasition-right">Idiomas</h1>
                                     <ul id="list-languages">
-                                        <li>
+                                        <li class="trasition-right">
                                             <img src="imgs/icons8-brasil-96.png" alt="">
                                             <p>
                                                 <strong>Português</strong>
@@ -138,7 +138,7 @@
                                                 <i>Nativo</i>
                                             </p>
                                         </li>
-                                        <li>
+                                        <li class="trasition-right">
                                             <img src="imgs/icons8-eua-96.png" alt="">
                                             <p>
                                                 <strong>Inglês</strong>
@@ -148,7 +148,7 @@
                                         </li>
                                     </ul>
                                 </aside>
-                                <aside id="container-download">
+                                <aside id="container-download" class="trasition-right">
                                     <button class="cursor-pointer buttons">
                                         <ion-icon name="newspaper-outline"></ion-icon>
                                         Download CV
@@ -162,14 +162,14 @@
 
             <section id="section-ability">
                 <div class="container-title">
-                    <h1 class="h1-title">Habilidades</h1>  
+                    <h1 class="h1-title trasition-left">Habilidades</h1>  
                 </div>
 
                 
                 <div class="container-section" id="container-section-ability">
-                    <div class="container-section-group" id="container-ability">
+                    <div class="container-section-group trasition-left" id="container-ability">
                         <div id="container-list-bar">
-                            <ul id="list-bar">
+                            <ul id="list-bar" class="trasition-left">
                                 <li class="link-navgation" value="TECNOLOGIAS">TECNOLOGIAS</li> 
                                 <li class="link-navgation" value="CURSOS">CURSOS</li>
                                 <li class="link-navgation" value="CERTIFICADOS">CERTIFICADOS</li>
@@ -179,17 +179,17 @@
                         
                         <div class="container-sections" id="container-tecnologias">
                             <div id="section-infor">
-                                <h1>Tecnologias que Moldam Meu Caminho</h1>
+                                <h1 class="trasition-left">Tecnologias que Moldam Meu Caminho</h1>
 
-                                <P>No mundo do desenvolvimento web, minhas principais ferramentas são HTML, CSS e JavaScript. Com elas, construo estrutura, estilo e interatividade em meus projetos.</P>
+                                <P class="trasition-left">No mundo do desenvolvimento web, minhas principais ferramentas são HTML, CSS e JavaScript. Com elas, construo estrutura, estilo e interatividade em meus projetos.</P>
 
-                                <p>Para colaborar e versionar meu código, confio no Git e no GitHub, onde posso trabalhar em equipe e acompanhar o progresso de forma eficiente.</p>
+                                <p class="trasition-left">Para colaborar e versionar meu código, confio no Git e no GitHub, onde posso trabalhar em equipe e acompanhar o progresso de forma eficiente.</p>
 
-                                <p>Para armazenar e gerenciar dados, conto com o MySQL, garantindo que minhas aplicações tenham uma base sólida.</p>
+                                <p class="trasition-left">Para armazenar e gerenciar dados, conto com o MySQL, garantindo que minhas aplicações tenham uma base sólida.</p>
                             </div>
 
                             <div id="box-container-tech">
-                                <div id="container-tech">
+                                <div id="container-tech" class="trasition-right">
                                     <!-- <aside class="box-icon">
                                         <p>HTML</p>
                                         <div class="box-icon-img">

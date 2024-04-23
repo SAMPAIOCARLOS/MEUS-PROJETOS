@@ -72,6 +72,7 @@ fetch("../dados/dadosIcons.json").then((res)=> {
         const newImg = document.createElement("img")
         newImg.src = element.icon
 
+
         container_tech.append(newAside)
         newAside.append(newP, newDiv)
         newDiv.append(newImg)

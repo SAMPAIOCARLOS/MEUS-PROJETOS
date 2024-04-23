@@ -41,7 +41,8 @@ function Active(Menu_ham, list_full) {
     })
 }
 
-const teste = document.querySelectorAll(".teste")
+const trasition_left = document.querySelectorAll(".trasition-left")
+const trasition_right = document.querySelectorAll(".trasition-right")
 
 function Intersecting(list, classe) {
     
@@ -60,8 +61,8 @@ function Intersecting(list, classe) {
     });
 }
 
-Intersecting(teste, 'show')
-
+Intersecting(trasition_left, 'trasition-left-show')
+Intersecting(trasition_right, 'trasition-right-show')
 
 
 document.addEventListener(`DOMContentLoaded`, ()=>{
