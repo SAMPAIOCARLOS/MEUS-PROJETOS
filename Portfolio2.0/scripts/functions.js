@@ -61,11 +61,43 @@ function Intersecting(list, classe) {
     });
 }
 
-Intersecting(trasition_left, 'trasition-left-show')
-Intersecting(trasition_right, 'trasition-right-show')
+function GetData(endpoint, container) {
+    fetch(endpoint).then((res)=> {
+        return res.json()
+    
+    }).then((data)=> {
+        console.log(data)
+    
+    
+        data.forEach(element => {
+            const newAside = document.createElement("aside")
+            newAside.setAttribute('class', 'box-icon')
+    
+            const newP = document.createElement("p")
+            newP.innerText = element.name
+            const newDiv = document.createElement('div')
+            newDiv.setAttribute('class', 'box-icon-img')
+    
+            const newImg = document.createElement("img")
+            newImg.src = element.icon
+    
+    
+            container.append(newAside)
+            newAside.append(newP, newDiv)
+            newDiv.append(newImg)
+    
+        });
+    })
+}
+
+// GetData("../dados/dadosIcons.json")
+
+
 
 
 document.addEventListener(`DOMContentLoaded`, ()=>{
+    Intersecting(trasition_left, 'trasition-left-show')
+    Intersecting(trasition_right, 'trasition-right-show')
     typed(text, array_text_about_header);
     Active(hamburguer, list_full);
     Calc_age(ano_atual, nascimento);

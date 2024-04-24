@@ -77,11 +77,9 @@ fetch("../dados/dadosIcons.json").then((res)=> {
         newAside.append(newP, newDiv)
         newDiv.append(newImg)
 
-        
-        
     });
-
-    
 })
+
+
 
 // const box_icon = document.querySelectorAll("box-icon")
