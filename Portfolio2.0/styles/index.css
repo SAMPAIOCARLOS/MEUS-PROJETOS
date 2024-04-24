@@ -245,7 +245,7 @@
 }
 
 #container-cursos {
-    background-color: #8763fd4d;
+    /* background-color: #8763fd4d; */
     display: none;
 }
 
@@ -298,6 +298,10 @@
 
 .box-icon-img > img:hover {
     scale: 1.1;
+}
+
+#box-cursos {
+    border: 1px solid red;
 }
 
 #section-project {
