@@ -87,6 +87,7 @@ body {
     border-bottom: 1px solid transparent;
     /* border: 1px solid yellow; */
     padding: 0px 20px;
+    transition: all 0.5s;
 }
 .item-list-nav > a {
     color: #ffffff;
