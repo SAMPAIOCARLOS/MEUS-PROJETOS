@@ -9,7 +9,7 @@ link_navgation.forEach(element => {
 
         switch (element.innerText) {
             case "TECNOLOGIAS":
-                // alert("tecnologias") 
+                alert("tecnologias")
                 border.style.margin = '0'
                 border.style.width = '35%'
                 document.getElementById("container-tecnologias").style.display = 'flex'
