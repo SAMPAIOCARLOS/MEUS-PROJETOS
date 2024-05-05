@@ -9,7 +9,6 @@ link_navgation.forEach(element => {
 
         switch (element.innerText) {
             case "TECNOLOGIAS":
-                alert("tecnologias")
                 border.style.margin = '0'
                 border.style.width = '35%'
                 document.getElementById("container-tecnologias").style.display = 'flex'
@@ -46,40 +45,44 @@ link_navgation.forEach(element => {
 });
 
 const container_tech = document.getElementById("container-tech")
-const link_ver_todos = document.getElementById("link-ver-todos")
+const link_ver_todos = document.querySelector(".link-ver-todos")
 
-fetch("../dados/dadosIcons.json").then((res)=> {
-    return res.json()
+async function GetDataIndex() {
+    try {
+        const res = await fetch("../dados/dadosIcons.json")
+        const data = await res.json()
 
-}).then((data)=> {
-    console.log(data)
+        if (data.length > 6) {
+            console.log("teste")
+            data.length = 6
+            link_ver_todos.style.display = 'block'
+        }
 
-    if (data.length > 6) {
-        console.log("teste")
-        data.length = 6
-        link_ver_todos.style.display = 'block'
+        data.forEach(element => {
+            const newAside = document.createElement("aside")
+            newAside.setAttribute('class', 'box-icon')
+    
+            const newP = document.createElement("p")
+            newP.innerText = element.name
+            const newDiv = document.createElement('div')
+            newDiv.setAttribute('class', 'box-icon-img')
+    
+            const newImg = document.createElement("img")
+            newImg.src = element.icon
+    
+    
+            container_tech.append(newAside)
+            newAside.append(newP, newDiv)
+            newDiv.append(newImg)
+    
+        });
+
+    } catch (error) {
+        
     }
-
-    data.forEach(element => {
-        const newAside = document.createElement("aside")
-        newAside.setAttribute('class', 'box-icon')
-
-        const newP = document.createElement("p")
-        newP.innerText = element.name
-        const newDiv = document.createElement('div')
-        newDiv.setAttribute('class', 'box-icon-img')
-
-        const newImg = document.createElement("img")
-        newImg.src = element.icon
+}
 
 
-        container_tech.append(newAside)
-        newAside.append(newP, newDiv)
-        newDiv.append(newImg)
-
-    });
+document.addEventListener(`DOMContentLoaded`, ()=>{
+    GetDataIndex()
 })
-
-
-
-// const box_icon = document.querySelectorAll("box-icon")

@@ -43,6 +43,7 @@ function Active(Menu_ham, list_full) {
 
 const trasition_left = document.querySelectorAll(".trasition-left")
 const trasition_right = document.querySelectorAll(".trasition-right")
+const trasition_appear = document.querySelectorAll(".trasition-appear")
 
 function Intersecting(list, classe) {
     
@@ -61,43 +62,47 @@ function Intersecting(list, classe) {
     });
 }
 
-function GetData(endpoint, container) {
-    fetch(endpoint).then((res)=> {
-        return res.json()
+// function GetData(endpoint, container, button_show) {
+//     fetch(endpoint).then((res)=> {
+//         return res.json()
     
-    }).then((data)=> {
-        console.log(data)
-    
-    
-        data.forEach(element => {
-            const newAside = document.createElement("aside")
-            newAside.setAttribute('class', 'box-icon')
-    
-            const newP = document.createElement("p")
-            newP.innerText = element.name
-            const newDiv = document.createElement('div')
-            newDiv.setAttribute('class', 'box-icon-img')
-    
-            const newImg = document.createElement("img")
-            newImg.src = element.icon
-    
-    
-            container.append(newAside)
-            newAside.append(newP, newDiv)
-            newDiv.append(newImg)
-    
-        });
-    })
-}
+//     }).then((data)=> {
+//         console.log(data)
 
-// GetData("../dados/dadosIcons.json")
-
+//         if (data.length > 6) {
+//             console.log("teste")
+//             data.length = 6
+//             button_show.style.display = 'block'
+//         }
+    
+    
+//         data.forEach(element => {
+//             const newAside = document.createElement("aside")
+//             newAside.setAttribute('class', 'box-icon')
+    
+//             const newP = document.createElement("p")
+//             newP.innerText = element.name
+//             const newDiv = document.createElement('div')
+//             newDiv.setAttribute('class', 'box-icon-img')
+    
+//             const newImg = document.createElement("img")
+//             newImg.src = element.icon
+    
+    
+//             container.append(newAside)
+//             newAside.append(newP, newDiv)
+//             newDiv.append(newImg)
+    
+//         });
+//     })
+// }
 
 
 
 document.addEventListener(`DOMContentLoaded`, ()=>{
     Intersecting(trasition_left, 'trasition-left-show')
     Intersecting(trasition_right, 'trasition-right-show')
+    Intersecting(trasition_appear, 'trasition-appear-show')
     typed(text, array_text_about_header);
     Active(hamburguer, list_full);
     Calc_age(ano_atual, nascimento);

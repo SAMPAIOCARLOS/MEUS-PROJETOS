@@ -278,7 +278,7 @@
     flex-direction: column;
 }
 
-#link-ver-todos {
+.link-ver-todos {
     text-align: end;
     padding-top: 50px;
     padding-right: 20px;
