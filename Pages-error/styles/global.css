@@ -63,6 +63,8 @@
         }
         .container-logo-two {
             /* border: 1px solid red; */
+            width: 50%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -102,7 +104,7 @@
             width: 300px;
             height: 100px;
             margin-bottom: 100px;
-            /* border: 1px solid red; */
+            /* border: 1px solid rgb(0, 17, 255); */
 
         }
 
@@ -197,5 +199,11 @@
 
             .logo-ma-two {
                 display: flex;
+            }
+        }
+
+        @media(max-width: 950px) {
+            main {
+                min-height: 100vh;
             }
         }
