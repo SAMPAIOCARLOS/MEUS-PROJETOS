@@ -18,7 +18,7 @@
             /* border: 2px solid blue; */
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            /* justify-content: space-around; */
         }
 
         .top {
@@ -32,7 +32,7 @@
         .container-center {
             /* border: 2px solid rgb(30, 0, 255); */
             width: 70%;
-            height: 40%;
+            height: 50%;
             margin: auto;
             display: flex;
             gap: 10px;
@@ -40,7 +40,9 @@
 
         .container-img {
             /* border: 1px solid black; */
+            
             width: 51%;
+
             /* height: 100%; */
             /* animation: float 2s ease-in-out infinite; */
         }
@@ -62,8 +64,8 @@
             font-size: 1.5em;
         }
         .container-logo-two {
-            /* border: 1px solid red; */
-            width: 50%;
+            /* border: 1px solid rgb(43, 0, 255); */
+            width: 100%;
 
             display: flex;
             justify-content: space-between;
@@ -73,6 +75,7 @@
         
         .favicon {
             width: 100%;
+            min-width: 500px;
             height: 100%;
             /* border: 1px solid red; */
         }
@@ -104,11 +107,24 @@
             width: 300px;
             height: 100px;
             margin-bottom: 100px;
-            /* border: 1px solid rgb(0, 17, 255); */
+            /* border: 5px solid rgb(0, 17, 255); */
 
+        }
+        .logo-sei {
+            width: fit-content;
+            height: 170px;
+            margin-bottom: 100px;
+            /* border: 5px solid rgb(0, 17, 255); */
+            padding-top: 50px;
         }
 
         .logo-ma-two {
+            display: none;
+            width: 200px;
+            margin: auto;
+        }
+
+        .logo-sei-two {
             display: none;
             width: 200px;
             margin: auto;
@@ -127,6 +143,9 @@
         } */
 
         @media(max-width: 1300px) {
+            .container-center {
+                width: 95%;
+            }
             .top{
                 width: 250px;
                 height: 200px;
@@ -157,7 +176,9 @@
         @media(max-width: 1050px) {
             main {
                 height: 100%;
-                gap: 100px;
+            }
+            .container-center {
+                width: 80%;
             }
             .container-center {
                 /* border: 2px solid rgb(255, 0, 238); */
@@ -183,6 +204,9 @@
             .logo-ma{
                 display: none;
             }
+            .logo-sei {
+                display: none;
+            }
 
             .container-bottom {
                 justify-content: flex-end;
@@ -200,10 +224,29 @@
             .logo-ma-two {
                 display: flex;
             }
+
+            .logo-sei-two {
+                display: flex;
+            }
+            .favicon {
+                min-width: 250px;
+            }
         }
 
         @media(max-width: 950px) {
             main {
                 min-height: 100vh;
             }
+        }
+
+        @media(max-width: 500px) {
+            .favicon {
+                margin-bottom: 100px;
+            }
+
+            .container-logo-two {
+                flex-wrap: wrap;
+            }
+
+            
         }
