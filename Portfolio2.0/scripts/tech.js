@@ -1,5 +1,8 @@
 const page_tech_container = document.getElementById("page-tech-container")
 
+const teste1 = document.getElementById("teste1")
+const teste2 = document.getElementById("teste2")
+
 async function GetDataIndex() {
     try {
         const res = await fetch("../dados/dadosIcons.json")
@@ -37,4 +40,8 @@ async function GetDataIndex() {
     }
 }
 
-GetDataIndex()
+document.addEventListener("DOMContentLoaded", ()=> {
+    GetDataIndex()
+    Active(teste1, teste2)  //ajustar as variaveis!
+})
+

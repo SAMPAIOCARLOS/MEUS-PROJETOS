@@ -1,8 +1,8 @@
 const text = document.getElementById("span_auto_imcrement");
 const array_text_about_header = ['Desenvolvedor Front-end','Front-end Developer','Desenvolvedor Front-end','Front-end Developer'];
 
-const hamburguer = document.getElementById(`hamburguer`);
-const list_full = document.getElementById("list-full");
+const hamburguer = document.querySelector(`.hamburguer`);
+const list_full = document.querySelector(".list-full");
 const button_nav = document.querySelector(".button-nav");
 
 
