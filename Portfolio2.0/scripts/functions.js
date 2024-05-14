@@ -10,7 +10,7 @@ const button_nav = document.querySelector(".button-nav");
 const data_atual = new Date()
 const ano_atual = data_atual.getFullYear()
 const nascimento = "2005"
-const span_age = document.getElementById("span-age")
+const spans_age = document.querySelectorAll(".span-age")
 
 //Biblioteca typed. js
 
@@ -30,7 +30,10 @@ function Calc_age(Ano_atual, Data_nascimento) {
 
     console.log(`minha idade é ${idade}`)
 
-    span_age.innerText = idade
+    spans_age.forEach(span_age => {
+        span_age.innerText = idade
+    });
+
 
 }
 
