@@ -1,10 +1,10 @@
 [
     {
-        "icon": "",
-        "name_platform": "",
-        "Title": "",
-        "img_course": "",
-        "description": "",
-        "icons-tech": ""
+        "icon": "../imgs/img-cursos/curso htm&css 1-5.webp",
+        "name_platform": "CURSO EM VIDEO",
+        "Title": "Curso completo e atual de HTML5 e CSS3 - Módulo 1 de 5 Curso em Vídeo",
+        "img_course": "../imgs/img-cursos/curso htm&css 2-4.jpg",
+        "description": "Descubra os conceitos fundamentais de HTML e CSS com o módulo introdutório ministrado pelo professor Gustavo Guanabara. Este curso é o primeiro de uma série de cinco módulos, oferecendo uma sólida base para quem está começando no mundo do desenvolvimento web.",
+        "icons-tech": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>"]
     }
 ]

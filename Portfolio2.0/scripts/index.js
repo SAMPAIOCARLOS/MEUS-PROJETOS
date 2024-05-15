@@ -33,7 +33,6 @@ link_navgation.forEach(element => {
                 document.getElementById("container-cursos").style.display = 'none'
                 document.getElementById("container-tecnologias").style.display = 'none'
                 
-
                 break
             default:
 
@@ -47,7 +46,7 @@ link_navgation.forEach(element => {
 const container_tech = document.getElementById("container-tech")
 const link_ver_todos = document.querySelector(".link-ver-todos")
 
-async function GetDataIndex() {
+async function GetDataIndex(container_tech_fun, link_ver_todos_fun) {
     try {
         const res = await fetch("../dados/dadosIcons.json")
         const data = await res.json()
@@ -55,7 +54,7 @@ async function GetDataIndex() {
         if (data.length > 6) {
             console.log("teste")
             data.length = 6
-            link_ver_todos.style.display = 'block'
+            link_ver_todos_fun.style.display = 'block'
         }
 
         data.forEach(element => {
@@ -71,7 +70,7 @@ async function GetDataIndex() {
             newImg.src = element.icon
     
     
-            container_tech.append(newAside)
+            container_tech_fun.append(newAside)
             newAside.append(newP, newDiv)
             newDiv.append(newImg)
     
@@ -83,6 +82,25 @@ async function GetDataIndex() {
 }
 
 
+async function GetDataCard() {
+    try {
+        const response = await fetch("../dados/dadosCursos.json")
+        const data = await response.json()
+
+        data.forEach(dados_card => {
+            //Construção de card
+        });
+
+        console.log(data)
+    } catch (error) {
+        
+    }
+}
+
+
+
 document.addEventListener(`DOMContentLoaded`, ()=>{
-    GetDataIndex()
+    GetDataIndex(container_tech, link_ver_todos)
+
+    GetDataCard()
 })
