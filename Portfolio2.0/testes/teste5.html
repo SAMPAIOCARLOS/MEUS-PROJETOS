@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        .container {
+            border: 1px solid red;
+            width: 30%;
+            display: flex;
+            gap: 10px;
+
+            overflow-x: scroll;
+        }
+
+        .box {
+            background-color: bisque;
+            min-width: 300px;
+            height: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

@@ -245,6 +245,8 @@
 }
 
 #container-cursos {
+    width: 100%;
+    /* border: 1px solid red; */
     /* background-color: #8763fd4d; */
     display: none;
 }
@@ -302,16 +304,24 @@
 
 #box-cursos {
     width: 100%;
-    height: 60%;
+    height: 70%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    overflow-x: scroll;
+    gap: 50px;
     /* border: 1px solid rgb(25, 0, 255); */
 }
 
+.box-teste {
+    background-color: aquamarine;
+    min-width: 300px;
+    height: 300px;
+    color: #000000;
+}
 .card-curso {
-    width: 250px;
-    height: 400px;
+    min-width: 350px;
+    height: 500px;
     /* border: 1px solid red; */
     background-color: #141415;
     border-radius: 10px;
@@ -320,7 +330,6 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 
 
@@ -364,7 +373,7 @@
 .box-img-card-cursos {
     /* border: 1px solid red; */
     width: 100%;
-    height: 35%;
+    height: 40%;
     display: flex;
     justify-content: center;
 }
@@ -378,8 +387,29 @@
 
 .list-tech-card-cursos {
     /* border: 1px solid red; */
-    overflow-y: scroll;
+    width: 95%;
+    height: 20%;
+    margin: auto;
+    /* overflow-y: scroll; */
+    font-size: 14px;
 }
+
+.border-fixed {
+    border-bottom: 1px solid rgb(44, 44, 44);
+    padding-top: 10px;
+}
+
+.tech-utilizadas {
+    /* border: 1px solid orange; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    font-size: 2em;
+    padding-left: 10px;
+}
+
 #section-project {
     width: 100%;
     min-height: 100vh;
