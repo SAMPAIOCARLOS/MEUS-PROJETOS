@@ -1,9 +1,9 @@
 const page_tech_container = document.getElementById("page-tech-container")
 
-const teste1 = document.getElementById("teste1")
-const teste2 = document.getElementById("teste2")
+const hamburguer_menu_tech = document.getElementById("hamburguer_menu_tech")
+const list_full_two = document.getElementById("list_full_two")
 
-async function GetDataIndex() {
+async function GetDataTechSpecific(page_tech_container_fun) {
     try {
         const res = await fetch("../dados/dadosIcons.json")
         const data = await res.json()
@@ -29,7 +29,7 @@ async function GetDataIndex() {
             desc_page_tech.innerText = Dado.description
 
 
-            page_tech_container.appendChild(page_tech_box_icon)
+            page_tech_container_fun.appendChild(page_tech_box_icon)
             page_tech_box_icon.append(name_tech_page_tech, container_img_page_tech, desc_page_tech)
             container_img_page_tech.append(img)
     
@@ -41,7 +41,7 @@ async function GetDataIndex() {
 }
 
 document.addEventListener("DOMContentLoaded", ()=> {
-    GetDataIndex()
-    Active(teste1, teste2)  //ajustar as variaveis!
+    GetDataTechSpecific(page_tech_container)
+    Active(hamburguer_menu_tech, list_full_two)
 })
 

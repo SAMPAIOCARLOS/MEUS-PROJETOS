@@ -177,7 +177,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 5px;
-    height: 5px;
+    height: 10px;
     background-color: #000000;
 }
 
@@ -302,6 +302,7 @@ body {
     box-shadow: 2px 3px 20px #ffffff53;
     opacity: 1;
 }
+
 
 
 .box-icon > p {

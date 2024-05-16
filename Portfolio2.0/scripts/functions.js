@@ -65,42 +65,6 @@ function Intersecting(list, classe) {
     });
 }
 
-// function GetData(endpoint, container, button_show) {
-//     fetch(endpoint).then((res)=> {
-//         return res.json()
-    
-//     }).then((data)=> {
-//         console.log(data)
-
-//         if (data.length > 6) {
-//             console.log("teste")
-//             data.length = 6
-//             button_show.style.display = 'block'
-//         }
-    
-    
-//         data.forEach(element => {
-//             const newAside = document.createElement("aside")
-//             newAside.setAttribute('class', 'box-icon')
-    
-//             const newP = document.createElement("p")
-//             newP.innerText = element.name
-//             const newDiv = document.createElement('div')
-//             newDiv.setAttribute('class', 'box-icon-img')
-    
-//             const newImg = document.createElement("img")
-//             newImg.src = element.icon
-    
-    
-//             container.append(newAside)
-//             newAside.append(newP, newDiv)
-//             newDiv.append(newImg)
-    
-//         });
-//     })
-// }
-
-
 
 document.addEventListener(`DOMContentLoaded`, ()=>{
     Intersecting(trasition_left, 'trasition-left-show')
