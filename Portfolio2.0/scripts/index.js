@@ -154,26 +154,23 @@ async function GetDataCard(box_cursos_fun) {
 
             const next = document.getElementById("next")
             let cont = 0
-            next.addEventListener("click", ()=> {
 
+            next.addEventListener("click", ()=> {
                 cont++
 
-                const card_curso_all = document.querySelectorAll(".card-curso") 
+                // console.log(box_cursos.children[cont])
 
-                for (let ix = 0; ix < card_curso_all.length; ix++) {
-                    const card = card_curso_all[ix];
-
-                    card.scrollIntoView()
-
-                    // console.log(element)
-                    
-                }
-                // card_curso.scrollIntoView()
+                const vision = new IntersectionObserver((func)=> {
+                    func.forEach(input => {
+                        console.log(input)
+                    });
+                })
+                
             })
 
         });
 
-        console.log(data)
+        // console.log(data)
     } catch (error) {
 
     }
