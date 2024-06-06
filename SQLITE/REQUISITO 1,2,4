@@ -1,0 +1,26 @@
+select edital from tb_nis_sorteados; --todos os editais
+
+
+select distinct edital as "Editais" from tb_nis_sorteados; --todos os editais tirando os repetidos para ver quantos tem
+
+select count(distinct edital) as "Total de editais" from tb_nis_sorteados; --mostrando só a quantidade
+
+
+
+
+select * from tb_nis_sorteados;
+select * from tb_vinculo_cartoes_nis;
+
+
+select * from tb_nis_sorteados where cpf = "61948230380";
+  
+-- AQUI ESTÁ PEGANDO NOME, CPF, TELEFONE, ACESSANDO OUTRATABELA E INDO NO CAMPO NUM_CARTAO QUE É O NUMERO DO CARTÃO, FROM AS DUAS TABELAS COM O WHERE ESPECIFICANDO O EDITAL COM O AND PARA APENAS 
+-- OS REGISTROS DAS DUAS TABELAS QUE O CAMPO CPF FOR IGUAL OU SEJA PUXAR UMA PESSOA APENAS COM UM LIMIT DE 10 REGISTROS
+select nome, cpf, cel, tb_vinculo_cartoes_nis.num_cartao, municipio from tb_nis_sorteados, tb_vinculo_cartoes_nis where edital = "Edital Geral" and tb_nis_sorteados.cpf = tb_vinculo_cartoes_nis.CPF_BENEFICIARIO LIMIT 10;
+
+
+select tb_vinculo_cartoes_nis.NUM_CARTAO from tb_nis_sorteados, tb_vinculo_cartoes_nis;
+
+select * from tb_vinculo_cartoes_nis where nome_beneficiario = "MARCUS YOHAM COSTA PIRES";
+
+select * from tb_nis_sorteados where nome = "ANTONIA SILVA SOUSA"

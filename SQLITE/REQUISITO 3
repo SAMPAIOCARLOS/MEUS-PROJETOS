@@ -1,0 +1,72 @@
+--Total de inscritos por edital
+
+
+select count(edital) as "Edital_Geral" from tb_nis_sorteados where edital = "Edital Geral";
+
+select count(edital) as "Edital_Universitario_Grande_ilha" from tb_nis_sorteados where edital = "Edital Universitario Grande ilha";
+
+select count(edital) as "UNIDADE_PLENA_ALTO_ALEGRE_DO_PINDARE" from tb_nis_sorteados where edital = "UNIDADE PLENA ALTO ALEGRE DO PINDARE";
+
+select count(edital) as "UNIDADE_PLENA_AMARANTE_DO_MARANHÃO" from tb_nis_sorteados where edital = "UNIDADE PLENA AMARANTE DO MARANHÃO";
+
+select count(edital) as "UNIDADE_PLENA_AXIXÁ" from tb_nis_sorteados where edital = "UNIDADE PLENA AXIXÁ";
+
+select count(edital) as "UNIDADE_PLENA_BACABAL" from tb_nis_sorteados where edital = "UNIDADE PLENA BACABAL";
+
+select count(edital) as "UNIDADE_PLENA_BACABEIRA" from tb_nis_sorteados where edital = "UNIDADE PLENA BACABEIRA";
+
+select count(edital) as "UNIDADE_PLENA_BREJO" from tb_nis_sorteados where edital = "UNIDADE PLENA BREJO";
+
+select count(edital) as "Unidade_Plena_Carutapera" from tb_nis_sorteados where edital = "Unidade Plena Carutapera";
+
+select count(edital) as "Unidade_Plena_Chapadinha" from tb_nis_sorteados where edital = "Unidade Plena Chapadinha";
+
+select count(edital) as "UNIDADE_PLENA_CODÓ" from tb_nis_sorteados where edital = "UNIDADE PLENA CODÓ";
+
+select count(edital) as "Unidade_Plena_Coelho_Neto" from tb_nis_sorteados where edital = "Unidade Plena Coelho Neto";
+
+select count(edital) as "UNIDADE_PLENA_COLINAS" from tb_nis_sorteados where edital = "UNIDADE PLENA COLINAS";
+
+select count(edital) as "UNIDADE_PLENA_COROATÁ" from tb_nis_sorteados where edital = "UNIDADE PLENA COROATÁ";
+
+select count(edital) as "UNIDADE_PLENA_CURURUPU" from tb_nis_sorteados where edital = "UNIDADE PLENA CURURUPU";
+
+select count(edital) as "UNIDADE_PLENA_MATÕES" from tb_nis_sorteados where edital = "UNIDADE PLENA MATÕES";
+
+select count(edital) as "Unidade_Plena_Santa_Helena" from tb_nis_sorteados where edital = "Unidade Plena Santa Helena";
+
+select count(edital) as "UNIDADE_PLENA_SANTA_INÊS" from tb_nis_sorteados where edital = "UNIDADE PLENA SANTA INÊS";
+
+select count(edital) as "UNIDADE_PLENA_SANTA_LUZIA_DO_PARUÁ" from tb_nis_sorteados where edital = "UNIDADE PLENA SANTA LUZIA DO PARUÁ";
+
+select count(edital) as "UNIDADE_PLENA_SÃO_MATEUS_DO_MARANHÃO" from tb_nis_sorteados where edital = "UNIDADE PLENA SÃO MATEUS DO MARANHÃO";
+
+select count(edital) as "UNIDADE_PLENA_SÃO_VICENTE_FÉRRER" from tb_nis_sorteados where edital = "UNIDADE PLENA SÃO VICENTE FÉRRER";
+
+select count(edital) as "Unidade_Plena_Tutóia" from tb_nis_sorteados where edital = "Unidade Plena Tutóia";
+
+select count(edital) as "UNIDADE_PLENA_VARGEM_GRANDE" from tb_nis_sorteados where edital = "UNIDADE PLENA VARGEM GRANDE";
+
+select count(edital) as "UNIDADE_PLENA_VIANA" from tb_nis_sorteados where edital = "UNIDADE PLENA VIANA";
+
+select count(edital) as "Edital_Ensino_Médio_Grande_ilha" from tb_nis_sorteados where edital = "Edital Ensino Médio Grande ilha";
+
+select count(edital) as "UNIDADE_PLENA_AÇAILANDIA" from tb_nis_sorteados where edital = "UNIDADE PLENA AÇAILANDIA";
+
+select count(edital) as "Unidade_Plena_Balsas" from tb_nis_sorteados where edital = "Unidade Plena Balsas";
+
+select count(edital) as "UNIDADE_PLENA_CAXIAS" from tb_nis_sorteados where edital = "UNIDADE PLENA CAXIAS";
+
+select count(edital) as "UNIDADE_PLENA_IMPERATRIZ" from tb_nis_sorteados where edital = "UNIDADE PLENA IMPERATRIZ";
+
+select count(edital) as "UNIDADE_PLENA_PINDARÉ_MIRIM" from tb_nis_sorteados where edital = "UNIDADE PLENA PINDARÉ MIRIM";
+
+select count(edital) as "UNIDADE_PLENA_PRESIDENTE_DUTRA" from tb_nis_sorteados where edital = "UNIDADE PLENA PRESIDENTE DUTRA";
+
+select count(edital) as "UNIDADE_PLENA_TIMON" from tb_nis_sorteados where edital = "UNIDADE PLENA TIMON";
+
+select count(edital) as "UNIDADE_PLENA_ZÉ_DOCA" from tb_nis_sorteados where edital = "UNIDADE PLENA ZÉ DOCA";
+
+
+
+
