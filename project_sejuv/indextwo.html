@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* border: 3px solid red; */
+            width: 100vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 70vh;
+            /* border: 1px solid red; */
+            background-color: #FBBC1E;
+            position: relative;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+        #mancha-left {
+            /* border: 3px solid red; */
+            width: 300px;
+            height: 60%;
+            background-image: url("imgs/mancha_left.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #mancha-left > img {
+            transform: rotate(180deg);
+        }
+        .imgs {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #logo_ma {
+            /* border: 3px solid rgb(17, 0, 255); */
+            position: absolute;
+            width: 18.75rem;
+            height: 100px;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%);
+
+            display: flex;
+            align-items: center;
+        }
+        #img_center {
+            /* border: 3px solid blue; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 30%;
+        }
+
+        #bnc_one {
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            /* border: 2px solid red; */
+            width: 13%;
+            height: 70%;
+            /* animation: float 4s ease-in-out infinite; */
+        }
+
+        #mancha-right {
+            width: 300px;
+            height: 58%;
+            position: absolute;
+            /* border: 2px solid blueviolet; */
+            background-image: url("imgs/mancha_right.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #bnc_two {
+            position: absolute;
+            left: 85%;
+            top: 20px;
+            /* border: 2px solid rgb(0, 26, 255); */
+            width: 13%;
+            height: 70%;
+            /* animation: float 4s ease-in-out infinite; */
+        }
+
+        #bnc_three {
+            position: absolute;
+            left: 75%;
+            top: 65%;
+            /* border: 2px solid rgb(0, 26, 255); */
+            width: 13%;
+            height: 70%;
+            /* animation: float 4s ease-in-out infinite; */
+        }
+
+        nav {
+            /* border: 3px solid rgb(0, 255, 8); */
+            width: 100%;
+            height: 30vh;
+            background-color: #3574B9;
+            display: flex;
+            
+        }
+        #container-buttons {
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 50%;
+            margin-top: 30px;
+            padding-left: 50px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .buttons {
+            width: 230px;
+            height: 80px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            background-color: bisque;
+            padding: 20px;
+            transition: all 0.5s;
+            opacity: 0.8;
+        }
+
+        .buttons:hover {
+            scale: 1.1;
+            opacity: 1;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background-color: #3574B9;
+        }
+
+        #section-infor {
+            /* border: 1px solid blue; */
+            width: 100%;
+            height: 86%;
+            background-color: #2AB3BC;
+            display: flex;
+            flex-direction: column;
+
+        }
+        #title {
+            /* border: 1px solid red; */
+            width: 85%;
+            margin: auto;
+            padding-top: 70px;
+            display: flex;
+            align-items: center;
+            color: white;
+            gap: 20px;
+        }
+        #title > ion-icon {
+            font-size: 2em;
+            /* border: 1px solid red; */
+        }
+        #linha {
+            width: 40%;
+            height: 1px;
+            border: 2px solid white;
+        }
+
+        #infor_cards {
+            /* border: 1px solid black; */
+            width: 85%;
+            height: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #title_card {
+            /* border: 1px solid red; */
+            width: 25%;
+            font-size: 1.6em;
+            color: white;
+        }
+
+        #barra {
+            border: 2px solid white;
+            height: 100%;
+        }
+        #container_cards {
+            /* border: 2px solid green; */
+            width: 65%;
+            height: 70%;
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .cards {
+            background-color: white;
+            width: 200px;
+            height: 100%;
+        }
+
+        footer {
+            background-color: bisque;
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container_infor_footer {
+            /* border: 1px solid red; */
+            font-size: 1.1em;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #container_icons_social {
+            /* border: 1px solid red; */
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 4em;
+            color: #3574B9;
+        }
+        .icons_social {
+            opacity: 0.8;
+            transition: all 0.5s;
+        }
+
+        .icons_social:hover {
+            scale: 1.1;
+            opacity: 1;
+        }
+        @keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-20px)
+	}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mancha-left">
+            <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
+        </div>
+
+        <div id="bnc_one">
+            <img src="imgs/Ativo 4teste.png" alt="" class="imgs">
+        </div>
+
+        <div id="logo_ma">
+            <img src="imgs/mog_gov_borda_SEEJUV_P.png" alt="" class="imgs">
+        </div>
+
+        <div id="img_center">
+            <img src="imgs/Ativo 7teste.png" alt="" class="imgs">
+        </div>
+
+        <div id="mancha-right">
+            <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
+        </div>
+
+        <div id="bnc_two">
+            <img src="imgs/Ativo 5teste.png" alt="" class="imgs">
+        </div>
+
+        <div id="bnc_three">
+            <img src="imgs/Ativo 3teste.png" alt="" class="imgs">
+        </div>
+    </header>
+
+    <nav>
+        <div id="container-buttons">
+            <button class="buttons">INSTITUCIONAL</button>
+            
+            <button class="buttons">AÇÕES PRESENCIAIS</button>
+            
+            <button class="buttons">ORIENTAÇÕES</button>
+            
+            <button class="buttons">FOTOS</button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="section-infor">
+            <div id="title">
+                <h1>NOTÍCIAS</h1>
+
+                <span id="linha"></span>
+
+                <h1>ACESSAR TODAS AS NOTÍCIAS</h1>
+
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+
+            <div id="infor_cards">
+                <div id="title_card">
+                    <h1>CONFIRA OS <br>
+                        DESTAQUES</h1>
+                </div>
+
+                <div id="barra"></div>
+
+                <div id="container_cards">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div id="container_infor_footer">
+            <div id="address">
+                <p>Secretaria De Estado Extraordinária da Juventude <br>
+                    Av. Pedro II, N° 199 - Centro, São Luís - MA, 65010-450</p>
+            </div>
+
+            <div id="contact">
+                <p><strong>Contato</strong> <br>
+                    +55 98 98466-7812 <br>
+                    ascom@seejuv.ma.gov.br</p>
+            </div>
+        </div>
+
+        <div id="container_icons_social">
+            <ion-icon name="logo-whatsapp" class="icons_social"></ion-icon>
+
+            <ion-icon name="logo-instagram" class="icons_social"></ion-icon>
+
+            <ion-icon name="logo-facebook" class="icons_social"></ion-icon>
+        </div>
+    </footer>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
