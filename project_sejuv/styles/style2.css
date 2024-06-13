@@ -12,7 +12,7 @@ main {
     /* border: 1px solid red; */
     width: 100%;
     padding-left: 30px;
-    /* padding-top: 50px; */
+    padding-top: 50px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -104,4 +104,15 @@ main {
 
 #text_right > h3 {
     font-size: 1.4em;
+}
+
+#container-buttons {
+    /* border: 2px solid red; */
+    width: 50%;
+    margin: auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 100px;
 }

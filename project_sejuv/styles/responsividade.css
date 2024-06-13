@@ -98,6 +98,10 @@
     #text_right > h3 {
         font-size: 15px;
     }
+
+    .list-full {
+        left: -80%;
+    }
 }
 
 @media(max-width: 800px) {
@@ -171,6 +175,14 @@
         font-size: 2em;
         padding-bottom: 30px;
     }
+
+    .list-full {
+        width: 70%;
+    }
+
+    #container-buttons {
+        align-items: center;
+    }
 }
 
 @media(max-width: 603px) {
@@ -215,10 +227,25 @@
     #text_right > h3 {
         font-size: 14px;
     }
+
+
+    .hamburguer.active {
+        top: 1%;
+        left: 1%;
+    }
 }
 
 @media(max-width: 488px) {
     #container_cards {
         justify-content: center;
+    }
+    .buttons {
+        width: 150px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

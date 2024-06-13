@@ -50,7 +50,6 @@ body {
     top: 10px;
     left: 50%;
     transform: translate(-50%);
-
     display: flex;
     align-items: center;
 }
@@ -156,6 +155,81 @@ body {
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0);
 }
+
+.buttons {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: bisque;
+    padding: 20px;
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+.buttons:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.hamburguer.active {
+    position: fixed;
+    /* left: 10%; */
+    top: 10%;
+}
+
+.line-span {
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+.line-span.active {
+    background-color: #000000;
+}
+
+.list-full {
+    /* border: 1px solid rgb(0, 255, 30); */
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    left: -60%;
+    top: 0%;
+    background-color: white;
+    z-index: 100;
+    transition: 1s;
+}
+
+.list-full.active {
+    left: 0%;
+}
+
+
+.hamburguer.active .line-span:nth-child(2) {
+    opacity: 0;
+    transition: 0.3s;
+}
+.hamburguer.active .line-span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.5s;
+}
+.hamburguer.active .line-span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.5s;
+}
+
 
 @keyframes float{
 0%,100%{

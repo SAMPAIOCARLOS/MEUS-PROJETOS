@@ -20,24 +20,7 @@
     padding-bottom: 40px;
 }
 
-.buttons {
-    width: 230px;
-    height: 80px;
-    border-radius: 30px;
-    outline: none;
-    border: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    background-color: bisque;
-    padding: 20px;
-    transition: all 0.5s;
-    opacity: 0.8;
-}
 
-.buttons:hover {
-    scale: 1.1;
-    opacity: 1;
-}
 
 main {
     width: 100%;
@@ -75,7 +58,7 @@ main {
 }
 
 #infor_cards {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 85%;
     height: 50%;
     margin: auto;
@@ -97,7 +80,7 @@ main {
     height: 300px;
 }
 #container_cards {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 65%;
     min-height: 70%;
     display: flex;
