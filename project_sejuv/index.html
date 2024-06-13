@@ -1,57 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEJUV | HOME</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
+    <style>
+        
+
+    </style>
 </head>
 <body>
-    <div id="container">
-        <section id="main_top">
+    <header>
+        <div id="mancha-left">
+            <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
+        </div>
 
-            <header>
-                <div id="box-left-header">
-                    <div id="mancha-left-top">
-                        <img src="imgs/teste 1.png" alt="">
-                    </div>
+        <div id="bnc_one">
+            <img src="imgs/Ativo 4teste.png" alt="" class="imgs">
+        </div>
 
-                    <div id="box-boneco">
-                        <img src="imgs/Ativo 4teste.png" alt="">
-                    </div>
+        <div id="logo_ma">
+            <img src="imgs/mog_gov_borda_SEEJUV_P.png" alt="" class="imgs">
+        </div>
+
+        <div id="img_center">
+            <img src="imgs/Ativo 7teste.png" alt="" class="imgs" id="imagem_center">
+        </div>
+
+        <div id="mancha-right">
+            <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
+        </div>
+
+        <div id="bnc_two">
+            <img src="imgs/Ativo 5teste.png" alt="" class="imgs">
+        </div>
+
+        <div id="bnc_three">
+            <img src="imgs/Ativo 3teste.png" alt="" class="imgs">
+        </div>
+    </header>
+
+    <nav>
+        <div id="container-buttons">
+            <button class="buttons">INSTITUCIONAL</button>
+            
+            <button class="buttons">AÇÕES PRESENCIAIS</button>
+            
+            <button class="buttons">ORIENTAÇÕES</button>
+            
+            <button class="buttons">FOTOS</button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="section-infor">
+            <div id="title">
+                <h1>NOTÍCIAS</h1> 
+
+                <span id="linha"></span>
+                <div id="barra_two"></div>
+
+                <h1>
+                    ACESSAR TODAS AS NOTÍCIAS
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </h1>
+
+                
+            </div>
+
+            <div id="infor_cards">
+                <div id="title_card">
+                    <h1>CONFIRA OS 
+                        DESTAQUES</h1>
                 </div>
 
-                <div id="box-center-header">
+                <div id="barra"></div>
 
-                    <div id="box-img-logoMA">
-                        <img src="imgs/MARCAGOVMA-PRINCIPAL(COLORIDA).png" alt="">
-                    </div>
-
-                    <div id="box-img-center">
-                        <img src="imgs/Ativo 7teste.png" alt="">
-                    </div>
-
-                    <p></p>
-                    <p></p><p></p>
+                <div id="container_cards">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
                 </div>
+            </div>
 
-                <div id="box-right-header">
-                    <div id="mancha-right-bottom">
-                        <img src="imgs/teste 1.png" alt="">
-                    </div>
+            
 
-                    <div id="box-boneco2">
-                        <img src="imgs/Ativo 5teste.png" alt="">
-                        <img src="imgs/Ativo 3teste.png" alt="">
-                    </div>
-                </div>
-            </header>
+        </div>
 
-            <nav>
+        <div id="espaco">
 
-            </nav>
+        </div>
+    </main>
+    <footer>
+        <div id="container_infor_footer">
+            <div id="address">
+                <p>Secretaria De Estado Extraordinária da Juventude <br>
+                    Av. Pedro II, N° 199 - Centro, São Luís - MA, 65010-450</p>
+            </div>
 
-        </section>
-    </div>
+            <div id="contact">
+                <p><strong>Contato</strong> <br>
+                    +55 98 98466-7812 <br>
+                    ascom@seejuv.ma.gov.br</p>
+            </div>
+        </div>
+
+        <div id="container_icons_social">
+            <ion-icon name="logo-whatsapp" class="icons_social"></ion-icon>
+
+            <ion-icon name="logo-instagram" class="icons_social"></ion-icon>
+
+            <ion-icon name="logo-facebook" class="icons_social"></ion-icon>
+        </div>
+    </footer>
 </body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+function trocarImagem() {
+        var larguraTela = window.innerWidth;
+        var imagem = document.getElementById('imagem_center');
+
+        if (larguraTela < 1475) {
+            imagem.src = 'imgs/Ativo 6teste.png';
+        } else {
+            imagem.src = 'imgs/Ativo 7teste.png';
+        }
+    }
+
+    // Trocar a imagem quando a página carregar
+    window.onload = trocarImagem;
+
+    // Trocar a imagem quando a janela for redimensionada
+    window.onresize = trocarImagem;
+</script>
 </html>

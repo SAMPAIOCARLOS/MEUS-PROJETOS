@@ -9,123 +9,260 @@ body {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-}
-
-#container {
-    /* border: 2px solid blue; */
-    width: 100%;
-    height: 100%;
-}
-
-#main_top {
-    width: 100%;
-    height: 100vh;
-    /* border: 3px solid yellow; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    /* border: 3px solid red; */
     width: 100%;
-    height: 75%;
+    height: 70vh;
+    /* border: 1px solid red; */
     background-color: #FBBC1E;
-    display: flex;
-    
-}
-
-#box-left-header {
-    /* border: 1px solid blue; */
-    width: 300px;
-    height: 100%;
     position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
-
-#mancha-left-top {
-    /* border: 1px solid rgb(43, 255, 0); */
-    width: 100%;
-    height: 50%;
-    /* position: absolute; */
-    /* left: 100px;
-    top: 100px; */
+#mancha-left {
+    width: 25%;
+    min-width: 300px;
+    height: 60%;
+    background-image: url("imgs/mancha_left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#mancha-left > img {
     transform: rotate(180deg);
 }
-
-#mancha-left-top > img{
-    width: 100%;
-}
-
-#box-boneco {
-    border: 5px solid red;
-    position: absolute;
-    top: 60px;
-    left: 50px;
-    width: 70%;
-    height: 70%;
-}
-
-#box-boneco > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#box-center-header {
-    /* border: 2px solid blue; */
-    width: 63%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-#box-img-logoMA {
-    /* border: 3px solid red; */
-    width: 30%;
-    height: 20%;
-
-}
-#box-img-logoMA > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#box-img-center {
-    /* border: 2px solid green; */
-    width: 80%;
-    height: 50%;
-}
-
-#box-img-center > img {
-    width: 100%;
-}
-
-#box-right-header {
-    /* border: 3px solid black; */
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-#mancha-right-bottom {
-    /* border: 1px solid rgb(43, 255, 0); */
-    width: 100%;
-    height: 50%;
-}
-#mancha-right-bottom > img {
-    width: 100%;
-    height: 100%;
-}
-
-#box-boneco2 {
-    /* border: 5px solid red; */
-    position: absolute;
-    top: 30px;
-    left: 85%;
-    width: 13%;
-    height: 50%;
-}
-#box-boneco2 > img {
+.imgs {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+#logo_ma {
+    /* border: 3px solid rgb(17, 0, 255); */
+    position: absolute;
+    width: 18.75rem;
+    height: 100px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    align-items: center;
+}
+#img_center {
+    /* border: 3px solid blue; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+}
+
+#bnc_one {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    /* border: 2px solid red; */
+    width: 13%;
+    height: 70%;
+    /* animation: float 4s ease-in-out infinite; */
+}
+
+#mancha-right {
+    width: 25%;
+    min-width: 300px;
+    height: 58%;
+    position: absolute;
+    /* border-bottom: 8px solid #3574B9; */
+    background-image: url("imgs/mancha_right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#bnc_two {
+    position: absolute;
+    left: 85%;
+    top: 20px;
+    /* border: 2px solid rgb(0, 26, 255); */
+    width: 13%;
+    height: 70%;
+    /* animation: float 4s ease-in-out infinite; */
+}
+
+#bnc_three {
+    position: absolute;
+    left: 75%;
+    top: 65%;
+    /* border: 2px solid rgb(0, 26, 255); */
+    width: 13%;
+    height: 70%;
+    /* animation: float 4s ease-in-out infinite; */
+}
+
+nav {
+    /* border: 3px solid rgb(0, 255, 8); */
+    width: 100%;
+    min-height: 30vh;
+    background-color: #3574B9;
+    display: flex;
+    
+}
+#container-buttons {
+    border: 1px solid red;
+    width: 75%;
+    height: 50%;
+    margin-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.buttons {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: bisque;
+    padding: 20px;
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+.buttons:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+#section-infor {
+    /* border: 1px solid blue; */
+    width: 100%;
+    min-height: 86vh;
+    background-color: #2AB3BC;
+    display: flex;
+    flex-direction: column;
+
+}
+#title {
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+#title > ion-icon {
+    font-size: 2em;
+    /* border: 1px solid red; */
+}
+#linha {
+    width: 40%;
+    height: 1px;
+    border: 2px solid white;
+}
+
+#infor_cards {
+    border: 1px solid black;
+    width: 85%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#title_card {
+    /* border: 1px solid red; */
+    width: 25%;
+    font-size: 1.6em;
+    color: white;
+}
+
+#barra {
+    border: 2px solid white;
+    height: 300px;
+}
+#container_cards {
+    border: 2px solid green;
+    width: 65%;
+    min-height: 70%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards {
+    background-color: white;
+    min-width: 170px;
+    height: 200px;
+}
+#espaco {
+    width: 100%;
+    height: 14vh;
+    background-color: #3574B9;
+}
+footer {
+    background-color: bisque;
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container_infor_footer {
+    /* border: 1px solid red; */
+    font-size: 1.1em;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#container_icons_social {
+    /* border: 1px solid red; */
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 4em;
+    color: #3574B9;
+}
+.icons_social {
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.icons_social:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+@keyframes float{
+0%,100%{
+transform:translatey(0)
+}
+50%{
+transform:translatey(-20px)
+}
 }
