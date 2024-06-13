@@ -1,5 +1,5 @@
 @media(max-width: 2119px) {
-    #mancha-right {
+    .mancha-right {
         width: 20%;
         height: 50%;
         /* background-size: contain; */
@@ -7,7 +7,7 @@
 }
 
 @media(max-width: 1471px) {
-    #mancha-right {
+    .mancha-right {
         width: 25%;
         height: 50%;
         background-size: contain;
@@ -20,8 +20,8 @@
         top: 150px;
     } */
 
-    #mancha-left {
-        border: 3px solid blue;
+    .mancha-left {
+        /* border: 3px solid blue; */
         height: 250px;
     }
 }
@@ -41,7 +41,7 @@
         flex-direction: column;
     }
     #title_card {
-        border: 2px solid red;
+        /* border: 2px solid red; */
         width: 100%;
         text-align: center;
     }
@@ -52,21 +52,21 @@
 }
 
 @media(max-width: 1300px) {
-    #mancha-right {
+    .mancha-right {
         top: 50%;
     }
 }
 
 @media(max-width: 1160px) {
-    #mancha-left {
+    .mancha-left {
         display: none;
     }
 
-    #mancha-right {
+    .mancha-right {
         display: none;
     }
 
-    #img_center {
+    .img_center {
         height: 50%;
     }
 
@@ -81,17 +81,17 @@
 }
 
 @media(max-width: 800px) {
-    #bnc_one {
+    .bnc_one {
         display: none;
     }
 
-    #bnc_two {
+    .bnc_two {
         display: none;
     }
-    #bnc_three {
+    .bnc_three {
         display: none;        
     }
-    #img_center {
+    .img_center {
         width: 80%;
         height: 60%;
     }
@@ -105,7 +105,7 @@
     }
 
     #title {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         flex-wrap: wrap;
         width: 70%;
     }
@@ -119,7 +119,7 @@
         border: 2px solid white;
     }
 
-    footer {
+    .footer {
         flex-wrap: wrap;
     }
 
