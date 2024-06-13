@@ -1,0 +1,107 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #3574B9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#menu_home {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-left: 30px;
+    /* padding-top: 50px; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#menu_home > ion-icon {
+    font-size: 3em;
+}
+
+#description {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#description > h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#description > p {
+    width: 80%;
+    margin: auto;
+    /* border: 3px solid red; */
+    line-height: 2;
+    text-align: justify;
+}
+
+#double_description {
+    /* border: 3px solid red; */
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#text_left {
+    width: 48%;
+    min-width: 300px;
+    /* border: 3px solid rgb(0, 255, 4); */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0px 70px 0px;
+
+}
+#text_left > h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#text_left > p {
+    width: 90%;
+    margin: auto;
+    font-size: 1.4em;
+    /* border: 1px solid red; */
+}
+
+#box-list {
+    /* border: 2px solid red; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#barra_vertical_two {
+    width: 2px;
+    border: 2px solid white;
+    
+}
+
+#text_right {
+    width: 48%;
+    min-width: 300px;
+    /* border: 3px solid rgb(0, 0, 0); */
+    padding-left: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0px 70px 0px;
+}
+
+#text_right > h1 {
+    font-size: 2.5em;
+}
+
+#text_right > h3 {
+    font-size: 1.4em;
+}
