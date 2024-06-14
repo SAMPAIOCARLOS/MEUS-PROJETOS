@@ -123,4 +123,22 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script src="script.js"></script>
+
+<script>
+    function trocarImagem() {
+        const larguraTela = window.innerWidth;
+
+        let imagem_one = document.getElementById('imagem_center_one');
+
+        if (larguraTela < width) {
+            imagem_one.src = 'imgs/Ativo 6teste.png';
+        } else {
+            imagem_one.src = 'imgs/Ativo 7teste.png';
+        }
+
+        
+    }
+    window.onload = trocarImagem;
+    window.onresize = trocarImagem;
+</script>
 </html>

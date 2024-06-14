@@ -2,7 +2,6 @@
     .mancha-right {
         width: 20%;
         height: 50%;
-        /* background-size: contain; */
     }
 }
 
@@ -16,12 +15,8 @@
         top: 50%;
     }
 
-    /* #bnc_two {
-        top: 150px;
-    } */
 
     .mancha-left {
-        /* border: 3px solid blue; */
         height: 250px;
     }
 }
@@ -41,7 +36,6 @@
         flex-direction: column;
     }
     #title_card {
-        /* border: 2px solid red; */
         width: 100%;
         text-align: center;
     }
@@ -132,7 +126,6 @@
     }
 
     #title {
-        /* border: 1px solid red; */
         flex-wrap: wrap;
         width: 70%;
     }

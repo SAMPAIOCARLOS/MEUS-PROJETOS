@@ -5,59 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            /* border: 3px solid red; */
-            width: 100vw;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        header {
-            width: 100%;
-            height: 70vh;
-            /* border: 1px solid red; */
-            background-color: #FBBC1E;
-            position: relative;
-            /* display: flex;
-            justify-content: end;
-            align-items: end; */
-            /* background-image: url("imgs/teste\ 1.png"); */
-            background-position: left top;
-            background-repeat: no-repeat;
-            background-size: contain;        
-        }
-
-        #box-left {
+        main {
+            width: 500px;
+            height: 300px;
             border: 1px solid red;
-            width: 20%;
-            height: 100%;
-            background-image: url("imgs/Ativo\ 4teste.png"); 
-            background-size: contain;
-        }
-        #mancha-left {
-            border: 2px solid blue;
-            height: 60%;
-            background-image: url("imgs/mancha_left.png");
-            background-position: left top, left center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
         }
 
+        #div1 {
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+        }
+
+        #div2 {
+            background-color: rgb(13, 255, 0);
+            width: 50px;
+            height: 50px;
+        }
+
+        #div3 {
+            background-color: rgb(255, 0, 140);
+            width: 50px;
+            height: 50px;
+        }
+
+        @media(max-width: 500px) {
+            body {
+                background-color: aqua;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div id="box-left">
-            <div id="mancha-left">
+    <main>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </main>
 
-            </div>
-        </div>
-    </header>
 </body>
 </html>

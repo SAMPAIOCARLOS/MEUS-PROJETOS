@@ -140,4 +140,21 @@
 
 <script src="script.js"></script>
 
+<script>
+    function trocarImagem() {
+        const larguraTela = window.innerWidth;
+
+        let imagem_two = document.getElementById('imagem_center_two');
+
+        if (larguraTela < width) {
+            imagem_two.src = 'imgs/Ativo 6teste.png';
+        } else {
+            imagem_two.src = 'imgs/Ativo 7teste.png';
+        }
+
+        
+    }
+    window.onload = trocarImagem;
+    window.onresize = trocarImagem;
+</script>
 </html>

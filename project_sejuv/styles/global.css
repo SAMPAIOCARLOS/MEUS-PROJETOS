@@ -5,7 +5,6 @@
 }
 
 body {
-    /* border: 3px solid red; */
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
@@ -15,7 +14,6 @@ body {
 .header {
     width: 100%;
     height: 70vh;
-    /* border: 1px solid red; */
     background-color: #FBBC1E;
     position: relative;
     display: flex;
@@ -43,7 +41,6 @@ body {
 }
 
 .logo_ma {
-    /* border: 3px solid rgb(17, 0, 255); */
     position: absolute;
     width: 18.75rem;
     height: 100px;
@@ -54,7 +51,6 @@ body {
     align-items: center;
 }
 .img_center {
-    /* border: 3px solid blue; */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -67,10 +63,8 @@ body {
     position: absolute;
     left: 100px;
     top: 50px;
-    /* border: 2px solid red; */
     width: 13%;
     height: 70%;
-    /* animation: float 4s ease-in-out infinite; */
 }
 
 .mancha-right {
@@ -78,7 +72,6 @@ body {
     min-width: 300px;
     height: 58%;
     position: absolute;
-    /* border: 1px solid red; */
     background-image: url("../imgs/mancha_right.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -89,20 +82,16 @@ body {
     position: absolute;
     left: 85%;
     top: 20px;
-    /* border: 2px solid rgb(0, 26, 255); */
     width: 13%;
     height: 70%;
-    /* animation: float 4s ease-in-out infinite; */
 }
 
 .bnc_three {
     position: absolute;
     left: 75%;
     top: 65%;
-    /* border: 2px solid rgb(0, 26, 255); */
     width: 13%;
     height: 70%;
-    /* animation: float 4s ease-in-out infinite; */
 }
 
 
@@ -115,7 +104,6 @@ body {
 }
 
 #container_infor_footer {
-    /* border: 1px solid red; */
     font-size: 1.1em;
     padding: 20px;
     display: flex;
@@ -124,7 +112,6 @@ body {
 }
 
 #container_icons_social {
-    /* border: 1px solid red; */
     width: 300px;
     display: flex;
     justify-content: center;
@@ -175,67 +162,3 @@ body {
     opacity: 1;
 }
 
-.hamburguer {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    z-index: 1000;
-}
-
-.hamburguer.active {
-    position: fixed;
-    /* left: 10%; */
-    top: 10%;
-}
-
-.line-span {
-    width: 30px;
-    height: 4px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: 0.5s;
-}
-
-.line-span.active {
-    background-color: #000000;
-}
-
-.list-full {
-    /* border: 1px solid rgb(0, 255, 30); */
-    width: 40%;
-    height: 100%;
-    position: fixed;
-    left: -60%;
-    top: 0%;
-    background-color: white;
-    z-index: 100;
-    transition: 1s;
-}
-
-.list-full.active {
-    left: 0%;
-}
-
-
-.hamburguer.active .line-span:nth-child(2) {
-    opacity: 0;
-    transition: 0.3s;
-}
-.hamburguer.active .line-span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    transition: 0.5s;
-}
-.hamburguer.active .line-span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    transition: 0.5s;
-}
-
-
-@keyframes float{
-0%,100%{
-transform:translatey(0)
-}
-50%{
-transform:translatey(-20px)
-}
-}

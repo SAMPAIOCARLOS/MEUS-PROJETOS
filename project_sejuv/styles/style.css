@@ -1,7 +1,6 @@
 
 
 .nav {
-    /* border: 3px solid rgb(0, 255, 8); */
     width: 100%;
     min-height: 30vh;
     background-color: #3574B9;
@@ -9,7 +8,6 @@
     
 }
 #container-buttons {
-    /* border: 1px solid red; */
     width: 75%;
     height: 50%;
     margin-top: 30px;
@@ -29,7 +27,6 @@ main {
 }
 
 #section-infor {
-    /* border: 1px solid blue; */
     width: 100%;
     min-height: 86vh;
     background-color: #2AB3BC;
@@ -38,7 +35,6 @@ main {
 
 }
 #title {
-    /* border: 1px solid red; */
     width: 85%;
     margin: auto;
     padding-top: 70px;
@@ -46,10 +42,16 @@ main {
     align-items: center;
     color: white;
     gap: 20px;
+    /* border: 1px solid red; */
+}
+
+#title > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #title > ion-icon {
     font-size: 2em;
-    /* border: 1px solid red; */
 }
 #linha {
     width: 40%;
@@ -58,7 +60,6 @@ main {
 }
 
 #infor_cards {
-    /* border: 1px solid black; */
     width: 85%;
     height: 50%;
     margin: auto;
@@ -69,7 +70,6 @@ main {
 }
 
 #title_card {
-    /* border: 1px solid red; */
     width: 25%;
     font-size: 1.6em;
     color: white;
@@ -80,7 +80,6 @@ main {
     height: 300px;
 }
 #container_cards {
-    /* border: 2px solid green; */
     width: 65%;
     min-height: 70%;
     display: flex;
