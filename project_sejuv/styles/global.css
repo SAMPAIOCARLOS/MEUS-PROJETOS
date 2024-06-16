@@ -103,12 +103,13 @@ body {
     justify-content: space-between;
 }
 
-#container_infor_footer {
+.container_infor_footer {
     font-size: 1.1em;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: 1px solid red;
 }
 
 #container_icons_social {
