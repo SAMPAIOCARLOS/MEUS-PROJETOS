@@ -6,15 +6,6 @@
 }
 
 @media(max-width: 1471px) {
-    .mancha-right {
-        width: 25%;
-        height: 50%;
-        background-size: contain;
-        position: absolute;
-        left: 78%;
-        top: 50%;
-    }
-
 
     .mancha-left {
         height: 250px;
@@ -164,9 +155,9 @@
         font-size: 10px;
     }
 
-    #container_icons_social {
+    .container_icons_social {
         font-size: 2em;
-        padding-bottom: 30px;
+        /* border: 1px solid red; */
     }
 
     .list-full {
@@ -175,6 +166,16 @@
 
     #container-buttons {
         align-items: center;
+    }
+}
+
+@media(max-width: 780px) {
+    .footer {
+        justify-content: center;
+    }
+
+    .container_icons_social {
+        padding-bottom: 30px;
     }
 }
 

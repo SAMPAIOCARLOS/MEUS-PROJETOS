@@ -23,12 +23,10 @@
         </div>
 
         <div class="img_center">
-            <img src="imgs/Ativo 7teste.png" alt="" class="imgs" id="imagem_center_two">
+            <img src="imgs/Ativo 7teste.png" alt="" class="imgs testeimg">
         </div>
 
-        <div class="mancha-right">
-            <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
-        </div>
+        
 
         <div class="bnc_two">
             <img src="imgs/Ativo 5teste.png" alt="" class="imgs">
@@ -36,6 +34,12 @@
 
         <div class="bnc_three">
             <img src="imgs/Ativo 3teste.png" alt="" class="imgs">
+        </div>
+
+        <div class="container_mancha_right">
+            <div class="mancha-right">
+                <!-- <img src="imgs/teste 1.png" alt="" class="imgs"> -->
+            </div>
         </div>
     </header> 
 
@@ -125,7 +129,7 @@
             </div>
         </div>
 
-        <div id="container_icons_social">
+        <div class="container_icons_social">
             <ion-icon name="logo-whatsapp" class="icons_social"></ion-icon>
 
             <ion-icon name="logo-instagram" class="icons_social"></ion-icon>
@@ -140,21 +144,4 @@
 
 <script src="script.js"></script>
 
-<script>
-    function trocarImagem() {
-        const larguraTela = window.innerWidth;
-
-        let imagem_two = document.getElementById('imagem_center_two');
-
-        if (larguraTela < width) {
-            imagem_two.src = 'imgs/Ativo 6teste.png';
-        } else {
-            imagem_two.src = 'imgs/Ativo 7teste.png';
-        }
-
-        
-    }
-    window.onload = trocarImagem;
-    window.onresize = trocarImagem;
-</script>
 </html>

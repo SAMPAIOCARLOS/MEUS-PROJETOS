@@ -57,6 +57,7 @@ body {
     transform: translate(-50%, -50%);
     width: 50%;
     height: 30%;
+    margin-top: 50px;
 }
 
 .bnc_one {
@@ -66,16 +67,22 @@ body {
     width: 13%;
     height: 70%;
 }
-
+.container_mancha_right {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
 .mancha-right {
-    width: 25%;
+    width: 10% !important;
     min-width: 300px;
-    height: 58%;
-    position: absolute;
+    height: 100% !important;
     background-image: url("../imgs/mancha_right.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
+    /* border: 1px solid red; */
 }
 
 .bnc_two {
@@ -101,6 +108,7 @@ body {
     min-height: 25vh;
     display: flex;
     justify-content: space-between;
+
 }
 
 .container_infor_footer {
@@ -109,10 +117,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-#container_icons_social {
+.container_icons_social {
     width: 300px;
     display: flex;
     justify-content: center;
@@ -145,13 +153,13 @@ body {
 }
 
 .buttons {
-    width: 230px;
-    height: 80px;
+    width: 170px;
+    height: 60px;
     border-radius: 30px;
     outline: none;
     border: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 12px;
     background-color: bisque;
     padding: 20px;
     transition: all 0.5s;
