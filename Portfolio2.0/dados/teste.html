@@ -4,10 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
+    <style>
+        .glider-contain {
+            width: 70%;
+        }
+        #mouse {
+            /* display: flex; */
+            gap: 30px;
+            width: 50%;
+            /* justify-content: center; */
+        }
+
+
+
+        .box {
+            width: 500px;
+            height: 400px !important;
+            border: 1px solid red;
+        }
+
+    </style>
+
 </head>
 <body>
-    <img src="../imgs/img-cursos/curso-onebitcode-javascript.jpg" alt="">
-
-    
+    <div class="glider-contain">
+        <div id="mouse">
+          <div class="box">Item 1</div>
+          <div class="box">Item 2</div>
+          <div class="box">Item 3</div>
+          <div class="box">Item 4</div>
+        </div>
+      
+        <button class="glider-prev">«</button>
+        <button class="glider-next">»</button>
+        <div id="dots"></div>
+      </div>
 </body>
+
+<script>
+
+new Glider(document.querySelector('#mouse'), {
+  slidesToShow: 3,
+  dots: '#dots',
+  draggable: true,
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  }
+});
+
+
+// new Glider(document.querySelector('.glider'), {
+//   slidesToShow: 5,
+//   slidesToScroll: 5,
+//   draggable: true,
+//   dots: '.dots',
+//   arrows: {
+//     prev: '.glider-prev',
+//     next: '.glider-next'
+//   }
+// });v
+</script>
 </html>

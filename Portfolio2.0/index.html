@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles/global.css?v=2022.1">
     <link rel="stylesheet" href="../styles/app_footer.css">
     <link rel="stylesheet" href="styles/index.css?v=2022.2">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    
 </head>
 <body>
     <div class="main">
@@ -208,6 +211,7 @@
                         <div class="container-sections" id="container-cursos">
                             <h1 class="trasition-left">Cursos Concluídos</h1> <!--colocar esses elementos dentro de um container com width maximo-->
 
+                            <button class="glider-prev">«</button>
                             <div id="box-cursos" class="trasition-left">
 
                                 <!-- <aside class="card-curso">
@@ -245,10 +249,12 @@
                                         <ion-icon name="logo-css3" style="color: #0277BD;"></ion-icon>
                                     </div>
                                 </aside> -->
-                                
-                            </div>
 
-                            <button id="next">next</button>
+                            </div>
+                            
+                            <button class="glider-next">»</button>
+                            <div id="dots"></div>
+
                         </div>
 
                         <div class="container-sections" id="container-certificados">
@@ -300,6 +306,7 @@
 
     </div>
 </body>
+ <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script> <!-- link do js da biblioteca gliber js -->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

@@ -66,6 +66,19 @@ function Intersecting(list, classe) {
 }
 
 
+new Glider(document.querySelector('#box-cursos'), {
+    slidesToShow: 1,
+    slidesToScroll: 5,
+    dots: '#dots',
+    draggable: true,
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+  });
+
+
+
 document.addEventListener(`DOMContentLoaded`, ()=>{
     Intersecting(trasition_left, 'trasition-left-show')
     Intersecting(trasition_right, 'trasition-right-show')

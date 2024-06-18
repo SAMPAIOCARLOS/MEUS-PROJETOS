@@ -152,21 +152,6 @@ async function GetDataCard(box_cursos_fun) {
             box_img_card_cursos.append(newImgCourse)
             list_tech_card_cursos.append(description_course)
 
-            const next = document.getElementById("next")
-            let cont = 0
-
-            next.addEventListener("click", ()=> {
-                cont++
-
-                // console.log(box_cursos.children[cont])
-
-                const vision = new IntersectionObserver((func)=> {
-                    func.forEach(input => {
-                        console.log(input)
-                    });
-                })
-                
-            })
 
         });
 
