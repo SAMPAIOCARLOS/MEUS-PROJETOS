@@ -65,16 +65,18 @@ function Intersecting(list, classe) {
     });
 }
 
-
-new Glider(document.querySelector('#box-cursos'), {
-    slidesToShow: 1,
-    slidesToScroll: 5,
-    dots: '#dots',
-    draggable: true,
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto', // Permite que o Swiper ajuste o número de slides visíveis automaticamente
+    spaceBetween: 10, // Espaço entre os slides em pixels
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    loop: true,
   });
 
 

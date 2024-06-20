@@ -195,6 +195,8 @@
     background-image: linear-gradient(to top, #0a0a0a, #0d1418);
     /* border: 3px solid red; */
     padding-bottom: 100px;
+
+    position: relative;
 }
 
 #container-list-bar {
@@ -246,10 +248,11 @@
 
 #container-cursos {
     width: 100%;
-    border: 1px solid red;
+    height: 600px;
+    /* border: 1px solid red; */
     /* background-color: #8763fd4d; */
     display: none;
-    position: relative;
+    /* position: relative; */
 }
 
 #container-certificados {
@@ -303,22 +306,24 @@
     scale: 1.1;
 }
 
+.swiper-container {
+    overflow: hidden;
+}
+
 #box-cursos {
-    width: 100%;
-    /* height: 75%; */
+    width: 90%;
+    height: 80%;
+    margin: auto;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* overflow-x: scroll; */
     gap: 10px;
-    border: 1px solid rgb(25, 0, 255);
+    /* border: 1px solid rgb(25, 0, 255); */
     padding: 20px;
 }
 .card-curso {
     min-width: 350px;
-    max-width: 350px;
-    height: 500px;
-    border: 1px solid red;
+    max-width: 350px !important;
+    height: 100%;
+    /* border: 1px solid red; */
     background-color: #141415;
     border-radius: 10px;
     padding-top: 20px;
@@ -329,29 +334,12 @@
     opacity: 0.7;
 }
 
-.glider-prev, .glider-next {
-    background: #333 !important;
-    color: white !important;
-    border: none !important;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-  }
-  .glider-prev {
-    left: -50px !important;
-  }
-  .glider-next {
-    right: -50px !important;
-  }
 
 .card-curso:hover {
-    transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px) !important;
     box-shadow: 2px 3px 20px #ffffff53;
     opacity: 1;
 }
-
 
 
 .top-card-cursos {
@@ -429,6 +417,19 @@
     gap: 30px;
     font-size: 2em;
     padding-left: 10px;
+}
+
+
+.swiper-button-next {
+    position: absolute;
+    left: 103% !important;
+    z-index: 1000;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -5% !important;
+    z-index: 1000;
 }
 
 #section-project {

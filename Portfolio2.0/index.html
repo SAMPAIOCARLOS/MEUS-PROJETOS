@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../styles/app_footer.css">
     <link rel="stylesheet" href="styles/index.css?v=2022.2">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"> gliber -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     
 </head>
 <body>
@@ -208,13 +209,12 @@
                             </div>
                         </div>
 
-                        <div class="container-sections" id="container-cursos">
+                        <div class="container-sections swiper-container" id="container-cursos">
                             <h1 class="trasition-left">Cursos Concluídos</h1> <!--colocar esses elementos dentro de um container com width maximo-->
 
-                            <button class="glider-prev">«</button>
-                            <div id="box-cursos" class="trasition-left">
+                             <div id="box-cursos" class="swiper-wrapper"> <!--Tinha a class trasition-left -->
 
-                                <!-- <aside class="card-curso">
+                                <!-- <aside class="card-curso swiper-slide">
                                     <div class="top-card-cursos">
 
                                         <div class="container-img-card-cursos">
@@ -250,10 +250,12 @@
                                     </div>
                                 </aside> -->
 
+
                             </div>
-                            
-                            <button class="glider-next">»</button>
-                            <div id="dots"></div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- <div class="swiper-pagination"></div> -->
 
                         </div>
 
@@ -306,7 +308,11 @@
 
     </div>
 </body>
- <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script> <!-- link do js da biblioteca gliber js -->
+ <!-- <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script> link do js da biblioteca gliber js -->
+
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -314,4 +320,6 @@
 
 <script src="scripts/functions.js"></script>
 <script src="scripts/index.js"></script>
+
+
 </html>

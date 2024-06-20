@@ -93,7 +93,7 @@ async function GetDataCard(box_cursos_fun) {
 
             //Construção de card
             const card_curso = document.createElement("aside")
-            card_curso.setAttribute("class", "card-curso")
+            card_curso.classList.add("card-curso", "swiper-slide")
 
             const top_card_cursos = document.createElement("div")
             top_card_cursos.setAttribute("class", "top-card-cursos")
