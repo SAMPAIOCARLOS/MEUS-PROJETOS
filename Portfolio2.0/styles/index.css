@@ -320,8 +320,7 @@
     padding: 20px;
 }
 .card-curso {
-    min-width: 350px;
-    max-width: 350px !important;
+    max-width: 350px;
     height: 100%;
     /* border: 1px solid red; */
     background-color: #141415;
