@@ -15,6 +15,10 @@ link_navgation.forEach(element => {
                 document.getElementById("container-tecnologias").style.display = 'flex'
                 document.getElementById("container-cursos").style.display = 'none'
                 document.getElementById("container-certificados").style.display = 'none'
+
+                document.querySelector(".swiper-button-next").style.setProperty('display', 'none', 'important');
+                document.querySelector(".swiper-button-prev").style.setProperty('display', 'none', 'important');
+
                 break;
 
             case "CURSOS":
@@ -24,6 +28,9 @@ link_navgation.forEach(element => {
                 document.getElementById("container-cursos").style.display = 'flex'
                 document.getElementById("container-tecnologias").style.display = 'none'
                 document.getElementById("container-certificados").style.display = 'none'
+
+                document.querySelector(".swiper-button-next").style.setProperty('display', 'flex', 'important');
+                document.querySelector(".swiper-button-prev").style.setProperty('display', 'flex', 'important');
                 break
 
             case "CERTIFICADOS":
@@ -33,6 +40,9 @@ link_navgation.forEach(element => {
                 document.getElementById("container-certificados").style.display = 'flex'
                 document.getElementById("container-cursos").style.display = 'none'
                 document.getElementById("container-tecnologias").style.display = 'none'
+
+                document.querySelector(".swiper-button-next").style.setProperty('display', 'none', 'important');
+                document.querySelector(".swiper-button-prev").style.setProperty('display', 'none', 'important');
 
                 break
             default:
