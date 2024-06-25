@@ -1,0 +1,541 @@
+/*
+Theme Name: OUVIDORIA2024
+Author: ATI
+Author URI: http://ma.gov.br/
+Description: Novo tema Ouvidoria 2024
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 70vh;
+    background-color: #FBBC1E;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.mancha-left {
+    width: 25%;
+    min-width: 300px;
+    height: 60%;
+    background-image: url("https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/mancha_left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mancha-left > img {
+    transform: rotate(180deg);
+}
+.imgs {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo_ma {
+    position: absolute;
+    width: 18.75rem;
+    height: 100px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+}
+.img_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+    margin-top: 50px;
+}
+
+.bnc_one {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: 13%;
+    height: 70%;
+}
+.container_mancha_right {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.mancha-right {
+    width: 10% !important;
+    min-width: 300px;
+    height: 100% !important;
+    background-image: url("https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/mancha_right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /* border: 1px solid red; */
+}
+
+.bnc_two {
+    position: absolute;
+    left: 85%;
+    top: 20px;
+    width: 13%;
+    height: 70%;
+}
+
+.bnc_three {
+    position: absolute;
+    left: 75%;
+    top: 65%;
+    width: 13%;
+    height: 70%;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90, 0);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+.nav {
+    width: 100%;
+    min-height: 30vh;
+    background-color: #3574B9;
+    display: flex;
+}
+#container-buttons {
+    width: 50%;
+    height: 50%;
+    margin-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.buttons {
+    min-width: 170px;
+    height: 60px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: bisque;
+    padding: 20px;
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+.buttons:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    border:10px soid red;
+}
+
+#section-infor {
+    width: 100%;
+    min-height: 86vh;
+    background-color: #2AB3BC;
+    display: flex;
+    flex-direction: column;
+
+}
+#title {
+    width: 85%;
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+#title > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title > ion-icon {
+    font-size: 2em;
+}
+#linha {
+    width: 40%;
+    height: 1px;
+    border: 2px solid white;
+}
+
+#infor_cards {
+    width: 85%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#title_card {
+    width: 25%;
+    font-size: 1.6em;
+    color: white;
+}
+
+#barra {
+    border: 2px solid white;
+    height: 300px;
+}
+#container_cards {
+    width: 65%;
+    min-height: 70%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards {
+    background-color: white;
+    min-width: 170px;
+    height: 200px;
+}
+#espaco {
+    width: 100%;
+    height: 14vh;
+    background-color: #3574B9;
+}
+
+
+.footer {
+    background-color: bisque;
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container_infor_footer {
+    font-size: 1.1em;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+.container_icons_social {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 4em;
+    color: #3574B9;
+}
+.icons_social {
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.icons_social:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+@media(max-width: 2119px) {
+    .mancha-right {
+        width: 20%;
+        height: 50%;
+    }
+}
+
+@media(max-width: 1471px) {
+
+    .mancha-left {
+        height: 250px;
+    }
+}
+
+@media(max-width: 1400px) {
+
+    #container_cards {
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #barra {
+        display: none;
+    }
+
+    #infor_cards {
+        flex-direction: column;
+    }
+    #title_card {
+        width: 100%;
+        text-align: center;
+    }
+
+    #container_cards {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1300px) {
+    .mancha-right {
+        top: 50%;
+    }
+}
+
+@media(max-width: 1160px) {
+    .mancha-left {
+        display: none;
+    }
+
+    .mancha-right {
+        display: none;
+    }
+
+    .img_center {
+        height: 50%;
+    }
+
+    #container-buttons {
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+    
+    
+
+    #section-infor {
+        font-size: 13px;
+        gap: 30px;
+    }
+
+    #text_left > h1 {
+        font-size: 26px;
+    }
+
+    #text_left > p {
+        font-size: 15px;
+    }
+
+    #box-list > p {
+        font-size: 13px;
+    }
+
+    #text_right > h1 {
+        font-size: 26px;
+    }
+
+    #text_right > h3 {
+        font-size: 15px;
+    }
+
+    .list-full {
+        left: -80%;
+    }
+}
+
+@media(max-width: 825px){
+    #container-buttons {
+        width: 60%;
+    }
+    
+}
+
+@media(max-width: 800px) {
+    #menu_home {
+        padding-bottom: 40px;
+    }
+    .bnc_one {
+        display: none;
+    }
+
+    .bnc_two {
+        display: none;
+    }
+    .bnc_three {
+        display: none;        
+    }
+    .img_center {
+        width: 80%;
+        height: 60%;
+    }
+
+    #container-buttons {
+        width: 80%;
+        margin: auto;
+        justify-content: space-around;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    #title {
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    #linha {
+        display: none;
+    }
+
+    #barra_two {
+        width: 100%;
+        border: 2px solid white;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+
+    #text_left > h1 {
+        font-size: 22px;
+    }
+
+    #text_left > p {
+        font-size: 10px;
+    }
+
+    #box-list > p {
+        font-size: 10px;
+    }
+
+    #text_right > h1 {
+        font-size: 22px;
+    }
+
+    #text_right > h3 {
+        font-size: 10px;
+    }
+
+    .container_icons_social {
+        font-size: 2em;
+        /* border: 1px solid red; */
+    }
+
+    .list-full {
+        width: 70%;
+    }
+
+    #container-buttons {
+        align-items: center;
+    }
+}
+
+@media(max-width: 780px) {
+    .footer {
+        justify-content: center;
+    }
+
+    .container_icons_social {
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 603px) {
+    #menu_home > h1 {
+        font-size: 27px;
+    }
+    #description > h1 {
+        font-size: 27px;
+    }
+
+    #description > p {
+        font-size: 14px;
+    }
+    #barra_vertical_two {
+        display: none;
+    }
+
+    #text_left{
+        width: 80%;
+    }
+
+    #text_left > h1 {
+        font-size: 27px;
+    }
+
+    #text_left > p {
+        font-size: 14px;
+    }
+
+    #box-list > p {
+        font-size: 14px;
+    }
+
+    #text_right {
+        width: 80%;
+    }
+
+    #text_right > h1 {
+        font-size: 27px;
+    }
+
+    #text_right > h3 {
+        font-size: 14px;
+    }
+
+
+    .hamburguer.active {
+        top: 1%;
+        left: 1%;
+    }
+}
+
+@media(max-width: 488px) {
+    #container_cards {
+        justify-content: center;
+    }
+    .buttons {
+        width: 150px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
