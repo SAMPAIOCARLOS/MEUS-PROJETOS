@@ -12,12 +12,12 @@ window.addEventListener('resize', ()=> {
     if (larguraTela < width) {
         
         imgs_center.forEach(image => {
-            image.src = 'imgs/Ativo 6teste.png';
+            image.src = 'https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-6teste.png';
         });
     } else {
 
         imgs_center.forEach(image => {
-            image.src = 'imgs/Ativo 7teste.png';
+            image.src = 'https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-7teste.png';
         });
     }
 });

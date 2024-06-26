@@ -87,6 +87,11 @@
     .list-full {
         left: -80%;
     }
+
+    .cards {
+        border: 1px solid red; 
+        width: 100%;
+    }
 }
 
 @media(max-width: 800px) {
@@ -166,6 +171,27 @@
 
     #container-buttons {
         align-items: center;
+    }
+    .cards {
+        flex-direction: column; /*aqui*/
+        height: 30%;
+    }
+    .box-img-card {
+        /* border: 2px solid blue; */
+        width: 100%;
+        height: 200px ;
+        /* margin: auto; */
+        /* background-color: transparent; */
+        background-image: url("../imgs/istockphoto-1067089582-2048x2048.jpg");
+    }
+
+    .infor {
+        /* border: 2px solid red; */
+        width: 100%;
+    }
+
+    .img-post {
+        border-radius: 12px;
     }
 }
 

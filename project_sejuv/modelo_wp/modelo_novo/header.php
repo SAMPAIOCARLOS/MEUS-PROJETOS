@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-
     <?php wp_head(); ?>
 </head>
 <body>
@@ -14,24 +11,24 @@
         </div>
 
         <div class="bnc_one">
-            <img src="imgs/Ativo 4teste.png" alt="" class="imgs">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-4teste.png" alt="" class="imgs">
         </div>
 
         <div class="logo_ma">
-            <img src="imgs/mog_gov_borda_SEEJUV_P.png" alt="" class="imgs">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/mog_gov_borda_SEEJUV_P.png" alt="" class="imgs">
         </div>
 
         <div class="img_center">
-            <img src="imgs/Ativo 7teste.png" alt="" class="imgs testeimg">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-7teste.png" alt="" class="imgs testeimg">
         </div>
 
 
         <div class="bnc_two">
-            <img src="imgs/Ativo 5teste.png" alt="" class="imgs">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-5teste.png" alt="" class="imgs">
         </div>
 
         <div class="bnc_three">
-            <img src="imgs/Ativo 3teste.png" alt="" class="imgs">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-3teste.png" alt="" class="imgs">
         </div>
 
         <div class="container_mancha_right">

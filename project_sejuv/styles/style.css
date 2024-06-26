@@ -85,12 +85,48 @@ main {
     gap: 30px;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* border: 2px solid blue; */
+    margin-top: 50px;
 }
 
 .cards {
-    background-color: white;
-    min-width: 170px;
-    height: 200px;
+    
+    width: 80%;
+    height: 250px;
+    /* border: 1px solid red; */
+    display: flex;
+    border-top: 1px solid gray;
+    padding-top: 30px;
+}
+
+.box-img-card {
+    background-color: #fff;
+    /* background-image: url("../imgs/neymar.jpg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    min-width: 40%;
+    border-radius: 12px;
+    
+}
+
+.img-post {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.infor {
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    /* border: 2px solid red; */
+    padding-left: 20px;
+    
 }
 #espaco {
     width: 100%;

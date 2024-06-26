@@ -1,4 +1,6 @@
 <footer class="footer">
+    
+    <div class="container_two_infor">
         <div class="container_infor_footer">
             <div id="address">
                 <p>Secretaria De Estado Extraordinária da Juventude <br>
@@ -18,6 +20,10 @@
             <ion-icon name="logo-instagram" class="icons_social"></ion-icon>
 
             <ion-icon name="logo-facebook" class="icons_social"></ion-icon>
+        </div>
+    </div>
+        <div class="title-authority">
+            <h2>Desenvolvido e hospedado pela Agência Estadual de Tecnologia da Informação - ATI/MA</h2>
         </div>
     </footer>
 
