@@ -3,25 +3,12 @@ const line_span = document.querySelector(".line-span");
 const hamb = document.querySelectorAll('.hamburguer span');
 const hamburguer = document.querySelector(".hamburguer");
 const imgs_center = document.querySelectorAll(".testeimg");
-const width = 1175;
 
+const button_back = document.querySelector(".button-back")
 
-window.addEventListener('resize', ()=> {
-    const larguraTela = window.innerWidth;
-
-    if (larguraTela < width) {
-        
-        imgs_center.forEach(image => {
-            image.src = 'https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-6teste.png';
-        });
-    } else {
-
-        imgs_center.forEach(image => {
-            image.src = 'https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-7teste.png';
-        });
-    }
-});
-
+button_back.addEventListener("click", ()=> {
+    window.history.back();
+})
 
 function Active(Menu_hamburguer, list_full, line_span, hamb) {
     Menu_hamburguer.addEventListener("click", ()=> {

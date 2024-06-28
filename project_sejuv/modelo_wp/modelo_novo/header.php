@@ -21,6 +21,10 @@
         <div class="img_center">
             <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-7teste.png" alt="" class="imgs testeimg">
         </div>
+        
+        <div class="img_center" id="img-none-center">
+            <img src="https://estagiarios.firestoreslz.com/wp-content/uploads/2024/06/Ativo-6teste.png" alt="" class="imgs testeimg">
+        </div>
 
 
         <div class="bnc_two">

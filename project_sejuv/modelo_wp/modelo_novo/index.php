@@ -24,25 +24,25 @@
 
                 <div id="barra"></div>
 
-                <div id="container_cards">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <div class="cards">
-                        <div class="box-img-card">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail('full', array('class' => 'img-post')); ?>
-                            <?php endif; ?>
-                        </div>
-    
-                        <div class="infor">
-                            <h2><?php the_title(); ?></h2>
-                            <p><?php the_excerpt(); ?></p>
-                            <a href="<?php the_permalink(); ?>">Leia mais</a>
-                        </div>
+                    <div id="container_cards">
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <div class="cards">
+                                <div class="box-img-card">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <?php the_post_thumbnail('full', array('class' => 'img-post')); ?>
+                                    <?php endif; ?>
+                                </div>
+            
+                                <div class="infor">
+                                    <h2><?php the_title(); ?></h2>
+                                    <p><?php the_excerpt(); ?></p>
+                                    <a href="<?php the_permalink(); ?>">Leia mais</a>
+                                </div>
+                            </div>
+                        <?php endwhile; else : ?>
+                            <p>Nenhuma notícia encontrada.</p>
+                        <?php endif; ?>
                     </div>
-    <?php endwhile; else : ?>
-        <p>Nenhuma notícia encontrada.</p>
-    <?php endif; ?>
-</div>
 
             </div>
 
