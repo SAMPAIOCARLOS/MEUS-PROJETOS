@@ -1,0 +1,85 @@
+@media(max-width: 1100px) {
+    .btn-contact {
+        width: 200px;
+    }
+
+    .list-nav-header {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+    .hamburguer {
+        display: flex;
+    }
+
+    .btn-contact {
+        display: none;
+    }
+
+    .list-nav-header {
+        display: none;
+    }
+
+    #text-introduction > h2 {
+        font-size: 1.275rem;
+    }
+    #text-introduction > h1 {
+        font-size: 3.063rem;
+    }
+
+    #text-introduction > button {
+        width: 200px;
+    }
+}
+
+@media(max-width:650px) {
+    .list-full {
+        width: 70%;
+    }
+
+    .list-full.active {
+        left: 30%;
+    }
+
+    .hamburguer.active {
+        top: 3%;
+        left: 90%;
+    }
+    
+}
+
+@media(max-width: 500px) {
+    #text-introduction > h2 {
+        font-size: 1.075rem;
+    }
+
+    #text-introduction > h1 {
+        font-size: 2.063rem;
+    }
+
+    #container-icons-midia > a {
+        font-size: 1.5em;
+    }
+    .container-img-logo {
+        width: 200px;
+    }
+
+    .list-full {
+        width: 100%;
+    }
+
+    .list-full.active {
+        left: 0%;
+    }
+}
+
+@media(min-width: 900px) { /*isso é para esconder a aba do menu hamburguer quando a tela for muito grande*/
+    .list-full.active {
+        left: 100%;
+    }
+}
