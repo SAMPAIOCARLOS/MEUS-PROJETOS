@@ -1,3 +1,11 @@
+@media(max-width: 1300px) {
+    #personal-data{
+        width: 100%;
+    }
+    #container-logos-languages {
+        width: 100%;
+    }
+}
 @media(max-width: 1100px) {
     .btn-contact {
         width: 200px;
@@ -5,6 +13,12 @@
 
     .list-nav-header {
         font-size: 12px;
+    }
+    #container-my-image {
+        display: none;
+    }
+    #container-information {
+        width: 100%;
     }
 }
 
@@ -37,6 +51,17 @@
     }
 }
 
+@media(max-width: 750px) {
+
+    #text-question{
+        font-size: 20px;
+    }
+
+    #container-information {
+        font-size: 13px;
+    }
+}
+
 @media(max-width:650px) {
     .list-full {
         width: 70%;
@@ -49,6 +74,22 @@
     .hamburguer.active {
         top: 3%;
         left: 90%;
+    }
+
+    #personal-data{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #container-logos-languages {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .lenguages {
+        width: 100%;
+    }
+
+    .title-sections {
+        width: 80%;
     }
     
 }
@@ -75,6 +116,9 @@
 
     .list-full.active {
         left: 0%;
+    }
+    .title-sections > h1 {
+        font-size: 2.463rem;
     }
 }
 
