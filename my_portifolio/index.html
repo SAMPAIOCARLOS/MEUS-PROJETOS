@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/responsiveness.css">
 
     <script src="js/functions.js" defer></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <nav class="nav">
@@ -23,7 +24,7 @@
             <li>PROJETOS</li>
         </ul>
 
-        <button class="btn-contact">
+        <button class="btn-contact cursor_pointer">
             Entrar em contato
         </button>
 
@@ -43,7 +44,7 @@
             <li>HABILIDADES</li>
             <li>PROJETOS</li>
 
-            <button class="btn-contact-two">
+            <button class="btn-contact-two cursor_pointer">
                 Entrar em contato
             </button>
         </ul>
@@ -59,7 +60,7 @@
 
             <h2>Eu sou <span id="auto_complete" class="color-purple"></span></h2>
 
-            <button>
+            <button class="cursor_pointer">
                 <ion-icon name="chatbox-outline"></ion-icon>
                 Contact
             </button>
@@ -119,7 +120,7 @@
 
                         <div id="container-logos-languages">
                             <div class="lenguages">
-                                <div class="flag">
+                                <div class="flag cursor_pointer">
                                     <img src="img/icons8-brasil-96.png" alt="img-flag">
                                 </div>
 
@@ -130,7 +131,7 @@
                             </div>
 
                             <div class="lenguages">
-                                <div class="flag">
+                                <div class="flag cursor_pointer">
                                     <img src="img/icons8-eua-96.png" alt="img-flag">
                                 </div>
 
@@ -143,7 +144,7 @@
                         </div>
                     </div>
 
-                    <button id="button-download-cv">
+                    <button id="button-download-cv" class="cursor_pointer">
                         <ion-icon name="document-text-outline"></ion-icon>
                         Download CV
                     </button>
@@ -160,15 +161,33 @@
 
             <div id="container-general-skills">
                 <div id="container-list-navigation">
-                    <ul>
-                        <li>TECNOLOGIAS</li>
-                        <li>CURSOS</li>
-                        <li>CERTIFICADOS</li>
+                    <ul id="ul_list_sections">
+                        <li class="cursor_pointer">TECNOLOGIAS</li>
+                        <li class="cursor_pointer">CURSOS</li>
+                        <li class="cursor_pointer">CERTIFICADOS</li>
+                        <span id="scroll_bar"></span>
                     </ul>
                 </div>
 
                 <aside id="group-tech">
+                    
+                    <div id="container_text_tech">
+                        <p class="color-purple">Tecnologias que Moldam Meu Caminho</p>
 
+                        <p>No mundo do desenvolvimento web, minhas principais ferramentas são HTML, CSS e JavaScript. Com elas, construo estrutura, estilo e interatividade em meus projetos.</p>
+
+                        <p>Para colaborar e versionar meu código, confio no Git e no GitHub, onde posso trabalhar em equipe e acompanhar o progresso de forma eficiente.</p>
+
+                        <p>Para armazenar e gerenciar dados, conto com o MySQL, garantindo que minhas aplicações tenham uma base sólida.</p>
+
+                    </div>
+
+                    <div id="container_icons-tech">
+                        <div class="card_icon-tech">
+
+                        </div>
+                    </div>
+                    
                 </aside>
 
                 <aside id="group-course">
