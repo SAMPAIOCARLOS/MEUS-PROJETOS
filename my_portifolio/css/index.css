@@ -230,42 +230,37 @@ main {
 
 #container-general-skills {
     border: 3px solid rgb(0, 251, 255);
-    width: 100%;
+    width: 85%;
     min-height: 80vh;
+    margin: auto;
 }
 
 #container-list-navigation {
     /* border: 3px solid white; */
-    width: 85%;
-    margin: auto;
+    width: 65%;
 
 }
 
 #ul_list_sections {
-    width: 65%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     list-style: none;
     font-size: 27px;
     border-bottom: 1px solid rgba(171, 171, 171, 0.46);
     padding-bottom: 5px;
-    position: relative;
 }
 
 #scroll_bar {   
     border: 2px solid #8663FD;
-    width: 300px;
-    position: absolute;
-    top: 34px;
-    left: 0%;
+    width: 35%;
     transition: all 0.5s;
 }
 
 #group-tech {
     border: 1px solid red;
-    width: 85%;
+    width: 100%;
     min-height: 85vh;
-    margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
@@ -283,17 +278,77 @@ main {
 }
 
 #container_icons-tech {
-    border: 1px solid green;
+    border: 3px solid green;
     width: 45%;
+    min-height: 30vh !important;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+#container_icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 1px solid red;
 }
 
-.card_icon-tech {
+#container_link_ver_all {
+    border: 3px solid rgb(0, 255, 102);
+    width: 100%;
+}
+
+.card_icon_tech {
+    width: 10rem;
+    height: 13rem;
+    background-color: #141415;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 20px;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+.card_icon_tech:hover {
+    transform: translate(-10px, -10px);
+    opacity: 1;
+    box-shadow: 3px 3px 17px #ffffff88;
+}
+
+.box-img-icon-tech {
+    width: 70%;
+    height: 50%;
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+.img_icon_tech {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.5s;
+}
+.img_icon_tech:hover {
+    transform: scale(1.1);
+}
+
+
+#link_ver_todos_fun {
+    display: none;
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: end;
+    color: blue;
+    padding-right: 20px;
     
 }
-
 #group-course {
     background-color: rgba(0, 255, 255, 0.327);
-    width: 85%;
+    width: 100%;
     min-height: 85vh;
     display: none;
     margin: auto;
@@ -306,9 +361,7 @@ main {
     width: 85%;
     min-height: 85vh;
     display: none;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 
 

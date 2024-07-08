@@ -60,7 +60,7 @@ body {
     align-items: center;
 }
 .list-nav-header-two > li {
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
 }
 .list-nav-header-two li:hover {
     border-bottom: 1px solid #8663FD;
@@ -97,8 +97,6 @@ body {
     border: 2px solid #8663FD;
     color: #8663FD;
 }
-
-
 
 
 /*menu hamburguer*/
