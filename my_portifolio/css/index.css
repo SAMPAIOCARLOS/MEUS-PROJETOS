@@ -60,7 +60,7 @@ header {
 #container-midia {
     /* border: 2px solid blue; */
     width: 90%;
-    height: 100px;
+    height: 70px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -68,6 +68,7 @@ header {
 
 #container-midia > p {
     font-size: 1.5rem;
+    padding-top: 10px;
 }
 
 #container-icons-midia {
@@ -80,21 +81,15 @@ header {
     padding-top: 5px;
 }
 
-#container-icons-midia > a {
+#container-icons-midia > a > ion-icon {
     font-size: 2em;
     color: #ffffff;
     transition: all 0.5s;
 }
-#container-icons-midia > a:hover {
+#container-icons-midia > a > ion-icon:hover {
     color: #8663FD;
 }
 
-main {
-    width: 100%;
-    min-height: 100vh;
-    background-color: antiquewhite;
-    border: 2px solid rgb(0, 8, 255);
-}
 
 #section-about {
     width: 100%;
@@ -249,6 +244,9 @@ main {
     font-size: 27px;
     border-bottom: 1px solid rgba(171, 171, 171, 0.46);
     padding-bottom: 5px;
+    margin: 0;
+    padding-left: 0;
+    border: 1px solid red;
 }
 
 #scroll_bar {   
@@ -310,9 +308,13 @@ main {
     justify-content: space-around;
     align-items: center;
     border-radius: 12px;
-    font-size: 20px;
     opacity: 0.8;
     transition: all 0.5s;
+    /* border: 1px solid red; */
+}
+
+.card_icon_tech > h1 {
+    font-size: 23px;
 }
 .card_icon_tech:hover {
     transform: translate(-10px, -10px);

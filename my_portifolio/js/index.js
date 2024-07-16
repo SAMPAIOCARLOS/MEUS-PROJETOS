@@ -48,6 +48,10 @@ list_sections.forEach(li_item => {
     
 });
 
+const data_Atual = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+
+console.log(data_Atual)
+
 
 async function Get_data_icons_tech(container) {
     try {

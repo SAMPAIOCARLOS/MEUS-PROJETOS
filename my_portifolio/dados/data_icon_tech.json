@@ -3,44 +3,51 @@
         "icon": "../img/iconss/icons8-html-240.png",
         "name": "HTML",
         "fullName": "HTML",
-        "description": "Linguagem essencial para estruturar o conteúdo das páginas web, fornecendo uma base sólida para a apresentação visual e interatividade."
+        "description": "Linguagem essencial para estruturar o conteúdo das páginas web, fornecendo uma base sólida para a apresentação visual e interatividade.",
+        "status": "Avançado"
     },
 
     {
         "icon": "../img/iconss/icons8-css-240.png",
         "name": "CSS",
         "fullName": "CSS",
-        "description": "Ferramenta poderosa para estilizar e dar vida ao design das páginas web, permitindo o controle preciso sobre layout, cores e outros aspectos visuais. "
+        "description": "Ferramenta poderosa para estilizar e dar vida ao design das páginas web, permitindo o controle preciso sobre layout, cores e outros aspectos visuais. ",
+        "status": "Avançado"
     },
     {
         "icon": "../img/iconss/icons8-js-240.png",
         "name": "JS",
         "fullName": "JAVASCRIPT",
-        "description": "Uma linguagem dinâmica e versátil que possibilita a criação de interatividade e funcionalidades avançadas nas páginas web, aumentando a experiência do usuário."
+        "description": "Uma linguagem dinâmica e versátil que possibilita a criação de interatividade e funcionalidades avançadas nas páginas web, aumentando a experiência do usuário.",
+        "status": "Intermediario"
     },
     {
         "icon": "../img/iconss/icons8-git-240.png",
         "name": "GIT",
         "fullName": "GIT",
-        "description": "Uma ferramenta indispensável para o desenvolvimento de software, que oferece um sistema robusto de controle de versão, colaboração eficiente e gerenciamento de projetos."
+        "description": "Uma ferramenta indispensável para o desenvolvimento de software, que oferece um sistema robusto de controle de versão, colaboração eficiente e gerenciamento de projetos.",
+        "status": "Basico"
     },
     {
         "icon": "../img/iconss/icons8-github-375.png",
         "name": "GITHUB",
         "fullName": "GITHUB",
-        "description": "Uma plataforma que potencializa o Git, fornecendo recursos adicionais para hospedagem de código, colaboração em equipe, revisão de código e gerenciamento de projetos de forma integrada."
+        "description": "Uma plataforma que potencializa o Git, fornecendo recursos adicionais para hospedagem de código, colaboração em equipe, revisão de código e gerenciamento de projetos de forma integrada.",
+        "status": "Basico"
     },
     {
         "icon": "../img/iconss/icons8-mysql-240.png",
         "name": "MYSQL",
         "fullName": "MYSQL",
-        "description": "Um sistema confiável de gerenciamento de banco de dados relacional, essencial para armazenar e recuperar dados em aplicativos web, garantindo eficiência, escalabilidade e segurança."
+        "description": "Um sistema confiável de gerenciamento de banco de dados relacional, essencial para armazenar e recuperar dados em aplicativos web, garantindo eficiência, escalabilidade e segurança.",
+        "status": "Basico"
     },
     {
         "icon": "../img/iconss/icons8-mysql-240.png",
         "name": "MYSQL",
         "fullName": "MYSQL",
-        "description": "Um sistema confiável de gerenciamento de banco de dados relacional, essencial para armazenar e recuperar dados em aplicativos web, garantindo eficiência, escalabilidade e segurança."
+        "description": "Um sistema confiável de gerenciamento de banco de dados relacional, essencial para armazenar e recuperar dados em aplicativos web, garantindo eficiência, escalabilidade e segurança.",
+        "status": "Basico"
     }
     
     

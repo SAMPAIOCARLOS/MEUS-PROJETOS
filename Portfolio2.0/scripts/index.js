@@ -68,7 +68,8 @@ async function GetDataTech(container_tech_fun, link_ver_todos_fun) {
         data.forEach(element => {
             const newAside = document.createElement("aside")
             newAside.setAttribute('class', 'box-icon')
-
+ 
+            
             const newP = document.createElement("p")
             newP.innerText = element.name
             const newDiv = document.createElement('div')

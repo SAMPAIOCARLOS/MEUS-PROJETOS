@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #ffffff;
 }
 
 body {
@@ -40,7 +41,9 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    margin: 0;
     /* border: 1px solid red; */
+    
 }
 .list-nav-header > li {
     padding: 10px 10px 10px 10px;
@@ -167,3 +170,10 @@ body {
     background: rgba(0, 0, 0, 0);
 }
 
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: antiquewhite;
+    border: 2px solid rgb(0, 8, 255);
+}
