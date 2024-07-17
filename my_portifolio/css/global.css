@@ -4,6 +4,9 @@
     box-sizing: border-box;
     color: #ffffff;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     border: 3px solid red;
@@ -45,7 +48,7 @@ body {
     /* border: 1px solid red; */
     
 }
-.list-nav-header > li {
+.list-nav-header > a > li {
     padding: 10px 10px 10px 10px;
 }
 .list-nav-header li:hover {
@@ -62,13 +65,36 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-.list-nav-header-two > li {
+.list-nav-header-two > a > li {
     padding: 10px;
 }
 .list-nav-header-two li:hover {
     border-bottom: 1px solid #8663FD;
 }
 
+.list_sections_footer {
+    width: 15%;
+    border: 1px solid red;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 25px;
+    transition: all 0.5s;
+}
+
+.list_sections_footer > a > li {
+    padding: 0px 10px 0px 10px;
+}
+
+.list_sections_footer > a > li:hover {
+    border-bottom: 1px solid #8663FD;
+}
+
+.link_nav_sections {
+    text-decoration: none;
+}
 
 .btn-contact {
     border: 2px solid #ffffff;
@@ -100,6 +126,23 @@ body {
     border: 2px solid #8663FD;
     color: #8663FD;
 }
+
+.btn-contact-footer {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    width: 280px;
+    height: 3rem;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+.btn-contact-footer:hover {
+    border: 2px solid #8663FD;
+    color: #8663FD;
+}
+
 
 
 /*menu hamburguer*/
@@ -177,3 +220,36 @@ body {
     background-color: antiquewhite;
     border: 2px solid rgb(0, 8, 255);
 }
+
+.footer {
+    border: 2px solid rgb(255, 0, 204);
+    width: 100vw;
+    min-height: 20vh;
+    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
+    
+}
+
+.container_group_footer {
+    width: 85%;
+    min-height: 20vh;
+    margin: auto;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.box_logo_img_footer {
+    border: 1px solid red;
+    width: 20%;
+    min-width: 280px;
+    height: 5rem;
+}
+
+.box_logo_img_footer > img {
+    width: 100%;
+    object-fit: contain;
+}
+

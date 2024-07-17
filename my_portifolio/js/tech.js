@@ -1,5 +1,7 @@
 const container_focus_icon_tech = document.getElementById("container_focus_icon_tech");
 
+const hamburguer_menu_tech = document.getElementById("hamburguer_menu_tech");
+const list_full_two = document.getElementById("list_full_two");
 
 async function Get_data_icons_page_focus(Container_in_cards) {
     try {
@@ -53,4 +55,11 @@ async function Get_data_icons_page_focus(Container_in_cards) {
     }
 }
 
-Get_data_icons_page_focus(container_focus_icon_tech)
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    Get_data_icons_page_focus(container_focus_icon_tech);
+    Active(hamburguer_menu_tech, list_full_two);
+})
+
+
+

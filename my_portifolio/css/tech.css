@@ -5,13 +5,21 @@
     background-image: linear-gradient(to top, #0B0D0D, #0D1418);
 }
 
+#section_focus_icons_tech > h1 {
+    width: 80%;
+    margin: auto;
+    border: 1px solid green;
+    padding: 80px 0px 80px 0px;
+    font-size: 3.063rem
+}
+
 #container_focus_icon_tech {
     border: 1px solid red;
     width: 80%;
-    min-height: 100vh;
+    min-height: 80vh;
     margin: auto;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
@@ -21,7 +29,7 @@
     /* border: 1px solid rgb(0, 17, 255); */
     max-width: 550px;
     min-width: 300px;
-    height: 17rem;
+    height: 16rem;
     background-color: #141415;
     display: flex;
     align-items: center;
@@ -38,10 +46,13 @@
 
 .img_icon_tech_focus {
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img_icon_tech_focus > img {
-    width: 100%;
+    width: 70%;
     object-fit: contain;
     /* border: 1px solid red; */
     transition: all 0.5s;

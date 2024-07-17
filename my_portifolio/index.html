@@ -13,16 +13,24 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" id="section_start">
         <div class="container-img-logo">
             <img src="img/Logo + Letreiro (1).png" alt="imagem_logo">
         </div>
 
         <ul class="list-nav-header">
-            <li>INÍCIO</li>
-            <li>SOBRE</li>    
-            <li>HABILIDADES</li>
-            <li>PROJETOS</li>
+            <a href="#section_start" class="link_nav_sections">
+                <li>INÍCIO</li>
+            </a>
+            <a href="#section-about" class="link_nav_sections">
+                <li>SOBRE</li>
+            </a>    
+            <a href="section-skills" class="link_nav_sections">
+                <li>HABILIDADES</li>
+            </a>
+            <a href="#section-project" class="link_nav_sections">
+                <li>PROJETOS</li>
+            </a>
         </ul>
 
         <button class="btn-contact cursor_pointer">
@@ -40,10 +48,18 @@
 
     <div class="list-full">
         <ul class="list-nav-header-two">
-            <li>INÍCIO</li>
-            <li>SOBRE</li>
-            <li>HABILIDADES</li>
-            <li>PROJETOS</li>
+            <a href="#section_start" class="link_nav_sections">
+                <li>INÍCIO</li>
+            </a>
+            <a href="#section-about" class="link_nav_sections">
+                <li>SOBRE</li>
+            </a>    
+            <a href="#section-skills" class="link_nav_sections">
+                <li>HABILIDADES</li>
+            </a>
+            <a href="#section-project" class="link_nav_sections">
+                <li>PROJETOS</li>
+            </a>
 
             <button class="btn-contact-two cursor_pointer">
                 Entrar em contato
@@ -225,12 +241,34 @@
         </section>
 
         <section id="section-project">
-
+            
         </section>
     </main>
 
-    <footer>
-    
+    <footer class="footer">
+        <div class="container_group_footer">
+            <div class="box_logo_img_footer">
+                <img src="img/Logo + Letreiro (1).png" alt="">
+            </div>
+            
+            <ul class="list_sections_footer">
+                <a href="#section_start" class="link_nav_sections">
+                    <li>INÍCIO</li>
+                </a>
+                <a href="#section-about" class="link_nav_sections">
+                    <li>SOBRE</li>
+                </a>    
+                <a href="#section-skills" class="link_nav_sections">
+                    <li>HABILIDADES</li>
+                </a>
+                <a href="#section-project" class="link_nav_sections">
+                    <li>PROJETOS</li>
+                </a>
+            </ul>
+            <button class="btn-contact-footer cursor_pointer">
+                Entrar em contato
+            </button>
+        </div>
     </footer>
 </body>
 

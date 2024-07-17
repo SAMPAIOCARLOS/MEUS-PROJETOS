@@ -366,6 +366,13 @@ header {
     margin: 30px auto;
 }
 
+#section-project {
+    width: 100%;
+    min-height: 100vh;
+    border: 5px solid green;
+    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
+}
+
 
 
 
