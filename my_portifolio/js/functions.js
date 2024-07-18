@@ -3,14 +3,15 @@ const line_span = document.querySelector(".line-span");
 const hamb = document.querySelectorAll('.hamburguer span');
 const hamburguer = document.querySelector(".hamburguer");
 const container_icon = document.getElementById("container_icon");
+const swiper_wrapper = document.querySelector(".swiper-wrapper");
 
 const text = document.getElementById("auto_complete");
 const array_text_about_header = ['Desenvolvedor Front-end','Front-end Developer','Desenvolvedor Front-end','Front-end Developer'];
 
-const data_atual = new Date()
-const ano_atual = data_atual.getFullYear()
-const nascimento = "2005"
-const spans_age = document.querySelectorAll(".span-age")
+const data_atual = new Date();
+const ano_atual = data_atual.getFullYear();
+const nascimento = "2005";
+const spans_age = document.querySelectorAll(".span-age");
 
 
 function Active(Menu_hamburguer, list_full, line_span, hamb) {
@@ -36,12 +37,12 @@ function typed(id, array) {
 
 
 function Calc_age(Ano_atual, Data_nascimento) {
-    const idade = Ano_atual - Data_nascimento
+    const idade = Ano_atual - Data_nascimento;
 
-    console.log(`minha idade é ${idade}`)
+    console.log(`minha idade é ${idade}`);
 
     spans_age.forEach(span_age => {
-        span_age.innerText = idade
+        span_age.innerText = idade;
     });
 
 
@@ -73,8 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", ()=> {
-    typed(text, array_text_about_header)
+    typed(text, array_text_about_header);
     Active(hamburguer, list_full, line_span, hamb);
-    Get_data_icons_tech(container_icon)
-    Calc_age(ano_atual, nascimento)
+    Get_data_icons_tech(container_icon);
+    Get_data_course(swiper_wrapper);
+    Calc_age(ano_atual, nascimento);
 })

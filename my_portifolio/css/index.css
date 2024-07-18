@@ -349,7 +349,6 @@ header {
     
 }
 #group-course {
-    background-color: rgba(0, 255, 255, 0.327);
     width: 100%;
     min-height: 85vh;
     display: none;
@@ -371,11 +370,10 @@ header {
 }
 
 .swiper-slide {
-    background: #ccc;
+    background-color: #131415;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     margin: 10px;
     border-radius: 10px;
     min-height: 400px !important;
@@ -385,12 +383,95 @@ header {
     color: #000;
 }
 
+.swiper-button-next {
+    padding: 30px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
 
+.swiper-button-next:hover {
+    background-color: #fcfcfc92;
+}
+.swiper-button-prev {
+    padding: 30px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.swiper-button-prev:hover {
+    background-color: #fcfcfc92;
+}
+.header_card_course {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
 
+}
 
+.box_logo_company {
+    /* border: 1px solid blue; */
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+.box_logo_company > img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.name_company {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 60px;
+}
+
+.title_course {
+    padding: 20px;
+}
+
+.box_img_front_course {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #000;
+}
+.box_img_front_course > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.box_description_course {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.footer_icons_tech {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+
+}
 #group-certificate {
     background-color: rgba(137, 43, 226, 0.301);
-    width: 85%;
+    width: 100%;
     min-height: 85vh;
     display: none;
     margin: 30px auto;
