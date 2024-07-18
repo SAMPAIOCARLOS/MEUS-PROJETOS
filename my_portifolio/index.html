@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsiveness.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <script src="js/functions.js" defer></script>
     <script src="js/index.js" defer></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <nav class="nav" id="section_start">
@@ -25,7 +28,7 @@
             <a href="#section-about" class="link_nav_sections">
                 <li>SOBRE</li>
             </a>    
-            <a href="section-skills" class="link_nav_sections">
+            <a href="#section-skills" class="link_nav_sections">
                 <li>HABILIDADES</li>
             </a>
             <a href="#section-project" class="link_nav_sections">
@@ -114,7 +117,7 @@
 
                     <p><strong>Carlos Sampaio, Um entusiasta apaixonado pelo mundo da tecnologia, com uma afinidade excepcional pelo desenvolvimento front-end.</strong></p>
 
-                    <p>Sou Carlos Eduardo Sampaio, 19 anos, estudante de Engenharia de Software na UNDB, São Luís, MA. Apaixonado por Tecnologia da Informação e dedicado ao aprimoramento constante de habilidades técnicas e pessoais. Busco oportunidades para aplicar meu conhecimento e paixão no desenvolvimento web.</p>
+                    <p>Sou Carlos Eduardo Sampaio, <span class="span-age"></span> anos, estudante de Engenharia de Software na UNDB, São Luís, MA. Apaixonado por Tecnologia da Informação e dedicado ao aprimoramento constante de habilidades técnicas e pessoais. Busco oportunidades para aplicar meu conhecimento e paixão no desenvolvimento web.</p>
 
                     <hr>
 
@@ -122,7 +125,7 @@
                         <div id="first-part">
                             <p><strong>Nome:</strong> <span>Carlos Eduardo</span></p>
 
-                            <p><strong>Idade:</strong> <span>19</span></p>
+                            <p><strong>Idade:</strong> <span class="span-age"></span></p>
                         </div>
 
                         <div id="second_part">
@@ -225,9 +228,45 @@
                     <h2>Cursos Concluídos</h2>
 
                     <div id="container_cards_carrossel">
-                        <div class="card_course">
-                            <!--Construção do card de curso para ser feito dinamicamente-->
+
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="header_card_course">
+                                        <div class="box_logo_company">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <p class="name_company">Nome da Empresa</p>
+                                    </div>
+
+                                    <div class="title_course">
+                                        <h1>Curso de html e css do guanabara</h1>
+                                    </div>
+
+                                    <div class="box_img_front_course">
+                                        <img src="" alt="">
+                                    </div>
+
+                                    <div class="box_description_course">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia deleniti, beatae quibusdam libero numquam placeat neque sequi optio amet corporis obcaecati quo? Modi officia minima, quas mollitia ullam inventore maxime?</p>
+                                    </div>
+
+                                    <div class="footer_icons_tech">
+                                        
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-slide">Card 2</div>
+                                <div class="swiper-slide">Card 3</div>
+                                <div class="swiper-slide">Card 4</div>
+                                <div class="swiper-slide">Card 5</div> -->
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
+                            <div class="swiper-pagination"></div>
                         </div>
+
                     </div>
 
                 </aside>

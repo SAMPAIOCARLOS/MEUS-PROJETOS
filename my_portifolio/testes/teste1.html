@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel com Glider.js</title>
+    <!-- Incluir CSS do Glider.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <!-- Seu CSS -->
+    <style>
+        .glider-contain {
+            width: 90%;
+            margin: auto;
+            border: 1px solid red;
+        }
+
+        .glider {
+            border: 1px solid rgb(55, 0, 255);
+        }
+
+        .glider-slide {
+            background: #ccc;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            height: 400px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="glider-slide">Card 1</div>
+            <div class="glider-slide">Card 2</div>
+            <div class="glider-slide">Card 3</div>
+            <div class="glider-slide">Card 4</div>
+            <div class="glider-slide">Card 5</div>
+            <div class="glider-slide">Card 6</div>
+            <div class="glider-slide">Card 7</div>
+            <div class="glider-slide">Card 8</div>
+            <div class="glider-slide">Card 9</div>
+            <div class="glider-slide">Card 10</div>
+        </div>
+
+        <button class="glider-prev">«</button>
+        <button class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+    </div>
+
+    <!-- Incluir JS do Glider.js -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <!-- Seu JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            new Glider(document.querySelector('.glider'), {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: '.dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                },
+                responsive: [
+                    {
+                        breakpoint: 775,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 #section_focus_icons_tech {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     width: 100%;
     min-height: 100vh;
     background-image: linear-gradient(to top, #0B0D0D, #0D1418);
@@ -8,21 +8,22 @@
 #section_focus_icons_tech > h1 {
     width: 80%;
     margin: auto;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding: 80px 0px 80px 0px;
     font-size: 3.063rem
 }
 
 #container_focus_icon_tech {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     min-height: 80vh;
     margin: auto;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
+    padding-bottom: 100px;
 }
 
 .card_in_focus {
@@ -49,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid red; */
 }
 
 .img_icon_tech_focus > img {

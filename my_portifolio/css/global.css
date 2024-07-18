@@ -74,7 +74,7 @@ body {
 
 .list_sections_footer {
     width: 15%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -222,7 +222,7 @@ body {
 }
 
 .footer {
-    border: 2px solid rgb(255, 0, 204);
+    /* border: 2px solid rgb(255, 0, 204); */
     width: 100vw;
     min-height: 20vh;
     background-image: linear-gradient(to top, #0B0D0D, #0D1418);
@@ -242,7 +242,7 @@ body {
 }
 
 .box_logo_img_footer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 20%;
     min-width: 280px;
     height: 5rem;

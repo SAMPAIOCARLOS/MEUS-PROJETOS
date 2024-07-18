@@ -1,3 +1,12 @@
+@media(max-width: 1427px) {
+    .card_in_focus {
+        min-width: 100% !important;
+    }
+
+    .img_icon_tech_focus > img {
+        width: 40% !important;
+    }
+}
 @media(max-width: 1300px) {
     #personal-data{
         width: 100%;
@@ -51,6 +60,9 @@
     #container_icons-tech {
         width: 100%;
     }
+    .img_icon_tech_focus > img {
+        width: 60% !important;
+    }
 }
 @media(max-width: 916px) {
     /* .container_group_footer {
@@ -96,6 +108,9 @@
 
     #container-list-navigation {
         width: 100%;
+    }
+    #section_focus_icons_tech > h1 {
+        font-size: 2.040rem !important;
     }
 }
 
@@ -157,7 +172,24 @@
     .title-sections {
         width: 80%;
     }
+
+    .card_in_focus {
+        flex-wrap: wrap;
+        height: 21rem !important;
+    }
+
+    .img_icon_tech_focus {
+        min-width: 100%;
+        height: 100px;
+    }
+
+    .img_icon_tech_focus > img {
+        height: 100%;
+    }
     
+    .box_group_description_focus {
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 500px) {
@@ -192,6 +224,18 @@
     }
 
     #ul_list_sections {
+        font-size: 10px;
+    }
+
+    .title_card_focus {
+        font-size: 13px;
+    }
+
+    .description_card_focus {
+        font-size: 10px;
+    }
+
+    .status_card_focus {
         font-size: 10px;
     }
 
