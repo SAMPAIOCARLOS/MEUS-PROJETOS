@@ -377,8 +377,14 @@ header {
     margin: 10px;
     border-radius: 10px;
     min-height: 400px !important;
+    transition: all 0.5s !important;
 }
 
+.swiper-slide:hover {
+    transform: translate(-10px, -10px) !important;
+    opacity: 1;
+    box-shadow: 3px 3px 17px #ffffff88;
+}
 .swiper-button-prev, .swiper-button-next {
     color: #000;
 }
@@ -458,6 +464,74 @@ header {
     border-bottom: 1px solid gray;
 }
 
+
+#group-certificate {
+    background-color: rgba(137, 43, 226, 0.301);
+    width: 100%;
+    min-height: 85vh;
+    display: none;
+    margin: 30px auto;
+    flex-direction: column;
+}
+
+
+
+#container_certificates {
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link_container_certificate {
+    width: 49%;
+    text-decoration: none;
+}
+
+.card_link_certificate {
+    /* border: 2px solid rgb(255, 255, 255); */
+    width: 100%;
+    min-height: 5rem;
+    border-radius: 12px;
+    background-color: #141415;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    transition: all 0.5s;
+}
+.card_link_certificate:hover {
+    scale: 1.05;
+    opacity: 1;
+    box-shadow: 3px 3px 17px #ffffff88;
+}
+
+.box_img_tech_certificate {
+    width: 15%;
+    height: 5rem;
+    border: 1px solid green;
+}
+
+.box_img_tech_certificate > img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+.container_description_certificate {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#section-project {
+    width: 100%;
+    min-height: 100vh;
+    border: 5px solid green;
+    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
+}
+
+
 .footer_icons_tech {
     /* border: 1px solid red; */
     width: 90%;
@@ -469,23 +543,6 @@ header {
     font-size: 30px;
 
 }
-#group-certificate {
-    background-color: rgba(137, 43, 226, 0.301);
-    width: 100%;
-    min-height: 85vh;
-    display: none;
-    margin: 30px auto;
-}
-
-#section-project {
-    width: 100%;
-    min-height: 100vh;
-    border: 5px solid green;
-    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
-}
-
-
-
 
 
 

@@ -14,6 +14,52 @@ const nascimento = "2005";
 const spans_age = document.querySelectorAll(".span-age");
 
 
+const obj_menu_header = [
+    {
+        "name_menu": "INÍCIO",
+        "link_navigation": "../index.html#section_start",
+        "id": 1
+    },
+    {
+        "name_menu": "SOBRE",
+        "link_navigation": "../index.html#section-about",
+        "id": 2
+    },
+    {
+        "name_menu": "HABILIDADES",
+        "link_navigation": "../index.html#section-skills",
+        "id": 3
+    },
+    {
+        "name_menu": "PROJETOS",
+        "link_navigation": "../index.html#section-project",
+        "id": 4
+    }
+]
+
+const container_teste = document.getElementById("container_teste")
+
+function create_link_header(container_links, obj) {
+    
+    for (const element of obj) {
+
+        const link_tag_a = document.createElement("a");
+        link_tag_a.classList.add("link_nav_sections");
+        link_tag_a.href = element.link_navigation
+
+        const item_li = document.createElement("li");
+        item_li.innerText = element.name_menu
+
+
+        link_tag_a.append(item_li);
+        container_links.append(link_tag_a);
+        
+    }
+}
+
+
+create_link_header(container_teste, obj_menu_header)
+
 function Active(Menu_hamburguer, list_full, line_span, hamb) {
     Menu_hamburguer.addEventListener("click", ()=> {
         Menu_hamburguer.classList.toggle("active");
@@ -78,5 +124,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
     Active(hamburguer, list_full, line_span, hamb);
     Get_data_icons_tech(container_icon);
     Get_data_course(swiper_wrapper);
+    Get_data_certificate()
     Calc_age(ano_atual, nascimento);
 })

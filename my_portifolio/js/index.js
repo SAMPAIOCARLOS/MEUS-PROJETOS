@@ -48,9 +48,7 @@ list_sections.forEach(li_item => {
 
 });
 
-const data_Atual = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 
-console.log(data_Atual)
 
 
 async function Get_data_icons_tech(container) {
@@ -145,19 +143,27 @@ async function Get_data_course(container_main_course) {
             
             for (let i = 0; i < icons_techs.length; i++) {
                 const element = icons_techs[i];
-                let icon_tech = document.createElement("p")
-                icon_tech.innerHTML = element
+                let icon_tech = document.createElement("p");
+                icon_tech.innerHTML = element;
 
-                footer_icons_tech.append(icon_tech)   
+                footer_icons_tech.append(icon_tech);
             }
-
-
-            
 
         });
 
     } catch (error) {
 
     }
+}
+
+
+async function Get_data_certificate(container_main_certificate) {
+    const response = await fetch("../dados/data_links_certificate.json");
+    const data = await response.json()
+
+
+    data.forEach(array_certificate => {
+        // console.log(array_certificate)
+    });
 }
 
