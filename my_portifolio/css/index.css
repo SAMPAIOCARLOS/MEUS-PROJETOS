@@ -541,19 +541,19 @@ header {
     min-height: 80vh;
     display: flex;
     margin-top: 50px;
+    justify-content: space-between;
 }
 
 .card_project {
     /* border: 2px solid blue; */
     width: 45%;
     height: 30%;
-
 }
 .box_img_card_project {
     /* border: 1px solid red; */
-    width: 100%;
+    width: 70%;
     height: 15rem;
-    
+    margin: auto;
 }
 .box_img_card_project > img {
     width: 100%;
@@ -569,7 +569,7 @@ header {
     gap: 10px;
 }
 .container_description_projects > h1 {
-    padding: 20px 20px 5px 20px;
+    padding: 0px 20px 5px 20px;
     border-bottom: 2px solid gray;
 }
 .container_tech_used_project {

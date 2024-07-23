@@ -166,6 +166,7 @@ async function Get_data_certificate(container_main_certificate) {
 
     data.forEach(array_certificate => {
         const link_container_certificate = document.createElement("a");
+        link_container_certificate.setAttribute("target", "blank")
         link_container_certificate.classList.add("link_container_certificate");
         link_container_certificate.href = array_certificate.link_certificate;
 
