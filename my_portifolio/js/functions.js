@@ -37,7 +37,10 @@ const obj_menu_header = [
     }
 ]
 
-const container_teste = document.getElementById("container_teste")
+const container_list_header = document.getElementById("container_list_header");
+const container_list_footer = document.getElementById("container_list_footer");
+const container_list_header_two = document.getElementById("container_list_header_two");
+
 
 function create_link_header(container_links, obj) {
     
@@ -45,10 +48,10 @@ function create_link_header(container_links, obj) {
 
         const link_tag_a = document.createElement("a");
         link_tag_a.classList.add("link_nav_sections");
-        link_tag_a.href = element.link_navigation
+        link_tag_a.href = element.link_navigation;
 
         const item_li = document.createElement("li");
-        item_li.innerText = element.name_menu
+        item_li.innerText = element.name_menu;
 
 
         link_tag_a.append(item_li);
@@ -57,8 +60,6 @@ function create_link_header(container_links, obj) {
     }
 }
 
-
-create_link_header(container_teste, obj_menu_header)
 
 function Active(Menu_hamburguer, list_full, line_span, hamb) {
     Menu_hamburguer.addEventListener("click", ()=> {
@@ -124,6 +125,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     Active(hamburguer, list_full, line_span, hamb);
     Get_data_icons_tech(container_icon);
     Get_data_course(swiper_wrapper);
-    Get_data_certificate()
+    Get_data_certificate();
     Calc_age(ano_atual, nascimento);
+    create_link_header(container_list_header, obj_menu_header);
+    create_link_header(container_list_footer, obj_menu_header);
+    create_link_header(container_list_header_two, obj_menu_header);
+    
 })

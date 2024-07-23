@@ -3,6 +3,10 @@ const container_focus_icon_tech = document.getElementById("container_focus_icon_
 const hamburguer_menu_tech = document.getElementById("hamburguer_menu_tech");
 const list_full_two = document.getElementById("list_full_two");
 
+const container_list_header_tech = document.getElementById("container_list_header_tech");
+const container_list_footer_tech = document.getElementById("container_list_footer_tech");
+const container_list_header_two_tech = document.getElementById("container_list_header_two_tech");
+
 async function Get_data_icons_page_focus(Container_in_cards) {
     try {
         const response = await fetch("../dados/data_icon_tech.json");
@@ -56,9 +60,15 @@ async function Get_data_icons_page_focus(Container_in_cards) {
 }
 
 
+
+
 document.addEventListener("DOMContentLoaded", ()=> {
     Get_data_icons_page_focus(container_focus_icon_tech);
     Active(hamburguer_menu_tech, list_full_two);
+
+    create_link_header(container_list_header_tech, obj_menu_header);
+    create_link_header(container_list_footer_tech, obj_menu_header);
+    create_link_header(container_list_header_two_tech, obj_menu_header)
 })
 
 
