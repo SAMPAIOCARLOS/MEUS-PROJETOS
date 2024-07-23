@@ -87,7 +87,6 @@ async function Get_data_icons_tech(container) {
 }
 
 
-
 async function Get_data_course(container_main_course) {
     try {
         const response = await fetch("../dados/data_card_course.json");
@@ -138,9 +137,9 @@ async function Get_data_course(container_main_course) {
             title_course.append(h1_title_course)
             box_img_front_course.append(img_box_img_front_course)
             box_description_course.append(P_box_description_course)
-            
+
             const icons_techs = array_card.icons_tech
-            
+
             for (let i = 0; i < icons_techs.length; i++) {
                 const element = icons_techs[i];
                 let icon_tech = document.createElement("p");
@@ -158,12 +157,53 @@ async function Get_data_course(container_main_course) {
 
 
 async function Get_data_certificate(container_main_certificate) {
-    const response = await fetch("../dados/data_links_certificate.json");
-    const data = await response.json()
+
+
+    try {
+        const response = await fetch("../dados/data_links_certificate.json");
+        const data = await response.json()
 
 
     data.forEach(array_certificate => {
-        // console.log(array_certificate)
+        const link_container_certificate = document.createElement("a");
+        link_container_certificate.classList.add("link_container_certificate");
+        link_container_certificate.href = array_certificate.link_certificate;
+
+        const card_link_certificate = document.createElement("div");
+        card_link_certificate.classList.add("card_link_certificate");
+
+        const box_img_tech_certificate = document.createElement("div");
+        box_img_tech_certificate.classList.add("box_img_tech_certificate");
+
+        const img_tech_certificate = document.createElement("img");
+        img_tech_certificate.src = array_certificate.icon_tech_certificate;
+
+        const container_description_certificate = document.createElement("div");
+        container_description_certificate.classList.add("container_description_certificate");
+
+        const title_certificate = document.createElement("h1");
+        title_certificate.innerText = array_certificate.title_certificate;
+
+        const line_break = document.createElement("hr");
+
+        const description_certificate = document.createElement("p")
+        description_certificate.innerText = array_certificate.description_certificate;
+
+
+        container_main_certificate.append(link_container_certificate);
+        link_container_certificate.append(card_link_certificate);
+        card_link_certificate.append(box_img_tech_certificate, container_description_certificate);
+        box_img_tech_certificate.append(img_tech_certificate);
+        container_description_certificate.append(title_certificate, line_break, description_certificate)
+
+
+
     });
+
+
+    } catch (error) {
+        
+    }
+    
 }
 

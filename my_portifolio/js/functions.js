@@ -4,6 +4,7 @@ const hamb = document.querySelectorAll('.hamburguer span');
 const hamburguer = document.querySelector(".hamburguer");
 const container_icon = document.getElementById("container_icon");
 const swiper_wrapper = document.querySelector(".swiper-wrapper");
+const container_certificates = document.getElementById("container_certificates")
 
 const text = document.getElementById("auto_complete");
 const array_text_about_header = ['Desenvolvedor Front-end','Front-end Developer','Desenvolvedor Front-end','Front-end Developer'];
@@ -125,10 +126,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
     Active(hamburguer, list_full, line_span, hamb);
     Get_data_icons_tech(container_icon);
     Get_data_course(swiper_wrapper);
-    Get_data_certificate();
+    Get_data_certificate(container_certificates);
     Calc_age(ano_atual, nascimento);
     create_link_header(container_list_header, obj_menu_header);
     create_link_header(container_list_footer, obj_menu_header);
     create_link_header(container_list_header_two, obj_menu_header);
-    
 })

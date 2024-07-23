@@ -1,12 +1,32 @@
 [
     {   "link_certificate": "https://drive.google.com/file/d/10HCjvDJ3ww6JbDq1ZGDjClxu92zdkENX/view?usp=sharing",
         "icon_tech_certificate": "../img/iconss/icons8-html-240.png",
-        "title_certificate": "CURSO HTML5 E CSS3: MÓDULO 1 DE 5 [40 HORAS]",
+        "title_certificate": "CURSO HTML5 & CSS3: MÓDULO 1 DE 5 [40 HORAS]",
         "description_certificate": "Esse curso marcou o início da minha jornada na programação, onde dei meus primeiros passos com HTML e CSS."
     },
     {   "link_certificate": "",
         "icon_tech_certificate": "../img/iconss/icons8-html-240.png",
-        "title_certificate": "CURSO HTML5 E CSS3: MÓDULO 2 DE 5 [40 HORAS] VIP",
+        "title_certificate": "CURSO HTML5 & CSS3: MÓDULO 2 DE 5 [40 HORAS] VIP",
         "description_certificate": "Esse curso marcou um avanço significativo na minha jornada de programação, permitindo que eu aprofundasse meu conhecimento em HTML e CSS e desenvolvesse projetos mais complexos."
+    },
+    {   "link_certificate": "",
+        "icon_tech_certificate": "../img/iconss/icons8-html-240.png",
+        "title_certificate": "CURSO HTML5 & CSS3: MÓDULO 3 DE 5 [40 HORAS] VIP",
+        "description_certificate": "Esse curso me proporcionou conhecimentos em HTML e CSS, além de introduzir tópicos mais avançados como media queries e Flexbox."
+    },
+    {   "link_certificate": "",
+        "icon_tech_certificate": "../img/iconss/icons8-html-240.png",
+        "title_certificate": "CURSO DE HTML5 DA PLATAFORMA ONEBITCODE",
+        "description_certificate": "Esse curso consolidou meus conhecimentos adquiridos anteriormente."
+    },
+    {   "link_certificate": "",
+        "icon_tech_certificate": "../img/iconss/icons8-css-240.png",
+        "title_certificate": "CURSO DE CSS3 DA PLATAFORMA ONEBITCODE",
+        "description_certificate": "Este curso também me ajudou a consolidar e relembrar conceitos que eu já havia aprendido."
+    },
+    {   "link_certificate": "",
+        "icon_tech_certificate": "../img/iconss/icons8-js-240.png",
+        "title_certificate": "CURSO COMPLETO DE JAVASCRIPT DA PLATAFORMA ONEBITCODE",
+        "description_certificate": "Foi nesse curso que dei meus primeiros passos com JavaScript e comecei a evoluir meus conhecimentos, explorando diversos tópicos da linguagem."
     }
 ]
