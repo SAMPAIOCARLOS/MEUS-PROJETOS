@@ -1,0 +1,107 @@
+#container_description_project_dedicated {
+    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
+    width: 100%;
+    min-height: 100vh;
+}
+
+#header_title {
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: auto;
+    padding: 40px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+#box_data_project > p {
+    font-weight: bold;
+}
+
+#container_description_full_dedicated {
+    width: 85%;
+    margin: auto;
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 0px 50px 0px;
+}
+
+#group_img_tech {
+    /* border: 2px solid blue; */
+    display: flex;
+    gap: 20px;
+}
+
+#box_img_full_project {
+    width: 50%;
+    border-radius: 12px;
+}
+
+#box_img_full_project > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#box_tech_full_project {
+    /* border: 2px solid red; */
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+#list_tech_project_dedicated {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    flex-wrap: wrap;
+}
+
+#box_description_full_project {
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.description_project {
+    opacity: 0.7;
+}
+
+#container_links_the_project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#box_links {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.link_and_icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.link_and_icon > ion-icon {
+    font-size: 30px;
+    background-color: #141415;
+    padding: 15px;
+    border-radius: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.link_and_icon > ion-icon:hover {
+    scale: 1.2;
+}
