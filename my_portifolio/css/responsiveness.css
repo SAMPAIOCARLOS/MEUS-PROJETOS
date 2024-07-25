@@ -53,6 +53,12 @@
     }
 }
 
+@media(max-width: 984px) {
+    .link_page_dedicated {
+        min-width: 100%;
+    }
+}
+
 @media(max-width: 930px) {
     #group-tech {
         flex-wrap: wrap;
@@ -117,6 +123,16 @@
     }
     #section_focus_icons_tech > h1 {
         font-size: 2.040rem !important;
+    }
+}
+
+@media(max-width: 835px) {
+    #box_img_full_project {
+        min-width: 100% !important;
+    }
+
+    #header_title {
+        font-size: 10px;
     }
 }
 
@@ -253,6 +269,17 @@
         font-size: 10px;
     }
 
+    .container_description_projects {
+        font-size: 10px;
+    }
+
+    .container_tech_used_project {
+        font-size: 20px;
+    }
+
+    .link_page_dedicated {
+        gap: 0;
+    }
 }
 
 @media(min-width: 900px) { /*isso é para esconder a aba do menu hamburguer quando a tela for muito grande*/

@@ -208,3 +208,60 @@ async function Get_data_certificate(container_main_certificate) {
     
 }
 
+
+async function Get_data_card_project(container_card_project) {
+    const response = await fetch("../dados/data_cards_projects.json");
+    const data = await response.json();
+
+    data.forEach(array_data_project => {
+
+        const link_page_dedicated = document.createElement("a");
+        link_page_dedicated.classList.add("link_page_dedicated");
+        link_page_dedicated.setAttribute("target", "black")
+        link_page_dedicated.href = array_data_project.link_page_dedicated
+
+        const card_project = document.createElement("div");
+        card_project.classList.add("card_project");
+
+        const box_img_card_project = document.createElement("div");
+        box_img_card_project.classList.add("box_img_card_project");
+
+        const img_project = document.createElement("img");
+        img_project.src = array_data_project.img_project
+
+        const container_description_projects = document.createElement("div");
+        container_description_projects.classList.add("container_description_projects");
+
+        const title_project = document.createElement("h1");
+        title_project.innerText = array_data_project.title_project;
+
+        const description_project = document.createElement("p");
+        description_project.innerText = array_data_project.description_project;
+
+        const footer_icons_tech_project = document.createElement('ul');
+        footer_icons_tech_project.classList.add("container_tech_used_project");
+
+
+        link_page_dedicated.append(card_project);
+
+        container_card_project.append(link_page_dedicated);
+        card_project.append(box_img_card_project, container_description_projects);
+        box_img_card_project.append(img_project);
+        container_description_projects.append(title_project, description_project, footer_icons_tech_project);
+
+
+        const icons_techs_project = array_data_project.container_icons_tech_project
+
+        console.log(icons_techs_project)
+
+            for (let i = 0; i < icons_techs_project.length; i++) {
+                const element = icons_techs_project[i];
+                let icon_tech_project = document.createElement("li");
+                icon_tech_project.innerHTML = element;
+                footer_icons_tech_project.append(icon_tech_project);
+            }
+
+        
+    });
+}
+
