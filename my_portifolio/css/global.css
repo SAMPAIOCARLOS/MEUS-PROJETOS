@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     width: 100%;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -219,7 +219,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: antiquewhite;
-    border: 2px solid rgb(0, 8, 255);
+    /* border: 2px solid rgb(0, 8, 255); */
 }
 
 .footer {

@@ -7,8 +7,8 @@
         "img_project": "../img/img_project/img_project_calculadora_geometrica.jpg", 
         "icons_tech_project": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>", "<ion-icon name='logo-javascript' style='color: yellow;'></ion-icon>"],
         "description_about_project": "teste Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ullam ex, ratione non amet id quia doloribus itaque asperiores ipsa veniam omnis quaerat cupiditate illum? Nesciunt autem optio voluptatum repellat. Cupiditate ad saepe, voluptatibus illum aut recusandae, fuga magnam, fugit esse libero est laudantium consectetur. Excepturi fugiat itaque, facilis inventore quae molestias alias. Nobis rerum vero ad quo soluta fuga.",
-        "link_project": "",
-        "link_repository": ""
+        "link_project": "https://sampaiocarlos.github.io/Calculadora-geometrica/",
+        "link_repository": "https://github.com/SAMPAIOCARLOS/Calculadora-geometrica"
         
     },
     {
@@ -16,11 +16,11 @@
         "title_head": "Project | Animal-selections",
         "title_project_header": "Animal-selections",
         "date_project": "18/09/2023",
-        "img_project": "../img/img_project/img_project_calculadora_geometrica.jpg", 
+        "img_project": "../img/img_project/img_project_animais_select.jpg", 
         "icons_tech_project": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>", "<ion-icon name='logo-javascript' style='color: yellow;'></ion-icon>"],
         "description_about_project": "teste2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ullam ex, ratione non amet id quia doloribus itaque asperiores ipsa veniam omnis quaerat cupiditate illum? Nesciunt autem optio voluptatum repellat. Cupiditate ad saepe, voluptatibus illum aut recusandae, fuga magnam, fugit esse libero est laudantium consectetur. Excepturi fugiat itaque, facilis inventore quae molestias alias. Nobis rerum vero ad quo soluta fuga.",
-        "link_project": "",
-        "link_repository": ""
+        "link_project": "https://sampaiocarlos.github.io/Animal-selections/",
+        "link_repository": "https://github.com/SAMPAIOCARLOS/Animal-selections"
         
     }
 ]
