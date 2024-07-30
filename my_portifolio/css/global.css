@@ -14,6 +14,8 @@ body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
+    overflow-x: hidden;
+
 }
 
 .nav {
@@ -144,7 +146,9 @@ body {
     color: #8663FD;
 }
 
-
+.text-decoretion {
+    text-decoration: none;
+}
 
 /*menu hamburguer*/
 
@@ -218,7 +222,7 @@ body {
 .main {
     width: 100%;
     min-height: 100vh;
-    background-color: antiquewhite;
+    background-image: linear-gradient(to bottom, #0B0D0D, #090c0d);
     /* border: 2px solid rgb(0, 8, 255); */
 }
 
@@ -252,5 +256,20 @@ body {
 .box_logo_img_footer > img {
     width: 100%;
     object-fit: contain;
+}
+
+
+.trasition-left {
+    opacity: 0;
+    filter: blur(15px);
+    /* transition: all 3s; */
+    transform: translate(-10%);
+}
+
+.trasition-left-show {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1.5s;
+    transform: translate(0);
 }
 

@@ -44,7 +44,7 @@ const container_list_footer = document.getElementById("container_list_footer");
 const container_list_header_two = document.getElementById("container_list_header_two");
 
 
-function create_link_header(container_links, obj) {
+async function create_link_header(container_links, obj) {
     
     for (const element of obj) {
 
@@ -122,6 +122,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const trasition_left = document.querySelectorAll(".trasition-left")
+
+function Intersecting(list, classe) {
+    
+    const myObserver = new IntersectionObserver((fun)=> {
+        fun.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(classe)
+            } else {
+                entry.target.classList.remove(classe)
+            }
+        });
+    })
+
+    list.forEach(element => {
+        myObserver.observe(element)
+    });
+}
+
+
+const campo_text = document.querySelectorAll(".campo_text")
+
+campo_text.forEach(input => {
+    input.addEventListener('keyup', (event) => {
+        const section = event.target.parentNode;
+        const input = section.querySelector('input');
+        const span = section.querySelector('span');
+        // const ion_icon = section.querySelector('ion-icon')
+
+        if (span.style.display === 'flex') {
+            // input.style.border = 'none'
+            // ion_icon.style.display = 'none'
+            input.setAttribute("class", "inputs")
+            span.style.display = 'none'
+        }
+    })
+});
+
+
+
+
+function isEmailValue(email) {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
+
+    return emailRegex.test(email);
+}
+
+
+function ErrorCampo(input, class_span, message ) {
+    input.setAttribute("class", "input_class_erro")
+    document.querySelector(`.${class_span}`).style.display = 'flex';
+    document.querySelector(`.${class_span}`).innerText = message;
+    input.focus()
+}
+
+
 document.addEventListener("DOMContentLoaded", ()=> {
     typed(text, array_text_about_header);
     Active(hamburguer, list_full, line_span, hamb);
@@ -133,4 +189,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
     create_link_header(container_list_header, obj_menu_header);
     create_link_header(container_list_footer, obj_menu_header);
     create_link_header(container_list_header_two, obj_menu_header);
+
+    Intersecting(trasition_left, 'trasition-left-show')
 })

@@ -228,6 +228,8 @@ header {
     width: 85%;
     min-height: 80vh;
     margin: auto;
+
+    padding-top: 50px;
 }
 
 #container-list-navigation {
@@ -543,8 +545,9 @@ header {
     /* margin-top: 50px; */
     margin: 50px auto 0px auto;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 .link_page_dedicated {
     /* border: 1px solid red; */
@@ -586,7 +589,7 @@ header {
     /* border: 1px solid red; */
 }
 .container_description_projects > h1 {
-    padding: 0px 20px 5px 20px;
+    padding: 10px 20px 5px 20px;
     border-bottom: 2px solid gray;
 }
 .container_tech_used_project {

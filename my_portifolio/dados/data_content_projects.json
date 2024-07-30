@@ -6,7 +6,7 @@
         "date_project": "10/10/2023",
         "img_project": "../img/img_project/img_project_calculadora_geometrica.jpg", 
         "icons_tech_project": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>", "<ion-icon name='logo-javascript' style='color: yellow;'></ion-icon>"],
-        "description_about_project": "teste Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ullam ex, ratione non amet id quia doloribus itaque asperiores ipsa veniam omnis quaerat cupiditate illum? Nesciunt autem optio voluptatum repellat. Cupiditate ad saepe, voluptatibus illum aut recusandae, fuga magnam, fugit esse libero est laudantium consectetur. Excepturi fugiat itaque, facilis inventore quae molestias alias. Nobis rerum vero ad quo soluta fuga.",
+        "description_about_project": "Este projeto foi criado no início da minha jornada de estudos em JavaScript, servindo como um exercício prático. Ele é uma calculadora que realiza cálculos sobre objetos geométricos para determinar suas áreas. Nele, utilizei as tecnologias HTML, CSS e JavaScript. Através deste projeto, consegui aprimorar minha compreensão de lógica de programação.",
         "link_project": "https://sampaiocarlos.github.io/Calculadora-geometrica/",
         "link_repository": "https://github.com/SAMPAIOCARLOS/Calculadora-geometrica"
         
@@ -18,9 +18,21 @@
         "date_project": "18/09/2023",
         "img_project": "../img/img_project/img_project_animais_select.jpg", 
         "icons_tech_project": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>", "<ion-icon name='logo-javascript' style='color: yellow;'></ion-icon>"],
-        "description_about_project": "teste2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ullam ex, ratione non amet id quia doloribus itaque asperiores ipsa veniam omnis quaerat cupiditate illum? Nesciunt autem optio voluptatum repellat. Cupiditate ad saepe, voluptatibus illum aut recusandae, fuga magnam, fugit esse libero est laudantium consectetur. Excepturi fugiat itaque, facilis inventore quae molestias alias. Nobis rerum vero ad quo soluta fuga.",
+        "description_about_project": "Este projeto funciona como uma página que fornece dados sobre diversos animais, permitindo a filtragem através de dois seletores. O segundo seletor é dinâmico, sendo criado com base na escolha do primeiro. Neste projeto, utilizei tecnologias como HTML, CSS e JavaScript, o que contribuiu para o meu aprimoramento em técnicas de desenvolvimento web.",
         "link_project": "https://sampaiocarlos.github.io/Animal-selections/",
         "link_repository": "https://github.com/SAMPAIOCARLOS/Animal-selections"
+        
+    },
+    {
+        "id": "3",
+        "title_head": "Project | Agendamento-FMRB",
+        "title_project_header": "Agendamento-FMRB",
+        "date_project": "23/04/2024",
+        "img_project": "../img/img_project/img_project_agendamento_fmrb.jpg", 
+        "icons_tech_project": ["<ion-icon name='logo-html5' style='color: orangered;'></ion-icon>", "<ion-icon name='logo-css3' style='color: #0277BD;'></ion-icon>", "<ion-icon name='logo-javascript' style='color: yellow;'></ion-icon>"],
+        "description_about_project": "Como estagiário na ATI, fui responsável pelo desenvolvimento front-end de uma página de agendamento para a FMRB-Fundação da Memória Republicana Brasileira. Utilizando HTML, CSS e JavaScript, criei uma interface intuitiva para três tipos de agendamento: individual, pesquisador e em grupo. Os dados dos formulários foram integrados a uma API de envio de emails para notificação automatizada. Esta experiência aprimorou minhas habilidades em desenvolvimento web e colaboração interdisciplinar.",
+        "link_project": "https://agendamento.fmrb.ma.gov.br/",
+        "link_repository": ""
         
     }
 ]

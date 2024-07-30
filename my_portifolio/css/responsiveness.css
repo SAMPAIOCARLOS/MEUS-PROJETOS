@@ -57,6 +57,15 @@
     .link_page_dedicated {
         min-width: 100%;
     }
+    #box_information_contact{
+        min-width: 400px !important;
+        width: 100% !important;
+    }
+
+    #form_contact {
+        min-width: 400px !important;
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 930px) {
@@ -75,6 +84,8 @@
     .img_icon_tech_focus > img {
         width: 60% !important;
     }
+
+    
 }
 @media(max-width: 916px) {
     /* .container_group_footer {
@@ -232,7 +243,7 @@
     }
 
     #container-icons-midia > a {
-        font-size: 1.5em;
+        font-size: 16px;
     }
     .container-img-logo {
         width: 200px;

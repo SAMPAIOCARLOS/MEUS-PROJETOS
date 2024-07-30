@@ -35,7 +35,7 @@
         </ul>
 
         <button class="btn-contact cursor_pointer">
-            <a href="contact.html">Entrar em contato</a>
+            <a href="contact.html" class="text-decoretion">Entrar em contato</a>
         </button>
 
 
@@ -109,53 +109,75 @@
                         </aside>
                     </section>
 
+                    <section class="section_information_contact" id="section_arte_contact">
+                        <img src="../img/Search engines-amico.png" alt="" id="img_arte_page_contact">
+                    </section>
+
                 </div>
 
 
                 <form id="form_contact">
                     <aside class="aside_campos_form">
-                        <label for="nome">Seu nome:</label>
-                        <input type="text" id="nome" class="inputs">
+                        <label for="Nome">Seu nome:</label>
+                        <input type="text" id="Nome" name="Nome" class="inputs campo_text">
 
-                        <div class="box_span_error">
+                        <!-- <div class="box_span_error span_nome">
                             <ion-icon name="alert-circle-outline"></ion-icon>
                             <span class="span_error">teste</span>
-                        </div>
+                        </div> -->
+
+                        <span class="box_span_error span_nome">
+                            <ion-icon name="alert-circle-outline"></ion-icon>
+                        </span>
                     </aside>
 
                     <aside class="aside_campos_form">
                         <label for="email">Seu email:</label>
-                        <input type="text" id="email" class="inputs">
+                        <input type="text" id="email" name="email" class="inputs campo_text">
 
-                        <div class="box_span_error">
+                        <!-- <div class="box_span_error">
                             <ion-icon name="alert-circle-outline"></ion-icon>
                             <span class="span_error"></span>
-                        </div>
+                        </div> -->
+
+                        <span class="box_span_error span_email">
+                            <ion-icon name="alert-circle-outline"></ion-icon>
+                        </span>
                     </aside>
 
                     <aside class="aside_campos_form">
                         <label for="num_telephone">Numero whatsapp:</label>
-                        <input type="text" id="num_telephone" class="inputs" placeholder="(xx) x xxxx-xxxx">
+                        <input type="text" id="num_telephone" name="Numero" class="inputs campo_text" placeholder="(xx) xxxxx-xxxx" maxlength="15" minlength="15">
 
-                        <div class="box_span_error">
+                        <!-- <div class="box_span_error">
                             <ion-icon name="alert-circle-outline"></ion-icon>
                             <span class="span_error"></span>
-                        </div>
+                        </div> -->
+
+                        <span class="box_span_error span_telephone">
+                            <ion-icon name="alert-circle-outline"></ion-icon>
+                        </span>
                     </aside>
 
                     <aside class="aside_campos_form">
                         <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" class="inputs textarea" placeholder="Coloque sua mensagem aqui"></textarea>
+                        <textarea name="message" id="message" name="Mensagem" class="inputs textarea campo_text" placeholder="Coloque sua mensagem aqui"></textarea>
 
-                        <div class="box_span_error">
+                        <!-- <div class="box_span_error">
                             <ion-icon name="alert-circle-outline"></ion-icon>
                             <span class="span_error"></span>
-                        </div>
+                        </div> -->
+
+                        <span class="box_span_error span_mensagem">
+                            <ion-icon name="alert-circle-outline"></ion-icon>
+                        </span>
                     </aside>
 
                     <aside class="aside_campos_form">
-                        <button id="btn_enviar_contact">Enviar</button>
+                        <button type="submit" id="btn_enviar_contact">Enviar</button>
                     </aside>
+
+
                 </form>
             </div>
 
@@ -183,7 +205,7 @@
                 </a> -->
             </ul>
             <button class="btn-contact-footer cursor_pointer">
-                <a href="contact.html">Entrar em contato</a>
+                <a href="contact.html" class="text-decoretion">Entrar em contato</a>
             </button>
         </div>
     </footer>
