@@ -7,9 +7,9 @@
     <title>Page | Contact</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/responsiveness.css">
-    <link rel="stylesheet" href="../css/tech.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <script src="../js/functions.js" defer></script>
-    <script src="../js/tech.js" defer></script>
+    <script src="../js/contact.js" defer></script>
 
 </head>
 
@@ -19,7 +19,7 @@
             <img src="../img/Logo + Letreiro (1).png" alt="imagem_logo">
         </div>
 
-        <ul class="list-nav-header" id="container_list_header_tech">
+        <ul class="list-nav-header" id="container_list_header_contact">
             <!-- <a href="../index.html#section_start" class="link_nav_sections">
                 <li>INÍCIO</li>
             </a>
@@ -39,7 +39,7 @@
         </button>
 
 
-        <div class="hamburguer" id="hamburguer_menu_tech">
+        <div class="hamburguer" id="hamburguer_menu_contact">
             <span class="line-span"></span>
             <span class="line-span"></span>
             <span class="line-span"></span>
@@ -47,8 +47,8 @@
 
     </nav>
 
-    <div class="list-full" id="list_full_two">
-        <ul class="list-nav-header-two" id="container_list_header_two_tech">
+    <div class="list-full" id="list_full_two_contact">
+        <ul class="list-nav-header-two" id="container_list_header_two_contact">
             <!-- <a href="../index.html#section_start" class="link_nav_sections">
                 <li>INÍCIO</li>
             </a>
@@ -73,7 +73,7 @@
 
         <div id="container_page_contact">
 
-            <h1>Fale comigo</h1>
+            <h1 id="title_page_contact">Fale comigo</h1>
 
 
             <div id="container_form_and_information">
@@ -82,27 +82,26 @@
 
                     <section class="section_information_contact">
 
-                        <aside class="card_social_contact">
-                            <span>teste</span>
-                            <div class="box_icon_rede_contact">
-                                <ion-icon name="logo-linkedin"></ion-icon>
-                            </div>
-                            <p></p>
-                        </aside>
 
                         <aside class="card_social_contact">
-                            <span>teste2</span>
                             <div class="box_icon_rede_contact">
                                 <ion-icon name="logo-whatsapp"></ion-icon>
                             </div>
-                            <p></p>
+                            <p>(99) 985137413</p>
+                        </aside>
+
+                        <aside class="card_social_contact">
+                            <div class="box_icon_rede_contact">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </div>
+                            <p>Carlos Sampaio</p>
                         </aside>
 
                     </section>
 
                     <section class="section_information_contact">
-                        <aside>
-                            <div>
+                        <aside class="card_social_contact_full">
+                            <div class="box_icon_rede_contact">
                                 <ion-icon name="mail-outline"></ion-icon>
                             </div>
                             
@@ -114,17 +113,17 @@
 
 
                 <form id="form_contact">
-                    <aside>
+                    <aside class="aside_campos_form">
                         <label for="nome">Seu nome:</label>
                         <input type="text" id="nome" class="inputs">
 
                         <div class="box_span_error">
                             <ion-icon name="alert-circle-outline"></ion-icon>
-                            <span class="span_error"></span>
+                            <span class="span_error">teste</span>
                         </div>
                     </aside>
 
-                    <aside>
+                    <aside class="aside_campos_form">
                         <label for="email">Seu email:</label>
                         <input type="text" id="email" class="inputs">
 
@@ -134,7 +133,7 @@
                         </div>
                     </aside>
 
-                    <aside>
+                    <aside class="aside_campos_form">
                         <label for="num_telephone">Numero whatsapp:</label>
                         <input type="text" id="num_telephone" class="inputs" placeholder="(xx) x xxxx-xxxx">
 
@@ -144,9 +143,9 @@
                         </div>
                     </aside>
 
-                    <aside>
+                    <aside class="aside_campos_form">
                         <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" class="textarea" placeholder="Coloque sua mensagem aqui"></textarea>
+                        <textarea name="message" id="message" class="inputs textarea" placeholder="Coloque sua mensagem aqui"></textarea>
 
                         <div class="box_span_error">
                             <ion-icon name="alert-circle-outline"></ion-icon>
@@ -154,7 +153,7 @@
                         </div>
                     </aside>
 
-                    <aside>
+                    <aside class="aside_campos_form">
                         <button id="btn_enviar_contact">Enviar</button>
                     </aside>
                 </form>
@@ -169,7 +168,7 @@
                 <img src="../img/Logo + Letreiro (1).png" alt="">
             </div>
             
-            <ul class="list_sections_footer" id="container_list_footer_tech">
+            <ul class="list_sections_footer" id="container_list_footer_contact">
                 <!-- <a href="../index.html#section_start" class="link_nav_sections">
                     <li>INÍCIO</li>
                 </a>

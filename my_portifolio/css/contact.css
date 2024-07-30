@@ -1,0 +1,140 @@
+#container_page_contact {
+    width: 100%;
+    min-height: 100vh;
+    border: 3px solid red;
+    background-image: linear-gradient(to top, #0B0D0D, #0D1418);
+}
+#title_page_contact {
+    width: 85%;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+}
+
+#container_form_and_information {
+    /* border: 2px solid blue; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+#box_information_contact {
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 48%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.section_information_contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid green; */
+}
+.card_social_contact {
+    /* border: 1px solid red; */
+    width: 48%;
+    min-height: 5rem;
+    background-color: #131415;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+.card_social_contact_full {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 5rem;
+    background-color: #131415;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+.box_icon_rede_contact {
+    width: 50px;
+    height: 50px;
+    background-color: #0B0D0D;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_icon_rede_contact > ion-icon {
+    font-size: 26px;
+    color: #8663FD;
+}
+
+#form_contact {
+    /* border: 1px solid rgb(13, 255, 0); */
+    width: 48%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside_campos_form {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputs {
+    width: 100%;
+    background-color: #131415;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.2s;
+    border: 3px solid transparent;
+}
+.inputs:focus {
+    border: 3px solid #8663FD;
+    box-shadow: 1px 1px 10px #8663FD;
+}
+
+.textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 4rem;
+}
+
+.box_span_error {
+    display: none;
+    gap: 10px;
+    align-items: center;
+
+}
+.box_span_error > ion-icon {
+    color: rgb(182, 0, 0);
+    font-size: 20px;
+}
+.span_error {
+    color: rgb(182, 0, 0);
+    font-weight: bold;
+}
+
+#btn_enviar_contact {
+    background-color: #8663FD;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+#btn_enviar_contact:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}

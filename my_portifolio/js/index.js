@@ -217,7 +217,6 @@ async function Get_data_card_project(container_card_project) {
 
         const link_page_dedicated = document.createElement("a");
         link_page_dedicated.classList.add("link_page_dedicated");
-        link_page_dedicated.setAttribute("target", "black")
         link_page_dedicated.href = array_data_project.link_page_dedicated
 
         const card_project = document.createElement("div");
