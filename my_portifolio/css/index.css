@@ -303,6 +303,7 @@ header {
 
 .card_icon_tech {
     width: 30%;
+    min-width: 170px;
     height: 13rem;
     background-color: #141415;
     display: flex;

@@ -68,7 +68,6 @@ async function Get_data_content_project() {
 }
 
 
-
 document.addEventListener("DOMContentLoaded", ()=> {
     create_link_header(container_list_header_dedicated, obj_menu_header);
     create_link_header(container_list_footer_dedicated, obj_menu_header);
