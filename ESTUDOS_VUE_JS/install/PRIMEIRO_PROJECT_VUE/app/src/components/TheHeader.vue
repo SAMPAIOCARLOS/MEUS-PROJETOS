@@ -1,9 +1,9 @@
 <template>
     <header>
         <ul id="list_nav_header">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            
+            <li v-for="obj in user" v-bind:key="obj.id" class="itens_header"> {{obj.id}} </li>
+
         </ul>
     </header>
 </template>
@@ -12,7 +12,43 @@
 <script>
 
     export default {
-        name: 'TheHeader'
+        name: 'TheHeader',
+        data() {
+            return {
+                user: [
+                        {
+                            "userId": 1,
+                            "id": 1,
+                            "title": "delectus aut autem",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 2,
+                            "title": "quis ut nam facilis et officia qui",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 3,
+                            "title": "fugiat veniam minus",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 4,
+                            "title": "et porro tempora",
+                            "completed": true
+                        },
+                        {
+                            "userId": 1,
+                            "id": 5,
+                            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                            "completed": false
+                        }
+                      ]
+            }
+        }
     }
 
 
@@ -33,14 +69,14 @@
         list-style: none;
     }
 
-    li {
+    .itens_header {
         border-bottom: 2px solid transparent;
         transition: all 0.5s;
         padding: 0px 10px 0px 10px;
         color: #ffffff;
     }
 
-    li:hover {
+    .itens_header:hover {
         border-bottom: 2px solid gray;
         color: blue;
     }
