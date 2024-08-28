@@ -1,9 +1,9 @@
 <template>
     <details>
-        <summary>Lista de nomes</summary>
+        <summary>Lista de {{username}}</summary>
 
         <ul class="list_name">
-            <li v-for="(nomes, i) in nomes" :key="i">
+            <li v-for="(nomes, i) in nomes" :key="i.id">
                 {{ nomes }}
             </li>
         </ul>
@@ -14,9 +14,14 @@
 
 export default {
     name: "ListName",
+    props:{
+        name:String,
+        list:Array,
+    },
     data () {
         return {
-            nomes: ['Carlos','Fabio','Joao','Johao', 'Calvo']
+            nomes: ['Carlos','Fabio','Joao','Johao', 'Calvo'],
+            username: "Nomes"
         }
     }
 }

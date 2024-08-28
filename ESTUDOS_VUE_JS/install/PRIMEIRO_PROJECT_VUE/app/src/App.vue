@@ -65,7 +65,7 @@ export default {
       firstName: "Carlos Eduardo",
       lastName: "Sampaio",
       showName: true,
-      accessLevel: "Marketing",
+      accessLevel: "",
     }
   }
 }
