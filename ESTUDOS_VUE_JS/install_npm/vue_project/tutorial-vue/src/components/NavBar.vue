@@ -1,5 +1,33 @@
 <script>
+   import { reactive } from 'vue';
 
+    export default {
+        setup() {
+
+            const listNav = reactive([
+                {
+                    titulo: "SOBRE"
+                },
+                {
+                    titulo: "HABILIDADES"
+                },
+                {
+                    titulo: "PROJETOS",
+                    teste: ["teste1", "teste2", "teste3"]
+                }
+            ])
+
+
+            return {
+                listNav
+            }
+        }
+    }
+
+
+   
+
+    
 </script>
 
 <template>
@@ -7,15 +35,16 @@
         <button>Button</button>
 
         <ul class="list_nav">
-            <li class="List_nav_item">SOBRE</li>
-            <li class="List_nav_item">HABILIDADES</li>
-            <li class="List_nav_item">PROJETOS</li>
+
+            <li v-for="(obj, index) in listNav" :key="index"> {{obj.titulo}}</li>
+
         </ul>
 
         <button>
             Contato
         </button>
     </nav>
+
 </template>
 
 <style>

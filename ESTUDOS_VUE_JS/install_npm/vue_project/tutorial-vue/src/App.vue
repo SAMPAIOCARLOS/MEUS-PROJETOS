@@ -3,6 +3,7 @@
 import NavBar from './components/NavBar.vue'
 import TheHeader from './components/TheHeader.vue'
 import FormUser from './components/FormUser.vue'
+import TheUsuario from './components/TheUsuario.vue'
 
 </script>
 
@@ -19,6 +20,8 @@ import FormUser from './components/FormUser.vue'
 
   <main>
     <FormUser/>
+
+    <TheUsuario/>
   </main>
 </template>
 
